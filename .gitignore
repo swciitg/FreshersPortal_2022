@@ -1,1 +1,4 @@
 venv/
+fresher_portal/__pycache__/
+fresher/__pycache__/
+fresher/migrations/

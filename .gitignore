@@ -1,4 +1,4 @@
 venv/
-fresher_portal/__pycache__/
-fresher_portal/fresher/__pycache__/
-fresher_portal/fresher/migrations/
+backend/fresher_portal/__pycache__/
+backend/fresher_portal/fresher/__pycache__/
+backend/fresher_portal/fresher/migrations/

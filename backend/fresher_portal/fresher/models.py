@@ -34,6 +34,9 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
+
+
+# Opening 1 model
 class Open1(models.Model):
     type = models.CharField(max_length=20, null=True, blank=True)
     title = models.CharField(max_length=100, null=True, blank=True)
@@ -42,6 +45,8 @@ class Open1(models.Model):
     def __str__(self):
         return self.title    
 
+
+# Opening 2 model
 class Open2(models.Model):
     type = models.CharField(max_length=20, null=True, blank=True)
     title = models.CharField(max_length=100, null=True, blank=True)
@@ -50,6 +55,8 @@ class Open2(models.Model):
     def __str__(self):
         return self.title   
 
+
+# FAQ model
 class FAQ(models.Model):
     que = models.TextField(null=True, blank=True)
     ans = RichTextField(null=True, blank=True)

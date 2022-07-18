@@ -6,4 +6,8 @@ from .models import *
 admin.site.register(BaseModel)
 admin.site.register(Imp)
 admin.site.register(Contact)
+admin.site.register(Open1)
+admin.site.register(Open2)
+admin.site.register(FAQ)
+
 

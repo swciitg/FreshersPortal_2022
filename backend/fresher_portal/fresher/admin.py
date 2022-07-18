@@ -6,5 +6,4 @@ from .models import *
 admin.site.register(BaseModel)
 admin.site.register(Imp)
 admin.site.register(Contact)
-admin.site.register(DropMsg)
 

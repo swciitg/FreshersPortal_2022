@@ -22,6 +22,7 @@ class BaseModel(models.Model):
     def __str__(self):
         return self.title
 
+
 # contact us model
 class Contact(models.Model):
     img = models.ImageField(upload_to='img/', null=True, blank=True)
@@ -32,3 +33,24 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class Open1(models.Model):
+    type = models.CharField(max_length=20, null=True, blank=True)
+    title = models.CharField(max_length=100, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.title    
+
+class Open2(models.Model):
+    type = models.CharField(max_length=20, null=True, blank=True)
+    title = models.CharField(max_length=100, null=True, blank=True)
+    img = models.ImageField(upload_to='img/', null=True, blank=True)
+
+    def __str__(self):
+        return self.title   
+
+class FAQ(models.Model):
+    que = models.TextField(null=True, blank=True)
+    ans = RichTextField(null=True, blank=True)
+

@@ -9,5 +9,6 @@ admin.site.register(Contact)
 admin.site.register(Open1)
 admin.site.register(Open2)
 admin.site.register(FAQ)
+admin.site.register(DropMsg)
 
 

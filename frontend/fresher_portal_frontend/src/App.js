@@ -1,10 +1,17 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainNavigation from './MainNavigation';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<MainNavigation />} />
+        <Route path='/about' />
+        <Route path='/contact' />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

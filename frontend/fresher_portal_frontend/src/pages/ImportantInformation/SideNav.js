@@ -16,7 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Template from '../pages/ImportantInformation/Template';
+import Template from './Template';
 
 const drawerWidth = 240;
 
@@ -118,8 +118,8 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <div style={{ display: 'flex', marginRight: '10px' }}>
-            <h3 style={{ marginRight: '5px' }}>Admin</h3>
-            <h3 style={{ marginRight: '10px' }}>Panel</h3>
+            <h3 style={{ marginRight: '5px' }}>Important</h3>
+            <h3 style={{ marginRight: '10px' }}>Information</h3>
           </div>
           {/* <Typography variant='h6' component='div' >
             Admin Panel

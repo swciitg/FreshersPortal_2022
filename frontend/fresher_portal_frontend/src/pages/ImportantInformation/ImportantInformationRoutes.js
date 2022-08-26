@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Template from './Template';
-import ResponsiveDrawer from '../../components/SideNav';
+import ResponsiveDrawer from './SideNav';
 
 const ImportantInformationRoutes = () => {
   return (

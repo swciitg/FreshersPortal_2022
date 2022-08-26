@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainNavigation from './MainNavigation';
+import ImportantInformationRoutes from './pages/ImportantInformation/ImportantInformationRoutes';
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<MainNavigation />} />
+        <Route path='/important/*' element={<ImportantInformationRoutes />} />
         <Route path='/about' />
         <Route path='/contact' />
       </Routes>

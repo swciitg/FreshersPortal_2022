@@ -14,35 +14,31 @@ const ImportantInformationRoutes = () => {
           position: 'relative',
           top: '80px',
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: 'left',
         }}
       >
         <Routes>
-          <Route
-            path='/'
-            element={
-              <Template title='Provisional ID Card' children='some lmba data' />
-            }
-          />
+          <Route path='/' element={<Template title='Provisional ID Card' />} />
           <Route
             path='/provisional'
-            element={
-              <Template title='Provisional ID Card' children='some lmba data' />
-            }
+            element={<Template title='Provisional ID Card' />}
           />
           <Route
             path='/antiragging'
             element={
               <Template
                 title='Antiragging Affidavit'
-                children='some lmba data'
+                descriptionTitle='The necessary instructions for filling up the anti-ragging form is as follows:-'
               />
             }
           />
           <Route
             path='/hostelundertaking'
             element={
-              <Template title='Hostel Undertaking' children='some lmba data' />
+              <Template
+                title='Hostel Undertaking'
+                descriptionTitle='The instructions for hostel Undertakings for hostel residents are as follows:-'
+              />
             }
           />
         </Routes>

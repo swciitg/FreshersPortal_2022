@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import { Stack, Button } from '@mui/material'
+import { Stack, Button } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -55,35 +55,34 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function SearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position='static'>
         <Toolbar>
-        <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
+          <IconButton
+            size='large'
+            edge='start'
+            color='inherit'
+            aria-label='open drawer'
             sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
           <Stack direction='row' spacing={3}>
-             <Button color='inherit'>HOME</Button>
-             <Button color='inherit'>IMPORTANT INFORMATION</Button>
-             <Button color='inherit'>ACADEMICS</Button>
-             <Button color='inherit'>HOSTELS </Button>
-             <Button color='inherit'>EVENTS</Button>
-             <Button color='inherit'>STUDENT ORGANISATION</Button>
+            <Button color='inherit'>HOME</Button>
+            <Button color='inherit'>IMPORTANT INFORMATION</Button>
+            <Button color='inherit'>ACADEMICS</Button>
+            <Button color='inherit'>HOSTELS </Button>
+            <Button color='inherit'>EVENTS</Button>
+            <Button color='inherit'>STUDENT ORGANISATION</Button>
           </Stack>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder='Search…'
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
-          
         </Toolbar>
       </AppBar>
     </Box>

@@ -1,11 +1,17 @@
-import * as React from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ImportantInformationRoutes from './pages/ImportantInformation/ImportantInformationRoutes';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-        
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/important/*' element={<ImportantInformationRoutes />} />
+        <Route path='/about' />
+        <Route path='/contact' />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

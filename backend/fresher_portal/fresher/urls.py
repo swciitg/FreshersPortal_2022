@@ -6,7 +6,7 @@ from .import views
 app_name='fresher'
 
 urlpatterns = [
-    path('api/<str:var>/',views.API),
+    path('api/<str:var1>/<str:var2>',views.API),
     # path('api/imp/<int:var>/', API.as_view(),name='api-imp'),
     # path('api/imp/', API.as_view(),name='api-imp'),
     # path('api/base', API.as_view(var=2),name='api-base'),

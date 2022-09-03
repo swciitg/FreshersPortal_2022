@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
+import './Template.css';
 
-const Template = (props) => {
+const Provisional = () => {
   return (
     <div className='page'>
       <div className='heading'>
@@ -9,11 +10,11 @@ const Template = (props) => {
       </div>
 
       <div className='description'>
-        <div className='description-header'>Some description</div>
+        <div className='description-header'> Some description</div>
         <div>Lambi List</div>
       </div>
     </div>
   );
-};
+}
 
-export default Template;
+export default Provisional

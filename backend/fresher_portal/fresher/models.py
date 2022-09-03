@@ -4,6 +4,7 @@ from ckeditor.fields import RichTextField
 
 # Imp Model
 class Imp(models.Model):
+    type = models.CharField('Type', max_length=20, null=True, blank=True)
     title = models.CharField('Title', max_length=200, null=True, blank=True)
     info = RichTextField('Info', blank=True, null=True)
 

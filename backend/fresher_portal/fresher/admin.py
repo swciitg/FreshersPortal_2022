@@ -11,4 +11,3 @@ admin.site.register(Open2)
 admin.site.register(FAQ)
 admin.site.register(DropMsg)
 
-

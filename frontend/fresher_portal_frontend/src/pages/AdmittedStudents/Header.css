@@ -1,0 +1,159 @@
+#b1 {
+  position: absolute;
+  left: 8.82%;
+  right: 87.78%;
+  top: 36.36%;
+  bottom: 30.91%;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+#b2 {
+  position: absolute;
+  left: 15.62%;
+  right: 69.72%;
+  top: 36.36%;
+  bottom: 30.91%;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+#b3 {
+  position: absolute;
+  left: 33.89%;
+  right: 59.38%;
+  top: 36.36%;
+  bottom: 30.91%;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+#b4 {
+  position: absolute;
+  left: 44.1%;
+  right: 43.33%;
+  top: 36.36%;
+  bottom: 30.91%;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+#b5 {
+  position: absolute;
+  left: 59.93%;
+  right: 35.76%;
+  top: 36.36%;
+  bottom: 30.91%;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+#b6 {
+  position: absolute;
+  left: 67.57%;
+  right: 18.26%;
+  top: 36.36%;
+  bottom: 30.91%;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+#search {
+  position: absolute;
+  left: 11.58%;
+  right: 13.52%;
+  top: 11.58%;
+  bottom: 13.52%;
+
+  border: 1.5px solid #130f26;
+}
+#menu {
+  position: absolute;
+  left: 89.65%;
+  right: 8.89%;
+  top: 35.45%;
+  bottom: 64.55%;
+
+  border: 2px solid #130f26;
+}
+#line {
+  position: absolute;
+  left: 8.33%;
+  right: 8.33%;
+  top: 100%;
+  bottom: 0%;
+
+  border: 1px solid #000000;
+}

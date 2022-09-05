@@ -8,9 +8,54 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { NavLink } from "react-router-dom";
+import { FunctionsOutlined, ViewComfyAltOutlined } from "@mui/icons-material";
 
 export default function AdmittedStudents() {
-  const [open, setOpen] = useState(false);
+  var s1 = 4;
+  var s2 = 4;
+  const data = [
+    {
+      date: "06.07.2022",
+      title: "Regarding hostel accomodation",
+    },
+    {
+      date: "01.07.2022",
+      title: "Regarding mess refund",
+    },
+    {
+      date: "30.06.2022",
+      title: "Regarding branch change",
+    },
+    {
+      date: "22.06.2022",
+      title: "Regarding SC/ST scholarship",
+    },
+    {
+      date: "14.06.2022",
+      title: "Regarding fee ",
+    },
+    {
+      date: "03.06.2022",
+      title: "Regarding department",
+    },
+    {
+      date: "14.06.2022",
+      title: "Regarding fee ",
+    },
+    {
+      date: "03.06.2022",
+      title: "Regarding department",
+    },
+    {
+      date: "14.06.2022",
+      title: "Regarding fee ",
+    },
+    {
+      date: "03.06.2022",
+      title: "Regarding department",
+    },
+  ];
 
   const galTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -32,6 +77,11 @@ export default function AdmittedStudents() {
       Telephone Directory
     </Tooltip>
   );
+  // const Viewall1 = () => (
+
+  // );
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
 
   return (
     <>
@@ -47,9 +97,9 @@ export default function AdmittedStudents() {
               scelerisque sagittis, lorem vitae ultrices viverra. Id enim
               accumsan, aliquet cras neque.
             </p>
-            <div id="d1a1">
+            <NavLink to="#" id="d1a1">
               <div id="d1ap"> Important Links</div>
-            </div>
+            </NavLink>
           </div>
           <div className="col-span-1 mt-36 " id="d1b">
             <OverlayTrigger
@@ -57,36 +107,36 @@ export default function AdmittedStudents() {
               delay={{ show: 150, hide: 150 }}
               overlay={galTooltip}
             >
-              <Button className="rectpurple">
+              <NavLink to="#" className="rectpurple">
                 <img className="s1icons" src="/AdmittedStudents/gallery.svg" />
-              </Button>
+              </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
               placement="right"
               delay={{ show: 150, hide: 150 }}
               overlay={calTooltip}
             >
-              <div className="rectpurple">
+              <NavLink to="#" className="rectpurple">
                 <img className="s1icons" src="/AdmittedStudents/Calendar.svg" />
-              </div>
+              </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
               placement="right"
               delay={{ show: 150, hide: 150 }}
               overlay={mapTooltip}
             >
-              <div className="rectpurple">
+              <NavLink to="#" className="rectpurple">
                 <img className="s1icons" src="/AdmittedStudents/Location.svg" />
-              </div>
+              </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
               placement="right"
               delay={{ show: 150, hide: 150 }}
               overlay={telTooltip}
             >
-              <div className="rectpurple">
+              <NavLink to="#" className="rectpurple">
                 <img className="s1icons" src="/AdmittedStudents/Call.svg" />
-              </div>
+              </NavLink>
             </OverlayTrigger>
           </div>
         </div>
@@ -95,66 +145,51 @@ export default function AdmittedStudents() {
         <div id="s2">
           <h2 id="s2h">Announcements</h2>
           <ul id="ul1">
-            <li className="list1 grid grid-cols-12 ">
-              <div className="col-span-11">
-                <div className="s2d1a">06.07.2022</div>
-                <div className="s2d1b">Regarding hostel accomodation</div>
-              </div>
+            {(() => {
+              if (!open) {
+                s1 = 4;
+              } else {
+                s1 = Object.keys(data).length;
+              }
+            })()}
+            {data.slice(0, s1).map((announc) => (
+              <li className="list1 grid grid-cols-12 ">
+                <div className="col-span-11">
+                  <div className="s2d1a">{announc.date}</div>
+                  <div className="s2d1b">{announc.title}</div>
+                </div>
 
-              <div className="col-span-1 " id="s2c2">
-                <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-              </div>
-            </li>
-            <li className="list1 grid grid-cols-12 ">
-              <div className="col-span-11">
-                <div className="s2d1a">01.07.2022</div>
-                <div className="s2d1b">Regarding mess refund</div>
-              </div>
-
-              <div className="col-span-1 " id="s2c2">
-                <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-              </div>
-            </li>
-            <li className="list1 grid grid-cols-12 ">
-              <div className="col-span-11">
-                <div className="s2d1a">30.06.2022</div>
-                <div className="s2d1b">Regarding branch change</div>
-              </div>
-
-              <div className="col-span-1 " id="s2c2">
-                <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-              </div>
-            </li>
-            <li className="list1 grid grid-cols-12 ">
-              <div className="col-span-11">
-                <div className="s2d1a">22.06.2022</div>
-                <div className="s2d1b">Regarding SC/ST scholarship</div>
-              </div>
-
-              <div className="col-span-1 " id="s2c2">
-                <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-              </div>
-            </li>
+                <NavLink to="#" className="col-span-1 " id="s2c2">
+                  <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
+                </NavLink>
+              </li>
+            ))}
           </ul>
-
-          <div id="s2div5">
-            <Button
-              id="viewall"
-              onClick={() => setOpen(!open)}
-              aria-controls="example-collapse-text"
-              aria-expanded={open}
-            >
-              View all
-            </Button>
-            <Collapse in={open}>
-              <div id="collap">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. Nihil anim keffiyeh
-                helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                ea proident.
-              </div>
-            </Collapse>
-          </div>
+          {(() => {
+            if (!open) {
+              return (
+                <Button
+                  id="s2div5"
+                  onClick={() => setOpen(!open)}
+                  aria-controls="example-collapse-text"
+                  aria-expanded={open}
+                >
+                  <Button id="viewall">View all</Button>
+                </Button>
+              );
+            } else {
+              return (
+                <Button
+                  id="s2div5"
+                  onClick={() => setOpen(!open)}
+                  aria-controls="example-collapse-text"
+                  aria-expanded={open}
+                >
+                  <Button id="viewall">View less</Button>
+                </Button>
+              );
+            }
+          })()}
 
           <h2 id="s22h">Upcoming Events</h2>
           {/* <div id="sort"> */}
@@ -162,7 +197,7 @@ export default function AdmittedStudents() {
            */}
           <div id="sort">
             <DropdownButton id="sorttext" title="Latest">
-              <Dropdown.Item href="#/action-1" className="sortitem" id="one">
+              {/* <Dropdown.Item href="#/action-1" className="sortitem" id="one">
                 Action
               </Dropdown.Item>
               <Dropdown.Item href="#/action-2" className="sortitem">
@@ -170,56 +205,57 @@ export default function AdmittedStudents() {
               </Dropdown.Item>
               <Dropdown.Item href="#/action-3" className="sortitem">
                 Something else
-              </Dropdown.Item>
+              </Dropdown.Item> */}
             </DropdownButton>
             <img src="/AdmittedStudents/Stroke 1.svg" id="downarrow" />
           </div>
           {/* </div> */}
           <ul id="ul2">
-            <li className="list2 grid grid-cols-12 ">
-              <div className="col-span-11">
-                <div className="s2d1a">06.07.2022</div>
-                <div className="s2d1b">Regarding hostel accomodation</div>
-              </div>
+            {(() => {
+              if (!open2) {
+                s2 = 4;
+              } else {
+                s2 = Object.keys(data).length;
+              }
+            })()}
+            {data.slice(0, s2).map((announc) => (
+              <li className="list1 grid grid-cols-12 ">
+                <div className="col-span-11">
+                  <div className="s2d1a">{announc.date}</div>
+                  <div className="s2d1b">{announc.title}</div>
+                </div>
 
-              <div className="col-span-1 " id="s2c2">
-                <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-              </div>
-            </li>
-            <li className="list2 grid grid-cols-12 ">
-              <div className="col-span-11">
-                <div className="s2d1a">01.07.2022</div>
-                <div className="s2d1b">Regarding mess refund</div>
-              </div>
-
-              <div className="col-span-1 " id="s2c2">
-                <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-              </div>
-            </li>
-            <li className="list2 grid grid-cols-12 ">
-              <div className="col-span-11">
-                <div className="s2d1a">30.06.2022</div>
-                <div className="s2d1b">Regarding branch change</div>
-              </div>
-
-              <div className="col-span-1 " id="s2c2">
-                <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-              </div>
-            </li>
-            <li className="list2 grid grid-cols-12 ">
-              <div className="col-span-11">
-                <div className="s2d1a">22.06.2022</div>
-                <div className="s2d1b">Regarding SC/ST scholarship</div>
-              </div>
-
-              <div className="col-span-1 " id="s2c2">
-                <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-              </div>
-            </li>
+                <NavLink to="#" className="col-span-1 " id="s2c2">
+                  <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
+                </NavLink>
+              </li>
+            ))}
           </ul>
-          <button id="s22div5">
-            <div id="viewall">View all</div>
-          </button>
+          {(() => {
+            if (!open2) {
+              return (
+                <Button
+                  id="s22div5"
+                  onClick={() => setOpen2(!open2)}
+                  aria-controls="example-collapse-text"
+                  aria-expanded={open2}
+                >
+                  <Button id="viewall">View all</Button>
+                </Button>
+              );
+            } else {
+              return (
+                <Button
+                  id="s22div5"
+                  onClick={() => setOpen2(!open2)}
+                  aria-controls="example-collapse-text"
+                  aria-expanded={open2}
+                >
+                  <Button id="viewall">View less</Button>
+                </Button>
+              );
+            }
+          })()}
         </div>
       </section>
       <section>
@@ -264,35 +300,45 @@ export default function AdmittedStudents() {
             </div>
 
             <div className="s4l2">About Us</div>
-            <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            <NavLink to="#">
+              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            </NavLink>
           </div>
           <div id="s4d4">
             <div className="s4div">
               <img classname="s4l1" src="/AdmittedStudents/Calendar2.svg" />
             </div>
-            <div className="s4l2">Counsellor's Timimgs</div>
-            <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            <div className="s4l2">Counsellor's Timings</div>
+            <NavLink to="#">
+              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            </NavLink>
           </div>
           <div id="s4d5">
             <div className="s4div">
               <img classname="s4l1" src="/AdmittedStudents/Add User.svg" />
             </div>
             <div className="s4l2">Student Mentorship</div>
-            <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            <NavLink to="#">
+              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            </NavLink>
           </div>
           <div id="s4d6">
             <div className="s4div">
               <img classname="s4l1" src="/AdmittedStudents/3 User.svg" />
             </div>
             <div className="s4l2">Team</div>
-            <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            <NavLink to="#">
+              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            </NavLink>
           </div>
           <div id="s4d7">
             <div className="s4div">
               <img classname="s4l1" src="/AdmittedStudents/Shield Done.svg" />
             </div>
             <div className="s4l2">Anonymous Emotional Support System</div>
-            <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            <NavLink to="#">
+              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
+            </NavLink>
           </div>
         </div>
       </section>

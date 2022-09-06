@@ -1,3 +1,8 @@
+/* #box {
+  display: flex;
+  flex-direction: column;
+} */
+
 #d1 {
   position: absolute;
   width: 1440px;
@@ -5,11 +10,18 @@
   left: 0px;
   top: 121px;
 }
+#s1 {
+  position: relative;
+  width: 1440px;
+  height: 446px;
+  left: 0px;
+  top: 40px;
+}
 #d1h {
-  position: absolute;
+  position: relative;
   width: 504px;
   height: 52px;
-  left: 120px;
+  left: 340px;
   top: 64px;
 
   font-family: "Plus Jakarta Sans";
@@ -24,10 +36,10 @@
 }
 
 #d1p {
-  position: absolute;
+  position: relative;
   width: 793px;
   height: 108px;
-  left: 120px;
+  left: 340px;
   top: 149px;
 
   /* Body text */
@@ -55,11 +67,11 @@
   padding: 12px 24px;
   gap: 10px;
 
-  position: absolute;
+  position: relative;
   width: 160px;
   height: 42px;
-  left: 120px;
-  top: 420px;
+  left: 340px;
+  top: 200px;
 
   /* #5468FD */
 
@@ -94,7 +106,8 @@
   flex-grow: 0;
 }
 #d1b {
-  padding-left: 1250px;
+  padding-left: 290px;
+  padding-top: 55px;
 }
 .rectpurple {
   width: 47px;
@@ -111,25 +124,23 @@
 }
 
 #s2 {
-  position: absolute;
+  position: relative;
   width: 1440px;
-  height: 90%;
+  height: auto;
   left: 220px;
-  top: 718px;
+  top: 200px;
   padding-bottom: 50px;
-  padding: 42px 104px 0 120px;
+  /* padding: 42px 104px 0 120px; */
 
   /* #F7F1FF */
-  z-index: -2;
+  z-index: 1;
   background: #f7f1ff;
 }
 
 #s2h {
-  position: absolute;
-  /* left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%; */
+  position: relative;
+  left: 120px;
+  top: 42px;
 
   font-family: "Plus Jakarta Sans";
   font-style: normal;
@@ -159,11 +170,11 @@
   padding: 12px 24px;
   gap: 10px;
 
-  position: absolute;
+  position: relative;
   width: 110px;
   height: 42px;
   left: 557px;
-  top: 599px;
+  top: 21px;
 
   /* #5468FD */
 
@@ -175,6 +186,8 @@
 }
 #ul1 {
   margin-top: 80px;
+  left: 120px;
+  position: relative;
 }
 .list1 {
   box-sizing: border-box;
@@ -195,9 +208,9 @@
 }
 #ul2 {
   margin-top: 80px;
-  position: absolute;
-  left: 773px;
-  top: 19px;
+  position: relative;
+  left: 53px;
+  /* top: 19px; */
 }
 .list2 {
   box-sizing: border-box;
@@ -266,8 +279,8 @@
   flex-grow: 0;
 }
 #s22h {
-  position: absolute;
-  left: 773px;
+  position: relative;
+  left: 53px;
   top: 42px;
 
   font-family: "Plus Jakarta Sans";
@@ -390,11 +403,11 @@
   padding: 12px 24px;
   gap: 10px;
 
-  position: absolute;
+  position: relative;
   width: 110px;
   height: 42px;
-  left: 1207px;
-  top: 599px;
+  left: 487px;
+  top: 21px;
 
   /* #5468FD */
 
@@ -480,7 +493,7 @@
   width: 1440px;
   height: 816px;
   left: 220px;
-  top: 1470px;
+  top: 300px;
   z-index: -3;
 
   background: #ffffff;
@@ -531,11 +544,11 @@
 }
 
 #s4 {
-  position: absolute;
+  position: relative;
   width: 1440px;
   height: 892px;
   left: 220px;
-  top: 2300px;
+  top: 200px;
 
   /* #F7F1FF */
 

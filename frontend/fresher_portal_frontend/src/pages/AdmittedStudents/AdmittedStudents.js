@@ -86,8 +86,8 @@ export default function AdmittedStudents() {
   return (
     <>
       <Navbar />
-      <section>
-        <div className="grid grid-cols-12" id="d1">
+      <div id="box">
+        <div className="grid grid-cols-12" id="s1">
           <div className="col-span-11" id="d1a">
             <h2 id="d1h">Important Submissions</h2>
             <p id="d1p">
@@ -140,64 +140,68 @@ export default function AdmittedStudents() {
             </OverlayTrigger>
           </div>
         </div>
-      </section>
-      <section>
-        <div id="s2">
-          <h2 id="s2h">Announcements</h2>
-          <ul id="ul1">
+
+        <div id="s2" className="grid grid-cols-12">
+          <div className="col-span-6">
+            <h2 id="s2h">Announcements</h2>
+            <ul id="ul1">
+              {(() => {
+                if (!open) {
+                  s1 = 4;
+                } else {
+                  s1 = Object.keys(data).length;
+                }
+              })()}
+              {data.slice(0, s1).map((announc) => (
+                <li className="list1 grid grid-cols-12 ">
+                  <div className="col-span-11">
+                    <div className="s2d1a">{announc.date}</div>
+                    <div className="s2d1b">{announc.title}</div>
+                  </div>
+
+                  <NavLink to="#" className="col-span-1 " id="s2c2">
+                    <img
+                      className=" s2d1c"
+                      src="/AdmittedStudents/Arrow 2.svg"
+                    />
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
             {(() => {
               if (!open) {
-                s1 = 4;
+                return (
+                  <Button
+                    id="s2div5"
+                    onClick={() => setOpen(!open)}
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open}
+                  >
+                    <Button id="viewall">View all</Button>
+                  </Button>
+                );
               } else {
-                s1 = Object.keys(data).length;
+                return (
+                  <Button
+                    id="s2div5"
+                    onClick={() => setOpen(!open)}
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open}
+                  >
+                    <Button id="viewall">View less</Button>
+                  </Button>
+                );
               }
             })()}
-            {data.slice(0, s1).map((announc) => (
-              <li className="list1 grid grid-cols-12 ">
-                <div className="col-span-11">
-                  <div className="s2d1a">{announc.date}</div>
-                  <div className="s2d1b">{announc.title}</div>
-                </div>
-
-                <NavLink to="#" className="col-span-1 " id="s2c2">
-                  <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-          {(() => {
-            if (!open) {
-              return (
-                <Button
-                  id="s2div5"
-                  onClick={() => setOpen(!open)}
-                  aria-controls="example-collapse-text"
-                  aria-expanded={open}
-                >
-                  <Button id="viewall">View all</Button>
-                </Button>
-              );
-            } else {
-              return (
-                <Button
-                  id="s2div5"
-                  onClick={() => setOpen(!open)}
-                  aria-controls="example-collapse-text"
-                  aria-expanded={open}
-                >
-                  <Button id="viewall">View less</Button>
-                </Button>
-              );
-            }
-          })()}
-
-          <h2 id="s22h">Upcoming Events</h2>
-          {/* <div id="sort"> */}
-          {/* <div id="sorttext">Latest</div>
-           */}
-          <div id="sort">
-            <DropdownButton id="sorttext" title="Latest">
-              {/* <Dropdown.Item href="#/action-1" className="sortitem" id="one">
+          </div>
+          <div className="col-span-6">
+            <h2 id="s22h">Upcoming Events</h2>
+            {/* <div id="sort"> */}
+            {/* <div id="sorttext">Latest</div>
+             */}
+            <div id="sort">
+              <DropdownButton id="sorttext" title="Latest">
+                {/* <Dropdown.Item href="#/action-1" className="sortitem" id="one">
                 Action
               </Dropdown.Item>
               <Dropdown.Item href="#/action-2" className="sortitem">
@@ -206,59 +210,62 @@ export default function AdmittedStudents() {
               <Dropdown.Item href="#/action-3" className="sortitem">
                 Something else
               </Dropdown.Item> */}
-            </DropdownButton>
-            <img src="/AdmittedStudents/Stroke 1.svg" id="downarrow" />
-          </div>
-          {/* </div> */}
-          <ul id="ul2">
+              </DropdownButton>
+              <img src="/AdmittedStudents/Stroke 1.svg" id="downarrow" />
+            </div>
+            {/* </div> */}
+            <ul id="ul2">
+              {(() => {
+                if (!open2) {
+                  s2 = 4;
+                } else {
+                  s2 = Object.keys(data).length;
+                }
+              })()}
+              {data.slice(0, s2).map((announc) => (
+                <li className="list1 grid grid-cols-12 ">
+                  <div className="col-span-11">
+                    <div className="s2d1a">{announc.date}</div>
+                    <div className="s2d1b">{announc.title}</div>
+                  </div>
+
+                  <NavLink to="#" className="col-span-1 " id="s2c2">
+                    <img
+                      className=" s2d1c"
+                      src="/AdmittedStudents/Arrow 2.svg"
+                    />
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
             {(() => {
               if (!open2) {
-                s2 = 4;
+                return (
+                  <Button
+                    id="s22div5"
+                    onClick={() => setOpen2(!open2)}
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open2}
+                  >
+                    <Button id="viewall">View all</Button>
+                  </Button>
+                );
               } else {
-                s2 = Object.keys(data).length;
+                return (
+                  <Button
+                    id="s22div5"
+                    onClick={() => setOpen2(!open2)}
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open2}
+                  >
+                    <Button id="viewall">View less</Button>
+                  </Button>
+                );
               }
             })()}
-            {data.slice(0, s2).map((announc) => (
-              <li className="list1 grid grid-cols-12 ">
-                <div className="col-span-11">
-                  <div className="s2d1a">{announc.date}</div>
-                  <div className="s2d1b">{announc.title}</div>
-                </div>
-
-                <NavLink to="#" className="col-span-1 " id="s2c2">
-                  <img className=" s2d1c" src="/AdmittedStudents/Arrow 2.svg" />
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-          {(() => {
-            if (!open2) {
-              return (
-                <Button
-                  id="s22div5"
-                  onClick={() => setOpen2(!open2)}
-                  aria-controls="example-collapse-text"
-                  aria-expanded={open2}
-                >
-                  <Button id="viewall">View all</Button>
-                </Button>
-              );
-            } else {
-              return (
-                <Button
-                  id="s22div5"
-                  onClick={() => setOpen2(!open2)}
-                  aria-controls="example-collapse-text"
-                  aria-expanded={open2}
-                >
-                  <Button id="viewall">View less</Button>
-                </Button>
-              );
-            }
-          })()}
+          </div>
         </div>
-      </section>
-      <section>
+
         <div id="s3">
           <h2 id="s3h">Freshers' Guide Magazine</h2>
           <div id="s3d1">
@@ -275,8 +282,7 @@ export default function AdmittedStudents() {
           </div>
           <div id="s3d2"></div>
         </div>
-      </section>
-      <section>
+
         <div id="s4">
           <div id="s4d1">
             <div id="saathi">SAATHI</div>
@@ -341,7 +347,7 @@ export default function AdmittedStudents() {
             </NavLink>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

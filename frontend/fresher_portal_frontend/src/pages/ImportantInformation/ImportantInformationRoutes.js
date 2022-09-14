@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './SideBar';
+import ResponsiveDrawer from './SideNav';
 import axios from 'axios';
 import Provisional from './Provisional';
 import Antiragging from './Antiragging';
@@ -21,12 +21,7 @@ const ImportantInformationRoutes = () => {
 
   // const fetchData = () => {
   //   axios
-  //     .get('http://127.0.0.1:8000/api/open2/tech', {
-  //       headers: {
-  //         'Access-Control-Allow-Origin': '*',
-  //         'Content-Type': 'application/json',
-  //       },
-  //     })
+  //     .get('http://127.0.0.1:8000/api/open2/tech')
   //     .then((response) => {
   //       console.log(response.data);
   //     })
@@ -35,7 +30,7 @@ const ImportantInformationRoutes = () => {
 
   return (
     <div style={{ display: 'flex' }}>
-      <Sidebar />
+      <ResponsiveDrawer />
 
       <div
         style={{
@@ -54,7 +49,10 @@ const ImportantInformationRoutes = () => {
           <Route path='/bonafide' element={<Bonafide />} />
           <Route path='/codeofconduct' element={<CodeOfConduct />} />
           <Route path='/guidelines' element={<Guidelines />} />
-          <Route path='/iitggirlscollective' element={<IITGGirlsCollective />} />
+          <Route
+            path='/iitggirlscollective'
+            element={<IITGGirlsCollective />}
+          />
           <Route path='/permanentidentity' element={<PermanentIdentity />} />
           <Route path='/portal' element={<Portal />} />
         </Routes>

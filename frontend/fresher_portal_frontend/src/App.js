@@ -5,7 +5,6 @@ import AdmittedStudents from "./pages/AdmittedStudents/AdmittedStudents";
 import Home from "./pages/Home/Home";
 import ContactUs from './pages/ContactUs/contactus';
 import HostelsAndFacilitiesRoutes from './pages/HostelsAndFacilities/HostelsAndFacilities';
-import ImportantInformationRoutes from './pages/ImportantInformation/ImportantInformationRoutes';
 
 const App = () => {
   return (

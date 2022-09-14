@@ -28,9 +28,11 @@
   color: #000000;
 }
 
-.description {
+.desc {
   background: #f7f1ff;
+  font-weight: 400;
   padding: 2rem;
+  line-height: 30px;
 }
 
 .description-header {

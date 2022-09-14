@@ -13,20 +13,6 @@ import PermanentIdentity from './PermanentIdentity';
 import Portal from './Portal';
 
 const ImportantInformationRoutes = () => {
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
-  // const fetchData = () => {
-  //   axios
-  //     .get('http://127.0.0.1:8000/api/open2/tech')
-  //     .then((response) => {
-  //       console.log(response.data);
-  //     })
-  //     .catch((error) => console.log('error', error));
-  // };
 
   return (
     <div style={{ display: 'flex' }}>

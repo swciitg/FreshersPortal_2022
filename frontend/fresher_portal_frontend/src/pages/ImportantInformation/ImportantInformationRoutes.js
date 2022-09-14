@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ResponsiveDrawer from './SideNav';
 import axios from 'axios';
+import Template from './Template';
 import Provisional from './Provisional';
 import Antiragging from './Antiragging';
 import HostelUndertaking from './HostelUndertaking';

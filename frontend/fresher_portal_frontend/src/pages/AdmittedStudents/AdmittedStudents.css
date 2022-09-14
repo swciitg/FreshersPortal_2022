@@ -1,0 +1,720 @@
+/* #box {
+  display: flex;
+  flex-direction: column;
+} */
+
+#d1 {
+  position: absolute;
+  width: 1440px;
+  height: 446px;
+  left: 0px;
+  top: 121px;
+}
+#s1 {
+  position: relative;
+  width: 1440px;
+  height: 446px;
+  left: 0px;
+  top: 40px;
+}
+#d1h {
+  position: relative;
+  width: 504px;
+  height: 52px;
+  left: 340px;
+  top: 64px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 43px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+#d1p {
+  position: relative;
+  width: 793px;
+  height: 108px;
+  left: 340px;
+  top: 149px;
+
+  /* Body text */
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  /* or 200% */
+
+  text-align: justify;
+
+  color: #000000;
+}
+#d1a1 {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+
+  position: relative;
+  width: 160px;
+  height: 42px;
+  left: 340px;
+  top: 200px;
+
+  /* #5468FD */
+
+  border: 2px solid #5468fd;
+  /* Ultra light shadow - for drop downs */
+
+  filter: drop-shadow(0px 4px 20px rgba(30, 37, 50, 0.04));
+  border-radius: 4px;
+}
+#d1ap {
+  width: 100px;
+  height: 18px;
+  left: 120px;
+  top: 420px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+
+  /* #313A57 */
+
+  color: #313a57;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+#d1b {
+  padding-left: 290px;
+  padding-top: 55px;
+}
+.rectpurple {
+  width: 47px;
+  height: 53px;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #f7f1ff;
+  border-radius: 5px 0px 0px 5px;
+}
+.s1icons {
+}
+
+#s2 {
+  position: relative;
+  width: 1440px;
+  height: auto;
+  left: 220px;
+  top: 200px;
+  padding-bottom: 50px;
+  /* padding: 42px 104px 0 120px; */
+
+  /* #F7F1FF */
+  z-index: 1;
+  background: #f7f1ff;
+}
+
+#s2h {
+  position: relative;
+  left: 120px;
+  top: 42px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  /* or 131% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0038em;
+
+  /* Style */
+
+  color: #14181c;
+}
+
+#s2div5 {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+
+  position: relative;
+  width: 110px;
+  height: 42px;
+  left: 557px;
+  top: 21px;
+
+  /* #5468FD */
+
+  border: 2px solid #5468fd;
+  /* Ultra light shadow - for drop downs */
+
+  filter: drop-shadow(0px 4px 20px rgba(30, 37, 50, 0.04));
+  border-radius: 4px;
+}
+#ul1 {
+  margin-top: 80px;
+  left: 120px;
+  position: relative;
+}
+.list1 {
+  box-sizing: border-box;
+  position: relative;
+  width: 547px;
+  height: 98px;
+
+  margin-top: 21px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+#ul2 {
+  margin-top: 80px;
+  position: relative;
+  left: 53px;
+  /* top: 19px; */
+}
+.list2 {
+  box-sizing: border-box;
+  position: relative;
+  width: 547px;
+  height: 98px;
+
+  margin-top: 21px;
+  z-index: -1;
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+#dropdown {
+}
+#collap {
+  position: absolute;
+  top: 50px;
+}
+
+#button-tooltip {
+  padding-left: 10px;
+  width: 160px;
+  height: 53px;
+  display: flex;
+  ustify-content: center;
+  align-items: center;
+  background: #f7f1ff;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  /* #5468FD */
+
+  color: #5468fd;
+}
+#viewall {
+  width: 80px;
+  height: 18px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+
+  /* #313A57 */
+
+  color: #313a57;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+#s22h {
+  position: relative;
+  left: 53px;
+  top: 42px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  /* or 131% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0038em;
+
+  /* Style */
+
+  color: #14181c;
+}
+#sort {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+  position: absolute;
+  left: 1152px;
+  top: 45.5px;
+
+  width: 165px;
+  height: 42px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  /* Ultra light shadow - for drop downs */
+
+  box-shadow: 0px 4px 20px rgba(30, 37, 50, 0.04);
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.sortitem {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+  position: relative;
+  /* z-index: 1; */
+
+  width: 165px;
+  height: 42px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  /* Ultra light shadow - for drop downs */
+
+  box-shadow: 0px 4px 20px rgba(30, 37, 50, 0.04);
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+#sorttext {
+  width: 54px;
+  height: 18px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  /* Dark Blue - For text and dark bg */
+
+  color: #1e2532;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+#downarrow {
+  position: absolute;
+  left: 80.83%;
+  top: 45%;
+
+  /* Dark Blue - For text and dark bg */
+}
+
+#s22div5 {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+
+  position: relative;
+  width: 110px;
+  height: 42px;
+  left: 487px;
+  top: 21px;
+
+  /* #5468FD */
+
+  border: 2px solid #5468fd;
+  /* Ultra light shadow - for drop downs */
+
+  filter: drop-shadow(0px 4px 20px rgba(30, 37, 50, 0.04));
+  border-radius: 4px;
+}
+#viewall2 {
+  width: 80px;
+  height: 18px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+
+  /* #313A57 */
+
+  color: #313a57;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.s2d1a {
+  position: absolute;
+  width: 196.59px;
+  height: 20px;
+  left: 20px;
+  top: 22px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+
+  /* #313A57 */
+
+  color: #313a57;
+}
+.s2d1b {
+  position: absolute;
+  width: 757.33px;
+  height: 28px;
+  left: 20px;
+  top: 50px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  /* identical to box height */
+
+  /* #313A57 */
+
+  color: #313a57;
+}
+.s2d1c {
+  position: absolute;
+  width: 71.49px;
+  height: 32px;
+  left: 480px;
+  top: 40px;
+}
+#s2c2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#s3 {
+  position: relative;
+  width: 1440px;
+  height: 816px;
+  left: 220px;
+  top: 300px;
+  z-index: -3;
+
+  background: #ffffff;
+}
+#s3h {
+  position: absolute;
+  width: 415px;
+  height: 43px;
+  left: 120px;
+  top: 102px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 43px;
+  /* identical to box height */
+
+  color: #000000;
+}
+#s3d1 {
+  position: absolute;
+  width: 546px;
+  height: 456px;
+  left: 120px;
+  top: 183px;
+
+  /* Body text */
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  /* or 200% */
+
+  color: #000000;
+}
+#s3d2 {
+  position: absolute;
+  width: 591px;
+  height: 464px;
+  left: 730px;
+  top: 183px;
+
+  background: #a3a3a3;
+  border-radius: 8px;
+}
+
+#s4 {
+  position: relative;
+  width: 1440px;
+  height: 892px;
+  left: 220px;
+  top: 200px;
+
+  /* #F7F1FF */
+
+  background: #f7f1ff;
+}
+#s4d1 {
+  position: absolute;
+  width: 644px;
+  height: 129px;
+  left: 120px;
+  top: 102px;
+
+  /* Heading */
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 43px;
+
+  color: #000000;
+}
+#s4d2 {
+  position: absolute;
+  width: 490px;
+  height: 456px;
+  left: 120px;
+  top: 232px;
+
+  /* Body text */
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  /* or 200% */
+
+  color: #000000;
+}
+#s4d3 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 547px;
+  height: 98px;
+  left: 773px;
+  top: 114px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+#s4d4 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 547px;
+  height: 98px;
+  left: 773px;
+  top: 233px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+#s4d5 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 547px;
+  height: 98px;
+  left: 773px;
+  top: 352px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+#s4d6 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 547px;
+  height: 98px;
+  left: 773px;
+  top: 471px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+#s4d7 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 547px;
+  height: 98px;
+  left: 773px;
+  top: 590px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Extreme light - for strokes and lines */
+
+  border: 1px solid #d7dde1;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.s4l1 {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  left: 40px;
+  top: 35px;
+}
+.s4l2 {
+  position: absolute;
+  width: 400px;
+  height: 28px;
+  left: 67px;
+  top: 37px;
+
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+
+  /* #313A57 */
+
+  color: #313a57;
+}
+.s4l3 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 489px;
+  top: 33px;
+}
+.s4div {
+  position: absolute;
+  left: 20px;
+  top: 35px;
+}

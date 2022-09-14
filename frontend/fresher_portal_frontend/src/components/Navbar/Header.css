@@ -1,0 +1,26 @@
+#search {
+  position: absolute;
+  left: 1500px;
+  /* left: 11.58%;
+  right: 13.52%;
+  top: 11.58%;
+  bottom: 13.52%; */
+  cursor: pointer;
+}
+#menu {
+  position: absolute;
+  left: 1560px;
+  /* left: 89.65%;
+  right: 8.89%;
+  top: 35.45%;
+  bottom: 64.55%; */
+  cursor: pointer;
+}
+#line {
+  position: absolute;
+  top: 80px;
+  left: 392px;
+  width: 1200px;
+
+  border: 1px solid #000000;
+}

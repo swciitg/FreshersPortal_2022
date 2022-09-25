@@ -1,5 +1,5 @@
 import React from 'react';
-import './Template.css';
+import './StudentOrganisation.css';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -12,29 +12,19 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
-const Barak = (props) => {
+const Debsoc = (props) => {
   return (
     <div className='page'>
       <div className='heading'>
         <div className='pre-cursor'></div>
-        <p className='heading-text'>Barak Hostel</p>
+        <p className='heading-text'>Deb-Soc</p>
       </div>
       <div className='description'>
-      <img src={`/assets/images/barak.jpg`} className='image'/>
+      <img src="/assets/images/debsoc.jpg" className='image'/>
         <div className='description-text'> {props.description}</div>
       </div>
-      <Box sx={{ width: '1400px' }} className='box'>
-        <Grid container rowSpacing={2} columnSpacing={0}>
-          <Grid item xs={6}>
-            <Item className='item'><p className='post-text'>Hostel Warden : {props.warden}</p></Item>
-          </Grid>
-          <Grid item xs={6}>
-            <Item className='item'><p className='post-text'>2</p></Item>
-          </Grid>
-        </Grid>
-      </Box>
     </div>
   );
 };
 
-export default Barak;
+export default Debsoc;

@@ -12,15 +12,15 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
-const Barak = (props) => {
+const Brahmaputra = (props) => {
   return (
     <div className='page'>
       <div className='heading'>
         <div className='pre-cursor'></div>
-        <p className='heading-text'>Barak Hostel</p>
+        <p className='heading-text'>Brahmaputra Hostel</p>
       </div>
       <div className='description'>
-      <img src={`/assets/images/barak.jpg`} className='image'/>
+      <img src={`/assets/images/brahmaputra.jpg`} className='image'/>
         <div className='description-text'> {props.description}</div>
       </div>
       <Box sx={{ width: '1400px' }} className='box'>
@@ -37,4 +37,4 @@ const Barak = (props) => {
   );
 };
 
-export default Barak;
+export default Brahmaputra;

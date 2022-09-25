@@ -1,22 +1,35 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 const Antiragging = () => {
+  const [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
+    axios
+      .get('http://127.0.0.1:8000/api/imp/ar')
+      .then((response) => {
+        console.log(response.data);
+        setInfo(response.data);
+      })
+      .catch((error) => console.log('error', error));
+  };
   return (
     <div className='page'>
       <div className='heading'>
         <div className='pre-cursor'></div>
-        <p className='heading-text'>Antiragging Affidavit</p>
+        {info.length && <p className='heading-text'>{info[0].title}</p>}
       </div>
 
-      <div className='description'>
-        <div className='description-header'>
-          The necessary instructions for filling up the anti-ragging form is as
-          follows:-
-        </div>
-        <div>Lambi List</div>
+      <div className='desc'>
+        {info.length && (
+          <div dangerouslySetInnerHTML={{ __html: info[0].info }}></div>
+        )}
       </div>
     </div>
   );
-}
+};
 
-export default Antiragging
+export default Antiragging;

@@ -1,22 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const HostelUndertaking = () => {
-  return (
-    <div className='page'>
-      <div className='heading'>
-        <div className='pre-cursor'></div>
-        <p className='heading-text'>Hostel Undertaking</p>
-      </div>
+   const [info, setInfo] = useState([]);
 
-      <div className='description'>
-        <div className='description-header'>
-          The instructions for hostel Undertakings for hostel residents are as
-          follows:-
-        </div>
-        <div>Lambi List</div>
-      </div>
-    </div>
-  );
-}
+   useEffect(() => {
+     fetchData();
+   }, []);
 
-export default HostelUndertaking
+   const fetchData = () => {
+     axios
+       .get('http://127.0.0.1:8000/api/imp/hu')
+       .then((response) => {
+         console.log(response.data);
+         setInfo(response.data);
+       })
+       .catch((error) => console.log('error', error));
+   };
+   return (
+     <div className='page'>
+       <div className='heading'>
+         <div className='pre-cursor'></div>
+         {info.length && <p className='heading-text'>{info[0].title}</p>}
+       </div>
+       <div className='desc'>
+         {info.length && (
+           <div dangerouslySetInnerHTML={{ __html: info[0].info }}></div>
+         )}
+       </div>
+     </div>
+   );
+};
+
+export default HostelUndertaking;

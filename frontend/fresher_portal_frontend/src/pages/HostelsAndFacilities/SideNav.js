@@ -26,6 +26,12 @@ import StarBorder from '@mui/icons-material/StarBorder';
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+  const handleListItemClick = (index) => {
+    setSelectedIndex(index);
+    console.log(index);
+  };
   const [open, setOpen] = React.useState(true);
   const handleClickOn = () => {
     setOpen(!open);
@@ -46,7 +52,9 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-      <ListItemButton onClick={() => {handleClickOn();navigate('/hostels/')}}>
+      <ListItemButton 
+        selected = {selectedIndex <= 13}
+        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/hostels/')}}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
@@ -60,9 +68,10 @@ function ResponsiveDrawer(props) {
             button
             key={text} 
             onClick={()=> {
+              handleListItemClick(index+1);
               navigate(`/hostels/${text.toLowerCase()}`)
             }} >
-            <ListItemButton>
+            <ListItemButton selected={selectedIndex === index+1}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
@@ -72,10 +81,11 @@ function ResponsiveDrawer(props) {
         ))}
         </List>
       </Collapse>
-      <ListItem
-        button
+      <ListItemButton
+        selected={selectedIndex==14}
         onClick={() => {
           handleClickOff();
+          handleListItemClick(14);
           navigate('/hostels/facilities/');
         }}
       >
@@ -83,7 +93,7 @@ function ResponsiveDrawer(props) {
           <MailIcon />
         </ListItemIcon>
         <ListItemText primary="Facilities" />
-      </ListItem>
+      </ListItemButton>
       </List>
       <Divider />
     </div>

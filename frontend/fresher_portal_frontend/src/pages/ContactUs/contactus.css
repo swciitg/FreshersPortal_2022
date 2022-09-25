@@ -4,7 +4,7 @@
   padding-top: 40px;
 }
 
-.heading {
+.heading-contact {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -19,7 +19,7 @@
   margin-top: 1.1rem;
 }
 
-.heading-text {
+.heading-text-contact {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 500;

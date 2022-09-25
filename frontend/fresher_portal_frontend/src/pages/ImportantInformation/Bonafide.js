@@ -1,9 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Bonafide = () => {
-  return (
-    <div>Bonafide</div>
-  )
-}
+  const [info, setInfo] = useState([]);
 
-export default Bonafide
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
+    axios
+      .get('http://127.0.0.1:8000/api/imp/bfd')
+      .then((response) => {
+        console.log(response.data);
+        setInfo(response.data);
+      })
+      .catch((error) => console.log('error', error));
+  };
+  return (
+    <div className='page'>
+      <div className='heading'>
+        <div className='pre-cursor'></div>
+        {info.length && <p className='heading-text'>{info[0].title}</p>}
+      </div>
+      <div className='desc'>
+        {info.length && (
+          <div dangerouslySetInnerHTML={{ __html: info[0].info }}></div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Bonafide;

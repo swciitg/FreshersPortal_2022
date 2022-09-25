@@ -27,8 +27,8 @@ const ContactUs = () => {
     return (
         <div className='page'>
             <div className="container">
-                <div className="heading">
-                    <p className="heading-text">Contact Us</p>
+                <div className="heading-contact">
+                    <p className="heading-text-contact">Contact Us</p>
                 </div>
                 <div>
                 <Container sx={{ py: 3 }} maxWidth="lg">
@@ -62,8 +62,8 @@ const ContactUs = () => {
                 </div>
             </div>
             <div className="container">
-                <div className="heading">
-                    <p className="heading-text">Drop Your Message</p>
+                <div className="heading-contact">
+                    <p className="heading-text-contact">Drop Your Message</p>
                 </div>
                 <div>
                     <Box
@@ -117,8 +117,8 @@ const ContactUs = () => {
                 </div>
               </div>
               <div className="container">
-                <div className="heading">
-                    <p className="heading-text">FAQs</p>
+                <div className="heading-contact">
+                    <p className="heading-text-contact">FAQs</p>
                 </div>
               <div>
                 {qna.map((obj,ind)=>(

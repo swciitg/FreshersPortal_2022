@@ -1,8 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Template from './Template';
-import ResponsiveDrawer from './SideNav';
-import Facilities from './Facilities';
 
 const Hostel = () =>
 {
@@ -22,7 +18,7 @@ const Hostel = () =>
                     <div className="pre-cursor"></div>
                     <p className="heading-text">Hostel Facilities</p>
                 </div>
-                <dic className="description">
+                <div className="description">
                     <div className='description-header'>
                     Each hostel provides a variety of facilities to its residents :
                     <ul>
@@ -38,7 +34,7 @@ const Hostel = () =>
                         <li>Stationary Shop</li>
                     </ul>
                     </div>
-                </dic>
+                </div>
             </div>
             
         </div>

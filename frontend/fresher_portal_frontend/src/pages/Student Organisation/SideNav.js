@@ -18,19 +18,17 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Template from './Template';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
 import StarBorder from '@mui/icons-material/StarBorder';
 
-const drawerWidth = 240;
+const drawerWidth = 350;
 
 function ResponsiveDrawer(props) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
   const handleListItemClick = (index) => {
     setSelectedIndex(index);
-    console.log(index);
   };
   const [open, setOpen] = React.useState(true);
   const handleClickOn = () => {
@@ -53,25 +51,28 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
       <ListItemButton 
-        selected = {selectedIndex <= 13}
-        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/hostels/')}}>
+        selected = {selectedIndex <= 9}
+        onClick={() => {handleClickOn();handleListItemClick(0);navigate('/studentorganisation/')}}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Hostels" />
+        <ListItemText primary="Cultural Board" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-        {['Barak','Bramhaputra','Dhansiri', 'Dibang','Dihing','Disang','Kameng','Kapili','Manas','Lohit','Siang','Subansiri','Umiam'].map((text, index) => (
+        {['Anchorenza & RadioG','Cadance','Finesse', 'Deb-Soc','Xpressions','Lumiere','Montage','Lit-Soc','Octaves'].map((text, index) => (
           <ListItem 
             button
             key={text} 
             onClick={()=> {
               handleListItemClick(index+1);
-              navigate(`/hostels/${text.toLowerCase()}`)
+              navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
+              console.log(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
             }} >
-            <ListItemButton selected={selectedIndex === index+1}>
+            <ListItemButton
+              selected = {selectedIndex == index+1}
+            >
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
@@ -82,17 +83,30 @@ function ResponsiveDrawer(props) {
         </List>
       </Collapse>
       <ListItemButton
-        selected={selectedIndex==14}
+        selected = {selectedIndex == 10}
         onClick={() => {
           handleClickOff();
-          handleListItemClick(14);
-          navigate('/hostels/facilities/');
+          handleListItemClick(10);
+          navigate('/studentorganisation/hab/');
         }}
       >
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary="Facilities" />
+        <ListItemText primary="Hostel Affairs Board" />
+      </ListItemButton>
+      <ListItemButton
+        selected = {selectedIndex == 11}
+        onClick={() => {
+          handleClickOff();
+          handleListItemClick(11);
+          navigate('/studentorganisation/sgc/');
+        }}
+      >
+        <ListItemIcon>
+          <MailIcon />
+        </ListItemIcon>
+        <ListItemText primary="Students' Gymkhana Council" />
       </ListItemButton>
       </List>
       <Divider />
@@ -129,10 +143,6 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <div style={{ display: 'flex', marginRight: '10px' }}>
-            <h3 style={{ marginRight: '5px' }}>Hostels</h3>
-            <h3 style={{ marginRight: '10px' }}> & Facilities</h3>
-          </div>
           {/* <Typography variant='h6' component='div' >
             Admin Panel
           </Typography> */}

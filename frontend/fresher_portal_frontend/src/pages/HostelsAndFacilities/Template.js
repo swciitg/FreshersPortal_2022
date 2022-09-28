@@ -1,5 +1,6 @@
-import React from 'react';
-import './Template.css';
+import React, { useState, useEffect } from 'react';
+import './HostelAndFacilities.css';
+import axios from 'axios';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -13,23 +14,50 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 const Template = (props) => {
+  const [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, [props.url]);
+
+  const fetchData = () => {
+    axios
+      .get(`http://127.0.0.1:8000/api/base/${props.url}`)
+      .then((response) => {
+        console.log(response.data);
+        setInfo(response.data);
+      })
+      .catch((error) => console.log('error', error));
+  };
   return (
     <div className='page'>
       <div className='heading'>
-        <div className='pre-cursor'></div>
-        <p className='heading-text'>{props.title}</p>
+        <div className='hostel_pre-cursor'></div>
+        {info.length && <p className='hostel_heading-text'>{info[0].title}</p>}
       </div>
-      <div className='description'>
-      <img src={`/assets/images/${String(props.title).split(' ')[0].toLowerCase()}.jpg`} className='image'/>
-        <div className='description-header'> {props.description}</div>
+      <div className='hostel_description'>
+        <img src={info.length && info[0].img} className='image' />
+        <div className='hostel_description-text'>
+          {info.length && (
+            <div dangerouslySetInnerHTML={{ __html: info[0].text }}></div>
+          )}
+        </div>
       </div>
       <Box sx={{ width: '1400px' }} className='box'>
         <Grid container rowSpacing={2} columnSpacing={0}>
           <Grid item xs={6}>
-            <Item className='item' >Hostel Warden : {props.warden}</Item>
-            </Grid>
-              <Grid item xs={6}>
-            <Item className='item'>2</Item>
+            <Item className='item'>
+              <p className='post-text'>
+                Hostel Warden : {info.length && info[0].person}
+              </p>
+            </Item>
+          </Grid>
+          <Grid item xs={6}>
+            <Item className='item'>
+              <a href={info.length && info[0].weblink} className='post-text'>
+                Website Link
+              </a>
+            </Item>
           </Grid>
         </Grid>
       </Box>

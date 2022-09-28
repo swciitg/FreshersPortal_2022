@@ -26,6 +26,12 @@ import StarBorder from '@mui/icons-material/StarBorder';
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+  const handleListItemClick = (index) => {
+    setSelectedIndex(index);
+    console.log(index);
+  };
   const [open, setOpen] = React.useState(true);
   const handleClickOn = () => {
     setOpen(!open);
@@ -46,23 +52,26 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-      <ListItemButton onClick={() => {handleClickOn();navigate('/hostels/')}}>
+      <ListItemButton 
+        selected = {selectedIndex <= 13}
+        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/acadfront/')}}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Hostels" />
+        <ListItemText primary="Departments" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-        {['Barak','Bramhaputra','Dhansiri', 'Dibang','Dihing','Disang','Kameng','Kapili','Manas','Lohit','Siang','Subansiri','Umiam'].map((text, index) => (
+        {['Biosciences and Engineering','Chemical Engineering','Chemical Science and Technology', 'Design','Electronics and Electrical Engineering','Humanities and Social Sciences','Mathematics','Mechanical Engineering','Physics',].map((text, index) => (
           <ListItem 
             button
             key={text} 
             onClick={()=> {
-              navigate(`/hostels/${text.toLowerCase()}`)
+              handleListItemClick(index+1);
+              navigate(`/acadfront/${text.toLowerCase()}`)
             }} >
-            <ListItemButton>
+            <ListItemButton selected={selectedIndex === index+1}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
@@ -72,18 +81,32 @@ function ResponsiveDrawer(props) {
         ))}
         </List>
       </Collapse>
-      <ListItem
-        button
+      <ListItemButton
+        selected={selectedIndex==14}
         onClick={() => {
           handleClickOff();
-          navigate('/hostels/facilities/');
+          handleListItemClick(14);
+          navigate('/acadfront/branchchange/');
         }}
       >
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary="Facilities" />
-      </ListItem>
+        <ListItemText primary="Branch Change" />
+      </ListItemButton>
+      <ListItemButton
+        selected={selectedIndex==14}
+        onClick={() => {
+          handleClickOff();
+          handleListItemClick(14);
+          navigate('/acadfront/minor/');
+        }}
+      >
+        <ListItemIcon>
+          <MailIcon />
+        </ListItemIcon>
+        <ListItemText primary="Minor Discipline" />
+      </ListItemButton>
       </List>
       <Divider />
     </div>
@@ -120,8 +143,9 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <div style={{ display: 'flex', marginRight: '10px' }}>
-            <h3 style={{ marginRight: '5px' }}>Hostels</h3>
-            <h3 style={{ marginRight: '10px' }}> & Facilities</h3>
+            <h3 style={{ marginRight: '5px' }}>Department</h3>
+            <h3 style={{ marginRight: '10px' }}> Branch Change</h3>
+            <h3 style={{ marginRight: '10px' }}> Minor Discipline</h3>
           </div>
           {/* <Typography variant='h6' component='div' >
             Admin Panel

@@ -20,7 +20,7 @@ const Bsbe = (props) => {
         <p className='heading-text'>Biosciences and Bioengineering</p>
       </div>
       <div className='description'>
-      <img src={`/assets/images/Bsbe.jpg`} className='image'/>
+      <img src={`/assets/images/bsbe.jpg`} className='image'/>
         <div className='description-header'> {props.description}</div>
       </div>
       <Box sx={{ width: '1400px' }} className='box'>

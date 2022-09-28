@@ -12,22 +12,19 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
-const Design = (props) => {
+const Techniche = (props) => {
   return (
     <div className='page'>
       <div className='heading'>
         <div className='pre-cursor'></div>
-        <p className='heading-text'>Department of Design</p>
+        <p className='heading-text'>Techniche</p>
       </div>
       <div className='description'>
-      <img src={`/assets/images/design.jpg`} className='image'/>
+      <img src={`/assets/images/Techniche.jpg`} className='image'/>
         <div className='description-header'> {props.description}</div>
       </div>
       <Box sx={{ width: '1400px' }} className='box'>
         <Grid container rowSpacing={2} columnSpacing={0}>
-          <Grid item xs={6}>
-            <Item className='item' >HOD : {props.HOD}</Item>
-            </Grid>
               <Grid item xs={6}>
             <Item className='item'>l</Item>
           </Grid>
@@ -37,4 +34,4 @@ const Design = (props) => {
   );
 };
 
-export default Design;
+export default Techniche;

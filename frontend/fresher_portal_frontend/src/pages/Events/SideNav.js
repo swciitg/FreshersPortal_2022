@@ -26,6 +26,12 @@ import StarBorder from '@mui/icons-material/StarBorder';
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+  const handleListItemClick = (index) => {
+    setSelectedIndex(index);
+    console.log(index);
+  };
   const [open, setOpen] = React.useState(true);
   const handleClickOn = () => {
     setOpen(!open);
@@ -46,23 +52,26 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-      <ListItemButton onClick={() => {handleClickOn();navigate('/hostels/')}}>
+      <ListItemButton 
+        selected = {selectedIndex <= 13}
+        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/Alcheringa/')}}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Hostels" />
+        <ListItemText primary="Events" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-        {['Barak','Bramhaputra','Dhansiri', 'Dibang','Dihing','Disang','Kameng','Kapili','Manas','Lohit','Siang','Subansiri','Umiam'].map((text, index) => (
+        {['Alcheringa','Advaya','Techniche', 'Reflux','Udgam',].map((text, index) => (
           <ListItem 
             button
             key={text} 
             onClick={()=> {
-              navigate(`/hostels/${text.toLowerCase()}`)
+              handleListItemClick(index+1);
+              navigate(`/acadfront/${text.toLowerCase()}`)
             }} >
-            <ListItemButton>
+            <ListItemButton selected={selectedIndex === index+1}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
@@ -72,18 +81,36 @@ function ResponsiveDrawer(props) {
         ))}
         </List>
       </Collapse>
-      <ListItem
-        button
-        onClick={() => {
-          handleClickOff();
-          navigate('/hostels/facilities/');
-        }}
-      >
+      <ListItemButton 
+        selected = {selectedIndex <= 13}
+        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/Interhostel/')}}>
         <ListItemIcon>
-          <MailIcon />
+          <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Facilities" />
-      </ListItem>
+        <ListItemText primary="Inter-Hostel Events" />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+        {['Kriti','Manthan','Spardha',,].map((text, index) => (
+          <ListItem 
+            button
+            key={text} 
+            onClick={()=> {
+              handleListItemClick(index+1);
+              navigate(`/acadfront/${text.toLowerCase()}`)
+            }} >
+            <ListItemButton selected={selectedIndex === index+1}>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+        </List>
+      </Collapse>
+      
       </List>
       <Divider />
     </div>
@@ -120,8 +147,9 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <div style={{ display: 'flex', marginRight: '10px' }}>
-            <h3 style={{ marginRight: '5px' }}>Hostels</h3>
-            <h3 style={{ marginRight: '10px' }}> & Facilities</h3>
+            <h3 style={{ marginRight: '5px' }}>Department</h3>
+            <h3 style={{ marginRight: '10px' }}> Branch Change</h3>
+            <h3 style={{ marginRight: '10px' }}> Minor Discipline</h3>
           </div>
           {/* <Typography variant='h6' component='div' >
             Admin Panel

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './Facilities.css'
-import './Template.css';
+import './HostelAndFacilities.css';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import ResponsiveDrawer from './SideNav';
@@ -47,14 +47,14 @@ const Facilities = () => {
     return(
     <div className="page">
         <div className="heading">
-            <div className="boxo">Facilities</div>
+            <div className='hostel_box'>Facilities</div>
         </div>
-        <div className="container">
+        <div className='hostel_container'>
                 <ScrollMenu LeftArrow={LeftArrow(nav,handlePrevClick)} RightArrow={RightArrow(nav,handleNextClick)}>
                 {nav.articles.map((text,id) => (
                     <MediaCard
                         title={text}
-                        description="description"
+                        description='hotel_description'
                         key={nav.page*3+id}
                         id={nav.page*3+id}
                     />

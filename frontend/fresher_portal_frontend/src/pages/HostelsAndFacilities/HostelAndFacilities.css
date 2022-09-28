@@ -10,7 +10,7 @@
   margin-bottom: 1rem;
 }
 
-.pre-cursor {
+.hostel_pre-cursor {
   width: 6px;
   height: 50px;
   background-color: #5468fd;
@@ -19,27 +19,27 @@
   margin-top: -0.2rem;
 }
 
-.heading-text {
+.hostel_heading-text {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
-  margin-top: 0.7rem;
   font-weight: 600;
   font-size: 30px;
   text-align: start;
   color: #000000;
 }
 
-.description {
+.hostel_description {
   background: #f7f1ff;
   padding: 2rem;
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
+  margin-bottom: 3rem;
   font-style: normal;
   font-size: 18px;
   line-height: 36px;
 }
 
-.description-header{
+.hostel_description-heading{
   text-align: start;
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
@@ -49,7 +49,7 @@
   line-height: 36px;
   margin: 0.9rem;
 }
-.description-text{
+.hostel_description-text{
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
   font-style: normal;

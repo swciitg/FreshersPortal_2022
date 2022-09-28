@@ -1,5 +1,5 @@
 import React from 'react';
-import './Template.css';
+import './HostelAndFacilities.css';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -16,20 +16,20 @@ const Barak = (props) => {
   return (
     <div className='page'>
       <div className='heading'>
-        <div className='pre-cursor'></div>
-        <p className='heading-text'>Barak</p>
+        <div className='hostel_pre-cursor'></div>
+        <p className='hostel_heading-text'>Barak Hostel</p>
       </div>
-      <div className='description'>
+      <div className='hostel_description'>
       <img src={`/assets/images/barak.jpg`} className='image'/>
-        <div className='description-header'> {props.description}</div>
+        <div className='hostel_description-text'> {props.description}</div>
       </div>
       <Box sx={{ width: '1400px' }} className='box'>
         <Grid container rowSpacing={2} columnSpacing={0}>
           <Grid item xs={6}>
-            <Item className='item' >Hostel Warden : {props.warden}</Item>
-            </Grid>
-              <Grid item xs={6}>
-            <Item className='item'>2</Item>
+            <Item className='item'><p className='post-text'>Hostel Warden : {props.warden}</p></Item>
+          </Grid>
+          <Grid item xs={6}>
+            <Item className='item'><p className='post-text'>2</p></Item>
           </Grid>
         </Grid>
       </Box>
@@ -37,4 +37,4 @@ const Barak = (props) => {
   );
 };
 
-export default Template;
+export default Barak;

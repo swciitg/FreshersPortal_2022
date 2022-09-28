@@ -1,4 +1,4 @@
-.boxo
+.hostel_box
 {
   background: #5468FD;
   padding-top: 40px;
@@ -20,7 +20,7 @@
   width: fixed;
 }
 
-.container{
+.hostel_container{
   flex-direction: row;
   margin-left: 100px;
   width: 1300px;

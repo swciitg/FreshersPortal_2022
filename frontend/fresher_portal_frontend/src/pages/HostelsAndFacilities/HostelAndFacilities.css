@@ -10,7 +10,7 @@
   margin-bottom: 1rem;
 }
 
-.pre-cursor {
+.hostel_pre-cursor {
   width: 6px;
   height: 50px;
   background-color: #5468fd;
@@ -19,33 +19,56 @@
   margin-top: -0.2rem;
 }
 
-.heading-text {
+.hostel_heading-text {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 28px;
-  line-height: 35px;
-
+  font-size: 30px;
+  text-align: start;
   color: #000000;
 }
 
-.description {
+.hostel_description {
   background: #f7f1ff;
   padding: 2rem;
+  font-family: 'Plus Jakarta Sans';
+  margin-right: 150px;
+  margin-bottom: 3rem;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 36px;
 }
 
-.description {
+.hostel_description-heading{
+  text-align: start;
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
   font-style: normal;
-  font-weight: 700;
+  color: #363232;
   font-size: 18px;
   line-height: 36px;
+  margin: 0.9rem;
+}
+.hostel_description-text{
+  font-family: 'Plus Jakarta Sans';
+  margin-right: 150px;
+  font-style: normal;
+  color: #363232;
+  font-size: 18px;
+  line-height: 36px;
+  margin: 0.9rem;
 }
 .image {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.post-text{
+  font-family: Plus Jakarta Sans;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f7f1ff;
+  text-align: center;
 }
 .item{
   font-family: Plus Jakarta Sans;
@@ -53,11 +76,10 @@
   font-weight: 600;
   line-height: 36px;
   color: #f7f1ff;
-  letter-spacing: 0em;
   text-align: center;
-  border: solid #f7f1ff;
 }
 .box
 {
   margin-right: 150px;
+  margin-bottom: 2.2rem;
 }

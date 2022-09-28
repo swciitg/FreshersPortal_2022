@@ -5,6 +5,7 @@ import AdmittedStudents from "./pages/AdmittedStudents/AdmittedStudents";
 import Home from "./pages/Home/Home";
 import ContactUs from './pages/ContactUs/contactus';
 import HostelsAndFacilitiesRoutes from './pages/HostelsAndFacilities/HostelsAndFacilities';
+import StudentOrganisationRoutes from "./pages/Student Organisation/Student Organisation Routes";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path='/hostels/*' element={<HostelsAndFacilitiesRoutes />} />
         <Route path='/contactus' element={<ContactUs/>} />
+        <Route path='/studentorganisation/*' element={<StudentOrganisationRoutes/>} />
       </Routes>
     </Router>
   );

@@ -7,7 +7,7 @@ const Template = (props) => {
 
  useEffect(() => {
    fetchData();
- }, []);
+ }, [props.url]);
 
  const fetchData = () => {
    axios

@@ -16,12 +16,12 @@ const Xpressions = (props) => {
   return (
     <div className='page'>
       <div className='heading'>
-        <div className='pre-cursor'></div>
-        <p className='heading-text'>Xpressions</p>
+        <div className='organisation_pre-cursor'></div>
+        <p className='organisation_heading-text'>Xpressions</p>
       </div>
-      <div className='description'>
+      <div className='organisation_description'>
       <img src="/assets/images/xpressions.jpg" className='image'/>
-        <div className='description-text'> {props.description}</div>
+        <div className='organisation_description-text'> {props.description}</div>
       </div>
     </div>
   );

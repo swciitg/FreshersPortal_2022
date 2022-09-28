@@ -1,5 +1,5 @@
 import React from 'react';
-import './Template.css';
+import './HostelAndFacilities.css';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -16,12 +16,12 @@ const Subansiri = (props) => {
   return (
     <div className='page'>
       <div className='heading'>
-        <div className='pre-cursor'></div>
-        <p className='heading-text'>Subansiri Hostel</p>
+        <div className='hostel_pre-cursor'></div>
+        <p className='hostel_heading-text'>Subansiri Hostel</p>
       </div>
-      <div className='description'>
+      <div className='hostel_description'>
       <img src={`/assets/images/subansiri.jpg`} className='image'/>
-        <div className='description-text'> {props.description}</div>
+        <div className='hostel_description-text'> {props.description}</div>
       </div>
       <Box sx={{ width: '1400px' }} className='box'>
         <Grid container rowSpacing={2} columnSpacing={0}>

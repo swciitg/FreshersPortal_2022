@@ -5,7 +5,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -18,12 +17,10 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Template from './Template';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
-import StarBorder from '@mui/icons-material/StarBorder';
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 function ResponsiveDrawer(props) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -42,7 +39,6 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const navigate = useNavigate();
-  const [component, setComponent] = useState('Login');
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -58,7 +54,7 @@ function ResponsiveDrawer(props) {
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Hostels" />
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Hostels" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
@@ -75,7 +71,7 @@ function ResponsiveDrawer(props) {
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -92,7 +88,7 @@ function ResponsiveDrawer(props) {
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary="Facilities" />
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Facilities" />
       </ListItemButton>
       </List>
       <Divider />
@@ -169,7 +165,8 @@ function ResponsiveDrawer(props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              // border:"3px solid pink"
+              background: '#313A57',
+              color: '#FFFFFF'
             },
           }}
           open

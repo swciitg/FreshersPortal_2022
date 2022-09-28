@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import CssBaseline from '@mui/material/CssBaseline';
+import './StudentOrganisation.css';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -17,12 +16,10 @@ import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
-import StarBorder from '@mui/icons-material/StarBorder';
 
-const drawerWidth = 350;
+const drawerWidth = 330;
 
 function ResponsiveDrawer(props) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -31,22 +28,41 @@ function ResponsiveDrawer(props) {
     setSelectedIndex(index);
   };
   const [open, setOpen] = React.useState(true);
+  const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
   const handleClickOn = () => {
     setOpen(!open);
+    setOpen3(false);
+    setOpen2(false);
   };
   const handleClickOff = () => {
     setOpen(false);
   };
+  const handleClickOn2 = () => {
+    setOpen2(!open2);
+    setOpen3(false);
+    setOpen(false);
+  };
+  const handleClickOff2 = () => {
+    setOpen2(false);
+  };
+  const handleClickOn3 = () => {
+    setOpen3(!open3);
+    setOpen2(false);
+    setOpen(false);
+  };
+  const handleClickOff3 = () => {
+    setOpen3(false);
+  };
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const navigate = useNavigate();
-  const [component, setComponent] = useState('Login');
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
   console.log('hello ', `${process.env.REACT_APP_BASE_URL}`);
   const drawer = (
-    <div>
+    <div className='sidebar'>
       <Toolbar />
       <Divider />
       <List>
@@ -56,36 +72,33 @@ function ResponsiveDrawer(props) {
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Cultural Board" />
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500}} primary="Cultural Board" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
         {['Anchorenza & RadioG','Cadance','Finesse', 'Deb-Soc','Xpressions','Lumiere','Montage','Lit-Soc','Octaves'].map((text, index) => (
-          <ListItem 
-            button
-            key={text} 
-            onClick={()=> {
-              handleListItemClick(index+1);
-              navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
-              console.log(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
-            }} >
             <ListItemButton
-              selected = {selectedIndex == index+1}
+              selected = {selectedIndex === index+1}
+              onClick={()=> {
+                handleListItemClick(index+1);
+                navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
+              }}
             >
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans', fontWeight:500}} primary={text} />
             </ListItemButton>
-          </ListItem>
         ))}
         </List>
       </Collapse>
+      
       <ListItemButton
-        selected = {selectedIndex == 10}
+        selected = {selectedIndex === 10}
         onClick={() => {
           handleClickOff();
+          handleClickOff2();
           handleListItemClick(10);
           navigate('/studentorganisation/hab/');
         }}
@@ -93,21 +106,109 @@ function ResponsiveDrawer(props) {
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary="Hostel Affairs Board" />
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Hostel Affairs Board" />
+      </ListItemButton>
+      <ListItemButton 
+        selected = {(selectedIndex>=11 && selectedIndex <= 22)}
+        onClick={() => {handleClickOn2();handleListItemClick(0);navigate('/studentorganisation/technicalboard')}}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500}} primary="Technical Board" />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open2} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+        {['Aeromodelling Club','Astronomy Club','Coding Club','Consultancy and Analytics Club','Electronics Club','Entreprenuership Cell','Finance & Economics Club','Green Automobile Club','Robotics Club','Science and Quiz Club ( ACUMEN )','TechEvince'].map((text, index) => (
+          <ListItem 
+            button
+            key={text} 
+            className='sidebar-text'
+            onClick={()=> {
+              handleListItemClick(index+12);
+              navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
+            }} >
+            <ListItemButton
+              selected = {selectedIndex === index+12}
+            >
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans', fontWeight:500}} primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+        </List>
+      </Collapse>
+      <ListItemButton
+        selected = {selectedIndex === 23}
+        onClick={() => {
+          window.location.href = 'https://iitg.ac.in/sail/'; 
+          return null;
+        }}
+      >
+        <ListItemIcon>
+          <MailIcon />
+        </ListItemIcon>
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="SAIL" />
       </ListItemButton>
       <ListItemButton
-        selected = {selectedIndex == 11}
+        selected = {selectedIndex === 24}
+        onClick={() => {
+          window.location.replace('https://iitg.ac.in/acad/');
+        }}
+      >
+        <ListItemIcon>
+          <MailIcon />
+        </ListItemIcon>
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Students' Academic Board" />
+      </ListItemButton>
+      <ListItemButton
+        selected = {selectedIndex === 25}
         onClick={() => {
           handleClickOff();
-          handleListItemClick(11);
+          handleClickOff2();
+          handleListItemClick(25);
           navigate('/studentorganisation/sgc/');
         }}
       >
         <ListItemIcon>
           <MailIcon />
         </ListItemIcon>
-        <ListItemText primary="Students' Gymkhana Council" />
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Students' Gymkhana Council" />
       </ListItemButton>
+      <ListItemButton 
+        selected = {(selectedIndex>=25 && selectedIndex <= 30)}
+        onClick={() => {handleClickOn3();handleListItemClick(0);navigate('/studentorganisation/studentswelfare')}}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500}} primary="Students' Welfare Board" />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open3} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+        {['Saathi- The Counselling Service','Social Service Club','Youth Empowerment Club','Rights and Responsibility Club','Red Ribbon Club'].map((text, index) => (
+          <ListItem 
+            button
+            key={text} 
+            className='sidebar-text'
+            onClick={()=> {
+              handleListItemClick(index+26);
+              navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
+            }} >
+            <ListItemButton
+              selected = {selectedIndex === index+25}
+            >
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans', fontWeight:500}} primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+        </List>
+      </Collapse>
       </List>
       <Divider />
     </div>
@@ -118,8 +219,6 @@ function ResponsiveDrawer(props) {
 
   return (
     <div style={{}}>
-      {/* <Box sx={{ display: 'flex', }}> */}
-      {/* <CssBaseline /> */}
       <AppBar
         position='fixed'
         sx={{
@@ -143,9 +242,6 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          {/* <Typography variant='h6' component='div' >
-            Admin Panel
-          </Typography> */}
         </Toolbar>
       </AppBar>
       <Box
@@ -153,7 +249,6 @@ function ResponsiveDrawer(props) {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label='mailbox folders'
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           container={container}
           variant='temporary'
@@ -167,6 +262,7 @@ function ResponsiveDrawer(props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
+              background: '#313A57'
             },
           }}
         >
@@ -179,7 +275,7 @@ function ResponsiveDrawer(props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              // border:"3px solid pink"
+              background: '#313A57'
             },
           }}
           open
@@ -187,29 +283,8 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-      {/* <Box
-        component='main'
-        sx={{
-          flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-        }}
-      >
-      
-        <Toolbar />
-        <Typography paragraph>{loadComponent()}</Typography>
-      </Box> */}
-      {/* </Box> */}
     </div>
   );
 }
-
-ResponsiveDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 export default ResponsiveDrawer;

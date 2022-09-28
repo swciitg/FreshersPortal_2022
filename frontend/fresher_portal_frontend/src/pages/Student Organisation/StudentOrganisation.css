@@ -4,12 +4,28 @@
   margin-left: 7%;
 }
 
-.heading {
+.organisation_heading {
   display: flex;
   flex-direction: row;
+  margin-bottom: 1rem;
 }
 
-.pre-cursor {
+.sidebar{
+  background: #313A57;
+  color: #FFFFFF;
+}
+
+.p{
+  font-family: 'Plus Jakarta Sans';
+}
+
+.span{
+  font-family: 'Plus Jakarta Sans';
+}
+.sidebar-text{
+  font-family: 'Plus Jakarta Sans';
+}
+.organisation_pre-cursor {
   width: 6px;
   height: 50px;
   background-color: #5468fd;
@@ -18,17 +34,17 @@
   margin-top: 1.1rem;
 }
 
-.heading-text {
+.organisation_heading-text {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
-  margin-top: 0.7rem;
+  margin-top: 1.2rem;
   font-weight: 600;
   font-size: 30px;
   text-align: start;
   color: #000000;
 }
 
-.description {
+.organisation_description {
   background: #f7f1ff;
   padding: 2rem;
   font-family: 'Plus Jakarta Sans';
@@ -38,7 +54,7 @@
   line-height: 36px;
 }
 
-.description-header{
+.organisation_description-header{
   text-align: start;
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
@@ -48,7 +64,7 @@
   line-height: 36px;
   margin: 0.9rem;
 }
-.description-text{
+.organisation_description-text{
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
   font-style: normal;
@@ -57,11 +73,13 @@
   line-height: 36px;
   margin: 0.9rem;
 }
+
 .image {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 .post-text{
   font-family: Plus Jakarta Sans;
   font-size: 18px;
@@ -77,8 +95,17 @@
   color: #f7f1ff;
   text-align: center;
 }
+
+
 .box
 {
   margin-right: 150px;
   margin-bottom: 2.2rem;
+}
+
+
+.active {
+  background-color:#5468FD;
+  color:  #f7f1ff;
+  font-weight: bold;
 }

@@ -12,19 +12,19 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
-const Montage = (props) => {
+const Templates = (props) => {
   return (
     <div className='page'>
       <div className='heading'>
         <div className='organisation_pre-cursor'></div>
-        <p className='organisation_heading-text'>Montage</p>
+        <p className='organisation_heading-text'>{props.title}</p>
       </div>
       <div className='organisation_description'>
-      <img src="/assets/images/montage.jpg" className='image'/>
+      <img src={`/assets/images/${String(props.title).split(' ')[0].toLowerCase()}.jpg`} className='image'/>
         <div className='organisation_description-text'> {props.description}</div>
       </div>
     </div>
   );
 };
 
-export default Montage;
+export default Templates;

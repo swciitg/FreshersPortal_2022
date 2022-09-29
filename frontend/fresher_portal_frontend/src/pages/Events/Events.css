@@ -4,22 +4,21 @@
   margin-left: 7%;
 }
 
-.hostel_heading {
+.events_heading {
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
 }
 
-.hostel_pre-cursor {
+.events_pre-cursor {
   width: 6px;
-  height: 50px;
+  height: 40px;
   background-color: #5468fd;
   border: none;
   margin-right: 0.25rem;
-  margin-top: -0.2rem;
 }
 
-.hostel_heading-text {
+.events_heading-text {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
@@ -28,7 +27,7 @@
   color: #000000;
 }
 
-.hostel_description {
+.events_description {
   background: #f7f1ff;
   padding: 2rem;
   font-family: 'Plus Jakarta Sans';
@@ -39,7 +38,7 @@
   line-height: 36px;
 }
 
-.hostel_description-heading{
+.events_description-heading{
   text-align: start;
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
@@ -49,7 +48,7 @@
   line-height: 36px;
   margin: 0.9rem;
 }
-.hostel_description-text{
+.events_description-text{
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
   font-style: normal;
@@ -77,9 +76,5 @@
   line-height: 36px;
   color: #f7f1ff;
   text-align: center;
-}
-.box
-{
-  margin-right: 150px;
-  margin-bottom: 2.2rem;
+  margin-left: 40%;
 }

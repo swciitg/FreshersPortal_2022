@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './HostelAndFacilities.css';
+import './Events.css';
 import axios from 'axios';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -31,36 +31,30 @@ const Template = (props) => {
   };
   return (
     <div className='page'>
-      <div className='hostel_heading'>
-        <div className='hostel_pre-cursor'></div>
-        {info.length && <p className='hostel_heading-text'>{info[0].title}</p>}
+      <div className='events_heading'>
+        <div className='events_pre-cursor'></div>
+        {info.length && <p className='events_heading-text'>{info[0].title}</p>}
       </div>
-      <div className='hostel_description'>
+      <div className='events_description'>
         <img src={info.length && info[0].img} className='image' />
-        <div className='hostel_description-text'>
+        <div className='events_description-text'>
           {info.length && (
             <div dangerouslySetInnerHTML={{ __html: info[0].text }}></div>
           )}
         </div>
+        <Box sx={{ width: '100%' }} className='box'>
+          <Grid container rowSpacing={2} columnSpacing={0}>
+            <Grid item xs={6}></Grid>
+            <Grid item xs={6}>
+              <Item className='item'>
+                <a href={info.length && info[0].weblink} className='post-text'>
+                  Website Link
+                </a>
+              </Item>
+            </Grid>
+          </Grid>
+        </Box>
       </div>
-      <Box sx={{ width: '1400px' }} className='box'>
-        <Grid container rowSpacing={2} columnSpacing={0}>
-          <Grid item xs={6}>
-            <Item className='item'>
-              <p className='post-text'>
-                Hostel Warden : {info.length && info[0].person}
-              </p>
-            </Item>
-          </Grid>
-          <Grid item xs={6}>
-            <Item className='item'>
-              <a href={info.length && info[0].weblink} className='post-text'>
-                Website Link
-              </a>
-            </Item>
-          </Grid>
-        </Grid>
-      </Box>
     </div>
   );
 };

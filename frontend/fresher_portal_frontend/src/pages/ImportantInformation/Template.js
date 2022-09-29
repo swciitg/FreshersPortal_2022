@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Template.css';
+import './Important.css';
 
 const Template = (props) => {
  const [info, setInfo] = useState([]);
@@ -21,8 +21,10 @@ const Template = (props) => {
  return (
    <div className='page'>
      <div className='heading'>
-       <div className='pre-cursor'></div>
-       {info.length && <p className='heading-text'>{info[0].title}</p>}
+       <div className='important_pre-cursor'></div>
+       {info.length && (
+         <p className='important_heading-text'>{info[0].title}</p>
+       )}
      </div>
      <div className='desc'>
        {info.length && (

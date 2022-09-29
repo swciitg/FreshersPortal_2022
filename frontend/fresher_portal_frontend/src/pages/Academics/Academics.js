@@ -22,6 +22,7 @@ const AcademicsRoutes = () => {
   return (
     <div style={{ display: 'flex' }}>
       <ResponsiveDrawer />
+      
 
       <div
         style={{
@@ -34,11 +35,15 @@ const AcademicsRoutes = () => {
       >
         <Routes>
         <Route
-            path='/acadfront'
+          path='/'
+          element={<AcadFront/>}
+        />
+        <Route
+            path='/academics'
             element={<AcadFront/>}
           />
           <Route
-            path='/Bsbe'
+            path='/bsbe'
             element={
               <Bsbe 
               description="The Department of Biosciences and Bioengineering at the Indian Institute of Technology Guwahati (IITG) was established in November 2002 to contribute the fascinating and emerging area of biological sciences. It has both undergraduate (B.Tech.) and postgraduate (M.Tech. and Ph.D.) academic programmes. The Department is unique in North-Eastern India, imparting quality education and providing an excellent research environment through its ongoing programmes. It imparts training for students to make them competent, motivated engineers and scientists."
@@ -46,7 +51,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Chemical'
+            path='/chemical'
             element={
               <Chemical 
               description="Started in 2002, currently the department is has 36 faculty members and 13 staff members, supported by 8 laboratories.
@@ -57,7 +62,7 @@ const AcademicsRoutes = () => {
             
           />
           <Route
-            path='/Cst'
+            path='/cst'
             element={
               <Cst 
               description="Department of Chemistry, is one of the globally recognized, emerging and leading department in science and technology with a growing list of accolades earned nationally and internationally. The Department started in 1995, covers all the major areas of Chemistry.
@@ -67,7 +72,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Civil'
+            path='/civil'
             element={
               <Civil 
               description="Civil Engineering is considered to be the most versatile branch among all the engineering branches. Department of Civil Engineering at IIT Guwahati was established in 1997 and has continually upgraded itself in terms of academic programs and research infrastructure including state-of-the-art laboratories.
@@ -77,7 +82,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Cse'
+            path='/cse'
             element={
               <Cse 
               description="Lobortis sem adipiscing etiam condimentum pellentesque diam. Adipiscing bibendum enim egestas etiam dapibus. Morbi condimentum netus neque neque vulputate vel. Aenean sed eget dui elementum. Sit velit faucibus donec duis feugiat. Malesuada volutpat auctor tellus, morbi. Mi erat massa amet id phasellus faucibus augue leo commodo. Aliquam lacinia placerat ipsum, sollicitudin et, ultricies. Eget platea vitae enim, tristique velit eleifend. Eget vitae magna amet scelerisque. Ac egestas molestie massa ultricies. Sociis turpis nisl adipiscing massa turpis tincidunt."
@@ -85,7 +90,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Design'
+            path='/design'
             element={
               <Design 
               description="The Department of Design (DoD), was set up with a vision to enkindle some of the brightest technical minds of the country a passion for innovation in technology driven by a firm understanding, appreciation and celebration of design.
@@ -96,7 +101,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Ece'
+            path='/ece'
             element={
               <Ece 
               description="Since its inception in 1995, the department now has over 700 students and 38 faculty members, supported by 17 laboratories. Besides the core courses, the faculties also offer projects, both course and self-interest ones, which not only turn theory into practise, but also turn enthusiasm into achievement.
@@ -106,7 +111,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Hss'
+            path='/hss'
             element={
               <Hss 
               description="The undergraduate programs/courses in HSS are designed to provide an understanding of various perspectives of development issues, through rigorous course works and guided research.
@@ -116,7 +121,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Mathematics'
+            path='/mathematics'
             element={
               <Mathematics 
               description="The 4-year programme, B.Tech. in Mathematics and Computing, is a unique programme and the first of its kind in the country. The curriculum for this program is designed to meet the need of sophisticated mathematics in modern scientific investigations and technological innovations. The programme has three components: mathematics, computing and financial engineering. This helps the students of the department to play a multidimensional role in both academia and industry.
@@ -126,7 +131,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Mechanical'
+            path='/mechanical'
             element={
               <Mechanical 
               description="The department of mechanical engineering, being one of the largest and oldest departments of the institute. Academic coursework and projects are designed to endow students with the ability to apply knowledge of science, mathematics, and engineering, and the capability to work effectively in multidisciplinary teams, providing leadership and technical expertise.
@@ -135,7 +140,7 @@ const AcademicsRoutes = () => {
             }
           />
           <Route
-            path='/Physics'
+            path='/physics'
             element={
               <Physics 
               description="The department of mechanical engineering, being one of the largest and oldest departments of the institute. Academic coursework and projects are designed to endow students with the ability to apply knowledge of science, mathematics, and engineering, and the capability to work effectively in multidisciplinary teams, providing leadership and technical expertise.

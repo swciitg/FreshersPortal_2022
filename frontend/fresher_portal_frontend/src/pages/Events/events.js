@@ -30,7 +30,7 @@ const EventsRoutes = () => {
       >
         <Routes>
           <Route
-            path='/Alcheringa'
+            path='/alcheringa'
             element={
               <Alcheringa 
               description='Alcheringa, popularly known as "Alcher", is the annual cultural festival of Indian Institute of Technology, Guwahati. Started in 1996, Alcheringa has quickly established itself as one of the biggest college level cultural events in Asia. It’s a 4 day cultural extravaganza and have witnessed a crowd of over 80,000, and was graced by artists like, Mohit Chauhan, Mika Singh,Anoushka Shankar, Sonu Nigam, Shankar-Ehsaan-Loy, Shilpa Rao, KK, Javed Ali, Shaan and international artists such as Orphaned Land, World’s Fastest Quad Guitarist Michael Angelo Batio, Korpikklani, Metastatis, Ne Obliviscaris, Guilliano Modarelli and many more. Alcheringa with over 400 participating colleges organises over 70 events, Houte Coutre, Mr. & Miss Alcher, Rock-o-Phonix: India’s biggest rock band competitions, Raga High, Electric Heels, Halla Bol and many more to provide a platform for talent and make them acknowledged and also have impressive winning prizes.
@@ -40,7 +40,7 @@ const EventsRoutes = () => {
             
           />
           <Route
-            path='/Advaya'
+            path='/advaya'
             element={
               <Advaya
               description='Advaya is an annual PG inter-departmental techno-cultural festival of IIT Guwahati. It is an avenue for students to be comforted from their conventional lives to embrace the fun and frolic embodied with captivating performances of the artists hidden inside them.
@@ -49,7 +49,7 @@ const EventsRoutes = () => {
             }
           />
           <Route
-            path='/Techniche'
+            path='/techniche'
             element={
               <Techniche
               description='Techniche is the annual Techno-Management festival of the Indian Institute of Technology Guwahati, India. Started in 1999, through its past seventeen editions, it has been witnessing a new zenith of techno-management events ranging from raging robotics to corporate module to inspiring lecture series to awe striking workshops to jubilant nites. It served as a distinguished platform for entrepreneurs, innovators and technocrats to showcase their abilities as every edition sought to take a leap forward in redefining and revolutionizing the technology.Techniche is generally held in the first weekend of September and lasts for three days and four nights. It comprises numerous diversified competitions, Technothlon: India’s largest student organized examination, lectures, interactive talks, exhibitions, workshops and exuberant nights as well as various social Initiatives.'
@@ -57,7 +57,7 @@ const EventsRoutes = () => {
             }
           />
           <Route
-            path='/Reflux'
+            path='/reflux'
             element={
               <Reflux
               description='Reflux, the annual Chemical Engineering Symposium of IIT Guwahati, is organized in the last week of March every year. It has been a pioneer in chemical industrial and entrepreneurial scene of the country.
@@ -67,7 +67,7 @@ const EventsRoutes = () => {
             }
           />
           <Route
-            path='/Udgam'
+            path='/udgam'
             element={
               <Udgam 
               description='Udgam, the IIT Guwahati Entrepreneurship Summit was conceptualized for a single purpose: to inspire people to know what it is like to pursue your dreams as an Entrepreneur, from people who know this perfectly well, and who want everyone else to do the same. This has been the aim for every edition of Udgam and we hope to continue moving towards this goal as relentlessly as possible. From giving you a chance to meet and interact with people who subscribe to our view of going ahead with what you are passionate about, and helping you shed your apprehensions and giving you a first-hand experience of how you should do so through our workshops, Udgam has something for every aspiring entrepreneur.
@@ -77,7 +77,7 @@ const EventsRoutes = () => {
             
           />
           <Route
-            path='/Kriti'
+            path='/kriti'
             element={
               <Kriti
               description='12 hostels, 7 days, 1 title! The inter hostel technical and management festival where nous and creativity are one�s only saviors. With a conflux of competitions from Robotics, Product Design, Finance and Management, Marketing Strategy, Quizzes, Astronomy and Gaming, this fest has been successful in uniting people from each year and department, besides inculcating the hostel spirit. 
@@ -86,7 +86,7 @@ const EventsRoutes = () => {
             }
           />
           <Route
-            path='/Manthan'
+            path='/manthan'
             element={
               <Manthan
               description='Manthan is the annual inter hostel cultural festival of IITG. Students from 12 hostels compete with full enthusiasm and hostel spirit. There are 30 events across various art forms in Manthan�15.'
@@ -94,7 +94,7 @@ const EventsRoutes = () => {
             }
           />
           <Route
-            path='/Spardha'
+            path='/spardha'
             element={
               <Spardha
               description='Spardha, the inter hostel sports competition, provides platform for all sportsmen, experienced and amateurs, in the campus. With the pride of your hostel at stake, this time in the sporting arena, Spardha will let you push the boundaries of what you can do for your hostel. 
@@ -104,7 +104,7 @@ const EventsRoutes = () => {
             }
           />
           <Route
-            path='/Interhostel'
+            path='/interhostel'
             element={
               <Interhostel/>
             }

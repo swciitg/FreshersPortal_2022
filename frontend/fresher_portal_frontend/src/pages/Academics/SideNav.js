@@ -46,6 +46,7 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  const arr=['bsbe','chemical','cst','design','ece','hss','mathematics','mechanical','physics']
   console.log('hello ', `${process.env.REACT_APP_BASE_URL}`);
   const drawer = (
     <div>
@@ -54,7 +55,7 @@ function ResponsiveDrawer(props) {
       <List>
       <ListItemButton 
         selected = {selectedIndex <= 13}
-        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/acadfront/')}}>
+        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/academics/')}}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
@@ -69,7 +70,7 @@ function ResponsiveDrawer(props) {
             key={text} 
             onClick={()=> {
               handleListItemClick(index+1);
-              navigate(`/acadfront/${text.toLowerCase()}`)
+              navigate(`/academics/${arr[index]}`)
             }} >
             <ListItemButton selected={selectedIndex === index+1}>
               <ListItemIcon>
@@ -86,7 +87,7 @@ function ResponsiveDrawer(props) {
         onClick={() => {
           handleClickOff();
           handleListItemClick(14);
-          navigate('/acadfront/branchchange/');
+          navigate('/academics/branchchange/');
         }}
       >
         <ListItemIcon>
@@ -99,7 +100,7 @@ function ResponsiveDrawer(props) {
         onClick={() => {
           handleClickOff();
           handleListItemClick(14);
-          navigate('/acadfront/minor/');
+          navigate('/academics/minor/');
         }}
       >
         <ListItemIcon>
@@ -142,11 +143,11 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <div style={{ display: 'flex', marginRight: '10px' }}>
+          {/* <div style={{ display: 'flex', marginRight: '10px' }}>
             <h3 style={{ marginRight: '5px' }}>Department</h3>
             <h3 style={{ marginRight: '10px' }}> Branch Change</h3>
             <h3 style={{ marginRight: '10px' }}> Minor Discipline</h3>
-          </div>
+          </div> */}
           {/* <Typography variant='h6' component='div' >
             Admin Panel
           </Typography> */}

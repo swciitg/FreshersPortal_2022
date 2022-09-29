@@ -33,16 +33,22 @@ function ResponsiveDrawer(props) {
     console.log(index);
   };
   const [open, setOpen] = React.useState(true);
+  const [open2, setOpen2] = React.useState(false);
   const handleClickOn = () => {
     setOpen(!open);
   };
   const handleClickOff = () => {
     setOpen(false);
   };
+  const handleClickOn2 = () => {
+    setOpen2(!open2);
+  };
+  const handleClickOff2 = () => {
+    setOpen2(false);
+  };
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const navigate = useNavigate();
-  const [component, setComponent] = useState('Login');
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -54,7 +60,7 @@ function ResponsiveDrawer(props) {
       <List>
       <ListItemButton 
         selected = {selectedIndex <= 13}
-        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/Alcheringa/')}}>
+        onClick={() => {handleListItemClick(0);handleClickOn();handleClickOff2();navigate('/events/alcheringa/')}}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
@@ -69,7 +75,7 @@ function ResponsiveDrawer(props) {
             key={text} 
             onClick={()=> {
               handleListItemClick(index+1);
-              navigate(`/acadfront/${text.toLowerCase()}`)
+              navigate(`/events/${text.toLowerCase()}`)
             }} >
             <ListItemButton selected={selectedIndex === index+1}>
               <ListItemIcon>
@@ -83,22 +89,22 @@ function ResponsiveDrawer(props) {
       </Collapse>
       <ListItemButton 
         selected = {selectedIndex <= 13}
-        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/Interhostel/')}}>
+        onClick={() => {handleListItemClick(0);handleClickOn2();handleClickOff();console.log(open2);navigate('/events/interhostel/')}}>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
         <ListItemText primary="Inter-Hostel Events" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
+      <Collapse in={open2} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-        {['Kriti','Manthan','Spardha',,].map((text, index) => (
+        {['Kriti','Manthan','Spardha'].map((text, index) => (
           <ListItem 
             button
             key={text} 
             onClick={()=> {
               handleListItemClick(index+1);
-              navigate(`/acadfront/${text.toLowerCase()}`)
+              navigate(`/events/${text.toLowerCase()}`)
             }} >
             <ListItemButton selected={selectedIndex === index+1}>
               <ListItemIcon>
@@ -146,11 +152,11 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <div style={{ display: 'flex', marginRight: '10px' }}>
+          {/* <div style={{ display: 'flex', marginRight: '10px' }}>
             <h3 style={{ marginRight: '5px' }}>Department</h3>
             <h3 style={{ marginRight: '10px' }}> Branch Change</h3>
             <h3 style={{ marginRight: '10px' }}> Minor Discipline</h3>
-          </div>
+          </div> */}
           {/* <Typography variant='h6' component='div' >
             Admin Panel
           </Typography> */}

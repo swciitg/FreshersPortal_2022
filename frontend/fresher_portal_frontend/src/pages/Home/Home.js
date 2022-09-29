@@ -4,13 +4,13 @@ import { NavLink } from "../../components/Navbar/NavbarElememts";
 
 export default function Home() {
   return (
-    <>
       <div
         id="container"
-        style={{
-          backgroundImage: `url(/AdmittedStudents/guesthouse1.jpg)`,
-        }}
+        // style={{
+        //   backgroundImage: `url(/AdmittedStudents/guesthouse1.jpg)`
+        // }}
       >
+        <img src="/AdmittedStudents/guesthouse1.jpg" alt="" />
         <div id="trs">
           <div id="d1">
             <div id="ha">WELCOME TO</div>
@@ -20,9 +20,7 @@ export default function Home() {
           <NavLink to="/admittedstudent" id="AS">
             Admitted Student
           </NavLink>
-          {/* <img id="back" src="" /> */}
         </div>
       </div>
-    </>
   );
 }

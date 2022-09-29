@@ -21,6 +21,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 const drawerWidth = 330;
 
+const redir = (url) => {
+  window.location.replace(url);
+}
 function ResponsiveDrawer(props) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
@@ -143,8 +146,10 @@ function ResponsiveDrawer(props) {
       <ListItemButton
         selected = {selectedIndex === 23}
         onClick={() => {
-          window.location.href = 'https://iitg.ac.in/sail/'; 
-          return null;
+          handleClickOff();
+          handleClickOff2();
+          handleListItemClick(23);
+          redir('https://iitg.ac.in/sail/');
         }}
       >
         <ListItemIcon>
@@ -155,7 +160,10 @@ function ResponsiveDrawer(props) {
       <ListItemButton
         selected = {selectedIndex === 24}
         onClick={() => {
-          window.location.replace('https://iitg.ac.in/acad/');
+          handleClickOff();
+          handleClickOff2();
+          handleListItemClick(24);
+          redir('https://www.iitg.ac.in/acad/');
         }}
       >
         <ListItemIcon>

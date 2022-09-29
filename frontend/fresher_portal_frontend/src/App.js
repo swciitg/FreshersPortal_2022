@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import ContactUs from './pages/ContactUs/contactus';
 import HostelsAndFacilitiesRoutes from './pages/HostelsAndFacilities/HostelsAndFacilities';
 import StudentOrganisationRoutes from "./pages/Student Organisation/Student Organisation Routes";
+import EventsRoutes from "./pages/Events/EventsRoutes";
 import AcademicsRoutes from "./pages/Academics/Academics_Routes";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/admittedstudent" element={<AdmittedStudents />} />
         <Route path="/" element={<Home />} />
         <Route path='/hostels/*' element={<HostelsAndFacilitiesRoutes />} />
+        <Route path='/events/*' element={<EventsRoutes />} />
         <Route path='/contactus' element={<ContactUs/>} />
         <Route path='/studentorganisation/*' element={<StudentOrganisationRoutes/>} />
       </Routes>

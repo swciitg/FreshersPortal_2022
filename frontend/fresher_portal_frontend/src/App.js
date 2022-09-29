@@ -7,6 +7,7 @@ import ContactUs from './pages/ContactUs/contactus';
 import HostelsAndFacilitiesRoutes from './pages/HostelsAndFacilities/HostelsAndFacilities';
 import StudentOrganisationRoutes from "./pages/Student Organisation/Student Organisation Routes";
 import EventsRoutes from "./pages/Events/EventsRoutes";
+import AcademicsRoutes from "./pages/Academics/Academics_Routes";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/important/*" element={<ImportantInformationRoutes />} />
         <Route path="/about" />
         <Route path="/contact" />
+        <Route path="/academics/*" element={<AcademicsRoutes/>}/>
         <Route path="/admittedstudent" element={<AdmittedStudents />} />
         <Route path="/" element={<Home />} />
         <Route path='/hostels/*' element={<HostelsAndFacilitiesRoutes />} />

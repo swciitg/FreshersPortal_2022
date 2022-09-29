@@ -129,6 +129,20 @@ const StudentOrganisationRoutes = () => {
             How easy it is to put forward your point in the agenda for the meeting?
             You can put agenda in the google form that is circulated each month. To give a detailed information of your proposal, you can call up a senator, sit with him so that he can put forward your point in the meeting which goes into action on approval by the Studnets' Senate. Senators will be happy to help you always. Just give them a call in case of help."/>}
           />
+          <Route
+            path='/sail/'
+            component={() => {
+              window.location.href = 'https://iitg.ac.in/sail/';
+              return null;
+            }}
+          />
+          <Route
+            path="/sab/"
+            component={() => {
+              window.location.href = 'https://www.iitg.ac.in/acad/';
+              return null;
+            }}
+          />
           {['Aeromodelling Club','Astronomy Club','Coding Club','Consultancy and Analytics Club','Electronics Club','Entreprenuership Cell','Finance & Economics Club','Green Automobile Club','Robotics Club','Science and Quiz Club ( ACUMEN )','TechEvince'].map((club) => {
             return (
               <Route

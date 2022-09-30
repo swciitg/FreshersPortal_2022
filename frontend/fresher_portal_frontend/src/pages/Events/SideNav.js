@@ -23,7 +23,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 const drawerWidth = 280;
 
 function ResponsiveDrawer(props) {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleListItemClick = (index) => {
     setSelectedIndex(index);

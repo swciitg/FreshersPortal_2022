@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './contactus.css';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -18,6 +18,10 @@ import TextField from '@mui/material/TextField';
 const ContactUs = () => {
   const [info, setInfo] = useState([]);
   const [info2, setInfo2] = useState([]);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [contact, setContact] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -41,6 +45,28 @@ const ContactUs = () => {
         setInfo2(response.data);
       })
       .catch((error) => console.log('error', error));
+  };
+
+  const sendMessage = () => {
+    axios
+      .post('http://127.0.0.1:8000/api/mssg/dropmsg', {
+        name: name,
+        email: email,
+        contact: contact,
+        message: message,
+      })
+      .then((response) => {
+        console.log(response.data);
+        alert('Message Sent');
+      })
+      .catch((error) => console.log('error', error));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(name, email, contact, message);
+    sendMessage();
+    window.location.reload();
   };
 
   let rand = 2;
@@ -148,70 +174,77 @@ const ContactUs = () => {
         <div className='heading-contact-2'>
           <p className='heading-text-contact'>Drop Your Message</p>
         </div>
-        <div className='contact_dropmessage'>
-          <Box
-            component='form'
-            sx={{
-              '& .MuiTextField-root': { m: 1, width: '620px' },
-            }}
-            noValidate
-            autoComplete='off'
-            className='contact_rows'
-          >
-            <div className='contact_column'>
-              <TextField
-                id='filled-multiline-flexible'
-                label='Name'
-                multiline
-                maxRows={1}
-                value=' '
-                variant='filled'
-              />
-              <TextField
-                id='filled-multiline-flexible'
-                label='Email'
-                multiline
-                maxRows={1}
-                value=' '
-                variant='filled'
-              />
-              <TextField
-                id='filled-multiline-flexible'
-                label='Phone'
-                multiline
-                maxRows={1}
-                value=' '
-                variant='filled'
-              />
-            </div>
-            <div>
-              <TextField
-                id='filled-multiline-static'
-                label='Message'
-                multiline
-                rows={7}
-                defaultValue=' '
-                variant='filled'
-              />
-            </div>
-          </Box>
-        </div>
-        <div className='contact_setwidth'>
-          <Button
-            variant='contained'
-            style={{
-              width: '10rem',
-              alignContent: 'center',
-              height: '3rem',
-              font: 'Plus Jakarta Sans',
-              background: '#5468FD',
-              textTransform: 'none',
-              fontSize: '1.2rem',
-            }}
-          >
-            Submit
-          </Button>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className='contact_dropmessage'>
+            <Box
+              component='form'
+              sx={{
+                '& .MuiTextField-root': { m: 1, width: '620px' },
+              }}
+              noValidate
+              autoComplete='off'
+              className='contact_rows'
+            >
+              <div className='contact_column'>
+                <TextField
+                  id='filled-multiline-flexible'
+                  onChange={(e) => setName(e.target.value)}
+                  label='Name'
+                  multiline
+                  maxRows={1}
+                  defaultValue=' '
+                  variant='filled'
+                />
+                <TextField
+                  id='filled-multiline-flexible'
+                  onChange={(e) => setEmail(e.target.value)}
+                  label='Email'
+                  multiline
+                  maxRows={1}
+                  defaultValue=' '
+                  variant='filled'
+                />
+                <TextField
+                  id='filled-multiline-flexible'
+                  onChange={(e) => setContact(e.target.value)}
+                  label='Phone'
+                  multiline
+                  maxRows={1}
+                  defaultValue=' '
+                  variant='filled'
+                />
+              </div>
+              <div>
+                <TextField
+                  id='filled-multiline-static'
+                  onChange={(e) => setMessage(e.target.value)}
+                  label='Message'
+                  multiline
+                  rows={7}
+                  defaultValue=' '
+                  variant='filled'
+                />
+              </div>
+            </Box>
+          </div>
+          <div className='contact_setwidth'>
+            <Button
+              variant='contained'
+              type='submit'
+              style={{
+                width: '10rem',
+                alignContent: 'center',
+                height: '3rem',
+                font: 'Plus Jakarta Sans',
+                background: '#5468FD',
+                textTransform: 'none',
+                fontSize: '1.2rem',
+              }}
+            >
+              Submit
+            </Button>
+          </div>
+        </form>
       </div>
       <div className='contact_faq-section'>
         <div className='heading-contact'>
@@ -234,8 +267,7 @@ const ContactUs = () => {
                   <Typography
                     dangerouslySetInnerHTML={{ __html: obj.ans }}
                     className='contact_regtext'
-                  >
-                  </Typography>
+                  ></Typography>
                 </AccordionDetails>
               </Accordion>
             ))}

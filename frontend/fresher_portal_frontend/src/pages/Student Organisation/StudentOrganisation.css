@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
 
 .organisation_page {
-  margin-left: 7%;
+  display: flex;
+  flex-direction: column;
 }
 
 .organisation_heading {
@@ -10,19 +11,19 @@
   margin-bottom: 1rem;
 }
 
-.organisation_sidebar{
-  background: #313A57;
-  color: #FFFFFF;
+.organisation_sidebar {
+  background: #313a57;
+  color: #ffffff;
 }
 
-.organisation_p{
+.organisation_p {
   font-family: 'Plus Jakarta Sans';
 }
 
-.organisation_span{
+.organisation_span {
   font-family: 'Plus Jakarta Sans';
 }
-.organisation_sidebar-text{
+.organisation_sidebar-text {
   font-family: 'Plus Jakarta Sans';
 }
 .organisation_pre-cursor {
@@ -47,13 +48,15 @@
 .organisation_description {
   background: #f7f1ff;
   font-family: 'Plus Jakarta Sans';
+  padding: 2rem;
+
   margin-right: 150px;
   font-style: normal;
   font-size: 18px;
   line-height: 36px;
 }
 
-.organisation_description-header{
+.organisation_description-header {
   text-align: start;
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
@@ -63,7 +66,7 @@
   line-height: 36px;
   margin: 0.9rem;
 }
-.organisation_description-text{
+.organisation_description-text {
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
   font-style: normal;
@@ -71,6 +74,8 @@
   font-size: 18px;
   line-height: 36px;
   padding-bottom: 7%;
+    margin: 0.9rem;
+
 }
 
 .organisation_image {
@@ -79,32 +84,29 @@
   margin-right: auto;
 }
 
-.organisation_post-text{
+.organisation_post-text {
   font-family: Plus Jakarta Sans;
   font-size: 18px;
   font-weight: 600;
   color: #f7f1ff;
   text-align: center;
 }
-.organisation_item{
+.organisation_item {
   font-family: Plus Jakarta Sans;
   font-size: 18px;
   font-weight: 600;
   line-height: 36px;
   color: #f7f1ff;
-  text-align: end;
+  text-align: center;
 }
 
-
-.organisation_box
-{
+.organisation_box {
   margin-right: 150px;
   margin-bottom: 2.2rem;
 }
 
-
 .Mui-selected {
-  background-color:#5468FD;
-  color:  #f7f1ff;
+  background-color: #5468fd;
+  color: #f7f1ff;
   font-weight: bold;
 }

@@ -24,7 +24,7 @@ const drawerWidth = 330;
 
 const redir = (url) => {
   window.location.replace(url);
-}
+};
 function ResponsiveDrawer(props) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
@@ -66,157 +66,246 @@ function ResponsiveDrawer(props) {
   };
   console.log('hello ', `${process.env.REACT_APP_BASE_URL}`);
   const drawer = (
-    <div className='sidebar'>
+    <div>
       <Toolbar />
       <Divider />
       <List>
-      <ListItemButton 
-        selected = {selectedIndex <= 9}
-        onClick={() => {handleClickOn();handleListItemClick(0);navigate('/studentorganisation/')}}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500}} primary="Cultural Board" />
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-        {['Anchorenza & RadioG','Cadance','Finesse', 'Deb-Soc','Xpressions','Lumiere','Montage','Lit-Soc','Octaves'].map((text, index) => (
-            <ListItemButton
-              selected = {selectedIndex === index+1}
-              onClick={()=> {
-                handleListItemClick(index+1);
-                navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
-              }}
-            >
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans', fontWeight:500}} primary={text} />
-            </ListItemButton>
-        ))}
-        </List>
-      </Collapse>
-      
-      <ListItemButton
-        selected = {selectedIndex === 10}
-        onClick={() => {
-          handleClickOff();
-          handleClickOff2();
-          handleListItemClick(10);
-          navigate('/studentorganisation/hab/');
-        }}
-      >
-        <ListItemIcon>
-          <MailIcon />
-        </ListItemIcon>
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Hostel Affairs Board" />
-      </ListItemButton>
-      <ListItemButton 
-        selected = {(selectedIndex>=11 && selectedIndex <= 22)}
-        onClick={() => {handleClickOn2();handleListItemClick(0);navigate('/studentorganisation/technicalboard')}}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500}} primary="Technical Board" />
-        {open2 ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={open2} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-        {['Aeromodelling Club','Astronomy Club','Coding Club','Consultancy and Analytics Club','Electronics Club','Entreprenuership Cell','Finance & Economics Club','Green Automobile Club','Robotics Club','Science and Quiz Club ( ACUMEN )','TechEvince'].map((text, index) => (
-          <ListItem 
-            button
-            key={text} 
-            className='sidebar-text'
-            onClick={()=> {
-              handleListItemClick(index+12);
-              navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
-            }} >
-            <ListItemButton
-              selected = {selectedIndex === index+12}
-            >
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans', fontWeight:500}} primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-        </List>
-      </Collapse>
-      <ListItemButton
-        selected = {selectedIndex === 23}
-        onClick={() => {
-          handleClickOff();
-          handleClickOff2();
-          handleListItemClick(23);
-          redir('https://iitg.ac.in/sail/');
-        }}
-      >
-        <ListItemIcon>
-          <MailIcon />
-        </ListItemIcon>
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="SAIL" />
-      </ListItemButton>
-      <ListItemButton
-        selected = {selectedIndex === 24}
-        onClick={() => {
-          handleClickOff();
-          handleClickOff2();
-          handleListItemClick(24);
-          redir('https://www.iitg.ac.in/acad/');
-        }}
-      >
-        <ListItemIcon>
-          <MailIcon />
-        </ListItemIcon>
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Students' Academic Board" />
-      </ListItemButton>
-      <ListItemButton
-        selected = {selectedIndex === 25}
-        onClick={() => {
-          handleClickOff();
-          handleClickOff2();
-          handleListItemClick(25);
-          navigate('/studentorganisation/sgc/');
-        }}
-      >
-        <ListItemIcon>
-          <MailIcon />
-        </ListItemIcon>
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Students' Gymkhana Council" />
-      </ListItemButton>
-      <ListItemButton 
-        selected = {(selectedIndex>=25 && selectedIndex <= 30)}
-        onClick={() => {handleClickOn3();handleListItemClick(0);navigate('/studentorganisation/studentswelfare')}}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500}} primary="Students' Welfare Board" />
-        {open3 ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={open3} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-        {['Saathi- The Counselling Service','Social Service Club','Youth Empowerment Club','Rights and Responsibility Club','Red Ribbon Club'].map((text, index) => (
-          <ListItem 
-            button
-            key={text} 
-            onClick={()=> {
-              handleListItemClick(index+26);
-              navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
-            }} >
-            <ListItemButton
-              selected = {selectedIndex === index+25}
-            >
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans', fontWeight:500}} primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-        </List>
-      </Collapse>
+        <ListItemButton
+          selected={selectedIndex <= 9}
+          onClick={() => {
+            handleClickOn();
+            handleListItemClick(0);
+            navigate('/studentorganisation/');
+          }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              fontFamily: 'Plus Jakarta Sans',
+              fontWeight: 500,
+            }}
+            primary='Cultural Board'
+          />
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={open} timeout='auto' unmountOnExit>
+          <List component='div' disablePadding>
+            {[
+              'Anchorenza & RadioG',
+              'Cadance',
+              'Finesse',
+              'Deb-Soc',
+              'Xpressions',
+              'Lumiere',
+              'Montage',
+              'Lit-Soc',
+              'Octaves',
+            ].map((text, index) => (
+              <ListItem
+                button
+                key={text}
+                onClick={() => {
+                  handleListItemClick(index + 1);
+                  navigate(
+                    `/studentorganisation/${text
+                      .split(' ')[0]
+                      .replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '')
+                      .toLowerCase()}`
+                  );
+                }}
+              >
+                <ListItemButton selected={selectedIndex === index + 1}>
+                  <ListItemText
+                    primaryTypographyProps={{
+                      fontFamily: 'Plus Jakarta Sans',
+                      fontWeight: 500,
+                    }}
+                    primary={text}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Collapse>
+
+        <ListItemButton
+          selected={selectedIndex === 10}
+          onClick={() => {
+            handleClickOff();
+            handleClickOff2();
+            handleListItemClick(10);
+            navigate('/studentorganisation/hab/');
+          }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              fontFamily: 'Plus Jakarta Sans',
+              fontWeight: 500,
+            }}
+            primary='Hostel Affairs Board'
+          />
+        </ListItemButton>
+        <ListItemButton
+          selected={selectedIndex >= 11 && selectedIndex <= 22}
+          onClick={() => {
+            handleClickOn2();
+            handleListItemClick(0);
+            navigate('/studentorganisation/technicalboard');
+          }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              fontFamily: 'Plus Jakarta Sans',
+              fontWeight: 500,
+            }}
+            primary='Technical Board'
+          />
+          {open2 ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={open2} timeout='auto' unmountOnExit>
+          <List component='div' disablePadding>
+            {[
+              'Aeromodelling Club',
+              'Astronomy Club',
+              'Coding Club',
+              'Consulting and Analytics Club',
+              'Electronics Club',
+              'Entreprenuership Cell',
+              'Finance & Economics Club',
+              'Green Automobile Club',
+              'Robotics Club',
+              'Science and Quiz Club ( ACUMEN )',
+              'Techevince',
+            ].map((text, index) => (
+              <ListItem
+                button
+                key={text}
+                className='sidebar-text'
+                onClick={() => {
+                  handleListItemClick(index + 12);
+                  navigate(
+                    `/studentorganisation/${text
+                      .split(' ')[0]
+                      .replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '')
+                      .toLowerCase()}`
+                  );
+                }}
+              >
+                <ListItemButton selected={selectedIndex === index + 12}>
+                  <ListItemText
+                    primaryTypographyProps={{
+                      fontFamily: 'Plus Jakarta Sans',
+                      fontWeight: 500,
+                    }}
+                    primary={text}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Collapse>
+        <ListItemButton
+          selected={selectedIndex === 23}
+          onClick={() => {
+            handleClickOff();
+            handleClickOff2();
+            handleListItemClick(23);
+            redir('https://iitg.ac.in/sail/');
+          }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              fontFamily: 'Plus Jakarta Sans',
+              fontWeight: 500,
+            }}
+            primary='SAIL'
+          />
+        </ListItemButton>
+        <ListItemButton
+          selected={selectedIndex === 24}
+          onClick={() => {
+            handleClickOff();
+            handleClickOff2();
+            handleListItemClick(24);
+            redir('https://www.iitg.ac.in/acad/');
+          }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              fontFamily: 'Plus Jakarta Sans',
+              fontWeight: 500,
+            }}
+            primary="Students' Academic Board"
+          />
+        </ListItemButton>
+        <ListItemButton
+          selected={selectedIndex === 25}
+          onClick={() => {
+            handleClickOff();
+            handleClickOff2();
+            handleListItemClick(25);
+            navigate('/studentorganisation/sgc/');
+          }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              fontFamily: 'Plus Jakarta Sans',
+              fontWeight: 500,
+            }}
+            primary="Students' Gymkhana Council"
+          />
+        </ListItemButton>
+        <ListItemButton
+          selected={selectedIndex >= 25 && selectedIndex <= 30}
+          onClick={() => {
+            handleClickOn3();
+            handleListItemClick(0);
+            navigate('/studentorganisation/studentswelfare');
+          }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              fontFamily: 'Plus Jakarta Sans',
+              fontWeight: 500,
+            }}
+            primary="Students' Welfare Board"
+          />
+          {open3 ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={open3} timeout='auto' unmountOnExit>
+          <List component='div' disablePadding>
+            {[
+              'Saathi- The Counselling Service',
+              'Social Service Club',
+              'Youth Empowerment Club',
+              'Rights and Responsibility Club',
+              'Red Ribbon Club',
+            ].map((text, index) => (
+              <ListItem
+                button
+                key={text}
+                onClick={() => {
+                  handleListItemClick(index + 26);
+                  navigate(
+                    `/studentorganisation/${text
+                      .split(' ')[0]
+                      .replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '')
+                      .toLowerCase()}`
+                  );
+                }}
+              >
+                <ListItemButton selected={selectedIndex === index + 25}>
+                  <ListItemText
+                    primaryTypographyProps={{
+                      fontFamily: 'Plus Jakarta Sans',
+                      fontWeight: 500,
+                    }}
+                    primary={text}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Collapse>
       </List>
       <Divider />
     </div>
@@ -234,23 +323,7 @@ function ResponsiveDrawer(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            sx={{
-              mr: 2,
-              display: { sm: 'none' },
-              position: 'relative',
-              top: '0',
-              left: '-100px',
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
+
       </AppBar>
       <Box
         component='nav'
@@ -270,7 +343,7 @@ function ResponsiveDrawer(props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              background: '#313A57'
+              background: '#313A57',
             },
           }}
         >
@@ -284,7 +357,7 @@ function ResponsiveDrawer(props) {
               boxSizing: 'border-box',
               width: drawerWidth,
               background: '#313A57',
-              color:'#FFFFFF'
+              color: '#FFFFFF',
             },
           }}
           open

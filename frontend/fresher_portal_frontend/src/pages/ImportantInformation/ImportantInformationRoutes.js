@@ -18,16 +18,25 @@ const ImportantInformationRoutes = () => {
         }}
       >
         <Routes>
-          <Route path='/' element={<Template url='pid' />} />
-          <Route path='/provisional' element={<Template url='pid' />} />
-          <Route path='/antiragging' element={<Template url='ar' />} />
-          <Route path='/hostelundertaking' element={<Template url='hu' />} />
-          <Route path='/bonafide' element={<Template url='bf' />} />
-          <Route path='/codeofconduct' element={<Template url='coc' />} />
-          <Route path='/guidelines' element={<Template url='gui' />} />
-          <Route path='/iitggirlscollective' element={<Template url='igc' />} />
-          <Route path='/permanentidentity' element={<Template url='per' />} />
-          <Route path='/portal' element={<Template url='por' />} />
+          <Route path='/' element={<Template url='provisional' />} />
+          <Route path='/provisional' element={<Template url='provisional' />} />
+          <Route path='/antiragging' element={<Template url='antiragging' />} />
+          <Route
+            path='/hostelundertaking'
+            element={<Template url='hostel' />}
+          />
+          <Route path='/bonafide' element={<Template url='bonafide' />} />
+          <Route path='/codeofconduct' element={<Template url='code' />} />
+          <Route path='/guidelines' element={<Template url='photo' />} />
+          <Route
+            path='/iitggirlscollective'
+            element={<Template url='girls' />}
+          />
+          <Route
+            path='/permanentidentity'
+            element={<Template url='permanent' />}
+          />
+          <Route path='/portal' element={<Template url='personal' />} />
         </Routes>
       </div>
     </div>

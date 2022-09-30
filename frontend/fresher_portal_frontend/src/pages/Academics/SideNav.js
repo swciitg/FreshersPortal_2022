@@ -16,12 +16,11 @@ import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
 
-const drawerWidth = 280;
-
+const drawerWidth = 300;
+const urls = ['bsbe','cl','cst','civil','cse','design','ece','hss','mnc','mech','phy']
 function ResponsiveDrawer(props) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
@@ -49,23 +48,28 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
       <ListItemButton 
-        selected = {selectedIndex <= 13}
-        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/hostels/')}}>
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Hostels" />
+        selected = {selectedIndex <= 11}
+        onClick={() => {handleListItemClick(0);handleClickOn();navigate('/academics/')}}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Departments" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-        {['Barak','Bramhaputra','Dhansiri', 'Dibang','Dihing','Disang','Kameng','Kapili','Manas','Lohit','Siang','Subansiri','Umiam'].map((text, index) => (
+        {['Biosciences & Bioengineering','Chemical Engineering','Chemical Science & Technology', 'Civil Engineering','Computer Science & Engineering','Design','Electronics & Electrical Engineering','Humanities & Social Sciences','Mathematics','Mechanical Engineering','Physics'].map((text, index) => (
           <ListItem 
             button
             key={text} 
             onClick={()=> {
               handleListItemClick(index+1);
-              navigate(`/hostels/${text.toLowerCase()}`)
+              navigate(`/academics/${urls[index]}`)
             }} >
             <ListItemButton selected={selectedIndex === index+1}>
-              
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
               <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary={text} />
             </ListItemButton>
           </ListItem>
@@ -73,15 +77,30 @@ function ResponsiveDrawer(props) {
         </List>
       </Collapse>
       <ListItemButton
-        selected={selectedIndex==14}
+        selected={selectedIndex===12}
         onClick={() => {
           handleClickOff();
-          handleListItemClick(14);
-          navigate('/hostels/facilities/');
+          handleListItemClick(12);
+          navigate('/academics/branchchange/');
         }}
       >
-
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Facilities" />
+        <ListItemIcon>
+          <MailIcon />
+        </ListItemIcon>
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Branch Change" />
+      </ListItemButton>
+      <ListItemButton
+        selected={selectedIndex===13}
+        onClick={() => {
+          handleClickOff();
+          handleListItemClick(13);
+          navigate('/academics/minor/');
+        }}
+      >
+        <ListItemIcon>
+          <MailIcon />
+        </ListItemIcon>
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Minor Discipline" />
       </ListItemButton>
       </List>
       <Divider />
@@ -92,17 +111,7 @@ function ResponsiveDrawer(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <div style={{}}>
-      {/* <Box sx={{ display: 'flex', }}> */}
-      {/* <CssBaseline /> */}
-      <AppBar
-        position='fixed'
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-        }}
-      >
-      </AppBar>
+    <div>
       <Box
         component='nav'
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
@@ -143,19 +152,6 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-      {/* <Box
-        component='main'
-        sx={{
-          flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-        }}
-      >
-      
-        <Toolbar />
-        <Typography paragraph>{loadComponent()}</Typography>
-      </Box> */}
-      {/* </Box> */}
     </div>
   );
 }

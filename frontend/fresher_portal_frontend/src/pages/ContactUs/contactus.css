@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
 
-.page {
+.contact_page {
   padding-top: 40px;
 }
 
@@ -8,9 +8,17 @@
   display: flex;
   flex-direction: row;
   text-align: center;
+  margin-bottom: 3rem;
+}
+.heading-contact-2 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
-.pre-cursor {
+.contact_pre-cursor {
   width: 6px;
   height: 50px;
   background-color: #5468fd;
@@ -30,21 +38,12 @@
   color: #000000;
 }
 
-
-.description {
-  font-family: 'Plus Jakarta Sans';
-  margin-right: 150px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 36px;
-}
-.image {
+.contact_image {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.item{
+.contact_item {
   font-family: Plus Jakarta Sans;
   font-size: 18px;
   font-weight: 600;
@@ -54,17 +53,21 @@
   text-align: center;
   border: solid #f7f1ff;
 }
-.box
-{
+
+.contact_dropmessage{
+  display: flex;
+  justify-content: center;
+}
+
+.contact_box {
   margin-right: 150px;
 }
 
-.container-grid{
+.contact_container-grid {
   display: grid;
 }
 
-.description-title
-{
+.contact_description-title {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
@@ -72,7 +75,7 @@
   color: #000000;
 }
 
-.description{
+.contact_description {
   font-family: Plus Jakarta Sans;
   width: fit-content;
   font-size: 18px;
@@ -81,28 +84,37 @@
   letter-spacing: 0em;
   text-align: center;
 }
-.column{
-  display:flex;
-  flex-direction:column;
+.contact_column {
+  display: flex;
+  flex-direction: column;
 }
-.rows
-{
-  display:flex;
-  flex-direction:row;
+.contact_rows {
+  display: flex;
+  flex-direction: row;
 }
-.setwidth{
+.contact_setwidth {
   padding: 50px;
   text-align: center;
 }
-.regtitle{
+.contact_regtitle {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
 }
-.regtext{
+.contact_regtext {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
+}
+
+.contact_faq-section{
+  margin-top: 4rem;
+}
+
+.contact_faq{
+  padding-left: 15rem;
+  padding-right: 15rem;
+  margin-bottom: 2rem;
 }

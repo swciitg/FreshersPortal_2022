@@ -16,10 +16,24 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import ListItemButton from '@mui/material/ListItemButton';
 
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+  const handleListItemClick = (index) => {
+    setSelectedIndex(index);
+    console.log(index);
+  };
+  const [open, setOpen] = React.useState(true);
+  const handleClickOn = () => {
+    setOpen(!open);
+  };
+  const handleClickOff = () => {
+    setOpen(false);
+  };
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const navigate = useNavigate();
@@ -48,6 +62,7 @@ function ResponsiveDrawer(props) {
             button
             key={text}
             onClick={() => {
+              handleListItemClick(index + 1);
               if (text === 'Provisional ID Card') {
                 navigate('/important/provisional');
                 setComponent('Provisional ID Card');
@@ -80,7 +95,15 @@ function ResponsiveDrawer(props) {
               }
             }}
           >
-            <ListItemText>{text}</ListItemText>
+            <ListItemButton selected={selectedIndex === index + 1}>
+              <ListItemText
+                primaryTypographyProps={{
+                  fontFamily: 'Plus Jakarta Sans',
+                  fontWeight: 500,
+                }}
+                primary={text}
+              />
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
@@ -102,30 +125,7 @@ function ResponsiveDrawer(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            sx={{
-              mr: 2,
-              display: { sm: 'none' },
-              position: 'relative',
-              top: '0',
-              left: '-100px',
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <div style={{ display: 'flex', marginRight: '10px' }}>
-            <h3 style={{ marginRight: '5px' }}>Important</h3>
-            <h3 style={{ marginRight: '10px' }}>Information</h3>
-          </div>
-          {/* <Typography variant='h6' component='div' >
-            Admin Panel
-          </Typography> */}
-        </Toolbar>
+        
       </AppBar>
       <Box
         component='nav'
@@ -158,7 +158,8 @@ function ResponsiveDrawer(props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              // border:"3px solid pink"
+              background: '#313A57',
+              color: '#FFFFFF',
             },
           }}
           open

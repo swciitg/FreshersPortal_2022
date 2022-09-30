@@ -18,9 +18,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
+import { color } from '@mui/system';
 
 const drawerWidth = 330;
 
+const redir = (url) => {
+  window.location.replace(url);
+}
 function ResponsiveDrawer(props) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
@@ -115,7 +119,7 @@ function ResponsiveDrawer(props) {
           <InboxIcon />
         </ListItemIcon>
         <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500}} primary="Technical Board" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        {open2 ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open2} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
@@ -143,8 +147,10 @@ function ResponsiveDrawer(props) {
       <ListItemButton
         selected = {selectedIndex === 23}
         onClick={() => {
-          window.location.href = 'https://iitg.ac.in/sail/'; 
-          return null;
+          handleClickOff();
+          handleClickOff2();
+          handleListItemClick(23);
+          redir('https://iitg.ac.in/sail/');
         }}
       >
         <ListItemIcon>
@@ -155,7 +161,10 @@ function ResponsiveDrawer(props) {
       <ListItemButton
         selected = {selectedIndex === 24}
         onClick={() => {
-          window.location.replace('https://iitg.ac.in/acad/');
+          handleClickOff();
+          handleClickOff2();
+          handleListItemClick(24);
+          redir('https://www.iitg.ac.in/acad/');
         }}
       >
         <ListItemIcon>
@@ -184,7 +193,7 @@ function ResponsiveDrawer(props) {
           <InboxIcon />
         </ListItemIcon>
         <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500}} primary="Students' Welfare Board" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        {open3 ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open3} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
@@ -192,7 +201,6 @@ function ResponsiveDrawer(props) {
           <ListItem 
             button
             key={text} 
-            className='sidebar-text'
             onClick={()=> {
               handleListItemClick(index+26);
               navigate(`/studentorganisation/${text.split(' ')[0].replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '').toLowerCase()}`);
@@ -275,7 +283,8 @@ function ResponsiveDrawer(props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              background: '#313A57'
+              background: '#313A57',
+              color:'#FFFFFF'
             },
           }}
           open

@@ -4,7 +4,7 @@
   margin-left: 7%;
 }
 
-.heading {
+.hostel_heading {
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
@@ -77,9 +77,4 @@
   line-height: 36px;
   color: #f7f1ff;
   text-align: center;
-}
-.box
-{
-  margin-right: 150px;
-  margin-bottom: 2.2rem;
 }

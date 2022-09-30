@@ -1,23 +1,24 @@
 import React from 'react';
 import './Home.css';
-import { NavLink } from '../../components/Navbar/NavbarElememts';
+import  NavBar  from '../../components/Navbar/Navbar_1';
+import NavBar2 from '../../components/Navbar/index';
+import {NavLink} from '../../components/Navbar/NavbarElements';
+import StickyFooter from '../../components/StickyFooter';
 
 export default function Home() {
   return (
     <div
       id='container'
-      // style={{
-      //   backgroundImage: `url(/AdmittedStudents/guesthouse1.jpg)`
-      // }}
     >
-      <img className='home_img' src='/AdmittedStudents/guesthouse1.jpg' alt='' />
+      <img className='home_img' src='/assets/images/homescreen.jpg' alt='' />
+      <NavBar/>
       <div id='trs'>
         <div id='d1'>
           <div id='ha'>WELCOME TO</div>
           <div id='hb'>IIT GUWAHATI</div>
         </div>
 
-        <NavLink to='/admittedstudent' id='AS'>
+        <NavLink className='navbar' exact to='/home' activeClassName='highlighted'>
           Admitted Student
         </NavLink>
       </div>

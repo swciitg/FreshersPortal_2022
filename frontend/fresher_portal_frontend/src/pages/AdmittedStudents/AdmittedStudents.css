@@ -1,7 +1,12 @@
-/* #box {
-  display: flex;
-  flex-direction: column;
-} */
+.classwithz{
+  z-index: 1;
+}
+.admittedstudents_page {
+  position: absolute;
+  top: 10%;
+  bottom:10%;
+  z-index: -1;
+}
 
 #d1 {
   position: absolute;
@@ -120,8 +125,6 @@
   background: #f7f1ff;
   border-radius: 5px 0px 0px 5px;
 }
-.s1icons {
-}
 
 #s2 {
   position: relative;
@@ -229,8 +232,7 @@
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-#dropdown {
-}
+
 #collap {
   position: absolute;
   top: 50px;
@@ -241,7 +243,7 @@
   width: 160px;
   height: 53px;
   display: flex;
-  ustify-content: center;
+  justify-content: center;
   align-items: center;
   background: #f7f1ff;
   font-family: "Plus Jakarta Sans";

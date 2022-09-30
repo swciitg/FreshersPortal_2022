@@ -55,7 +55,7 @@ import { Stack, Button } from "@mui/material";
 export default function Header() {
   return (
     // <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         <div id="box" className="">
           <button id="b1">HOME</button>
@@ -70,6 +70,5 @@ export default function Header() {
         <img src="/AdmittedStudents/Line 78.svg" id="line" />
       </Toolbar>
     </AppBar>
-    // </Box>
   );
 }

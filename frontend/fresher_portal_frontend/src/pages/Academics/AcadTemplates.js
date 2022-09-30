@@ -25,9 +25,8 @@ const AcadTemplates = (props) => {
         <div className='academics_description-text'>
           {props.description}
         </div>
-      </div>
-      <Box sx={{ width: '1400px' }} className='box'>
-        <Grid container rowSpacing={2} columnSpacing={0}>
+        <Box sx={{ width: '100%' }} className='academics_box'>
+        <Grid container rowSpacing={0} columnSpacing={0}>
           <Grid item xs={6}>
             <Item className='item'>
               <p className='post-text'>
@@ -44,6 +43,8 @@ const AcadTemplates = (props) => {
           </Grid>
         </Grid>
       </Box>
+      </div>
+      
     </div>
   );
 };

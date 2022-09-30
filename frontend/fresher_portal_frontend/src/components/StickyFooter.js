@@ -7,13 +7,9 @@ import Link from '@mui/material/Link';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="inherit">
-      {'|© '}
-      <Link color="inherit" href="">
-        2022SWC, All rights reserved | Designed, Developed and Maintained by Student Web Committee of IIT, Guwahati |
-      </Link>{' '}
-      {/* {new Date().getFullYear()}
-      {'.'} */}
+    <Typography color="inherit" sx={{fontFamily:'Plus Jakarta Sans',fontSize: '14px'}}>
+      {'| © '}
+        2022 SWC, All rights reserved | Designed, Developed and Maintained by Student Web Committee of IIT, Guwahati |
     </Typography>
   );
 }
@@ -22,9 +18,9 @@ export default function StickyFooter() {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
+        position:'fixed',
+        width:'100%',
+        bottom:'0.1rem'
       }}
     >
       <CssBaseline />
@@ -35,10 +31,8 @@ export default function StickyFooter() {
           py: 1,
           px: 2,
           mt: 'auto',
-          backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
+          backgroundColor: '#000000',
+          color:'#FFFFFF'
         }}
       > 
         <Container maxWidth="md">

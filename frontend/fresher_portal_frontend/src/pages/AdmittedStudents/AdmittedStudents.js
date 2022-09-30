@@ -2,7 +2,8 @@ import * as React from "react";
 import { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
 import "./AdmittedStudents.css";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/Navbar/Navbar_1";
+import NavBar2 from "../../components/Navbar/index";
 import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
@@ -10,6 +11,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { NavLink } from "react-router-dom";
 import { FunctionsOutlined, ViewComfyAltOutlined } from "@mui/icons-material";
+import StickyFooter from "../../components/StickyFooter";
 
 export default function AdmittedStudents() {
   var s1 = 4;
@@ -77,16 +79,15 @@ export default function AdmittedStudents() {
       Telephone Directory
     </Tooltip>
   );
-  // const Viewall1 = () => (
-
-  // );
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
 
   return (
-    <>
-      <Navbar />
-      <div id="box">
+    <div className="container">
+      <Navbar/>
+      <div className="classwithz"><NavBar2/></div>
+      <StickyFooter/>
+      <div className='admittedstudents_page' id="box">
         <div className="grid grid-cols-12" id="s1">
           <div className="col-span-11" id="d1a">
             <h2 id="d1h">Important Submissions</h2>
@@ -201,19 +202,9 @@ export default function AdmittedStudents() {
              */}
             <div id="sort">
               <DropdownButton id="sorttext" title="Latest">
-                {/* <Dropdown.Item href="#/action-1" className="sortitem" id="one">
-                Action
-              </Dropdown.Item>
-              <Dropdown.Item href="#/action-2" className="sortitem">
-                Another action
-              </Dropdown.Item>
-              <Dropdown.Item href="#/action-3" className="sortitem">
-                Something else
-              </Dropdown.Item> */}
               </DropdownButton>
               <img src="/AdmittedStudents/Stroke 1.svg" id="downarrow" />
             </div>
-            {/* </div> */}
             <ul id="ul2">
               {(() => {
                 if (!open2) {
@@ -348,6 +339,6 @@ export default function AdmittedStudents() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

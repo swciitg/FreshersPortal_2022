@@ -19,7 +19,7 @@ const Template = (props) => {
      .catch((error) => console.log('error', error));
  };
  return (
-   <div className='page'>
+   <div className='important_page'>
      <div className='heading'>
        <div className='important_pre-cursor'></div>
        {info.length && (

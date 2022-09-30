@@ -75,6 +75,9 @@
   font-weight: 600;
   line-height: 36px;
   color: #f7f1ff;
-  text-align: center;
-  margin-left: 40%;
+}
+.organisation_box
+{
+  margin-right: 150px;
+  margin-bottom: 2.2rem;
 }

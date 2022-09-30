@@ -11,6 +11,7 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
+  width: '30%',
   color: theme.palette.text.secondary,
 }));
 const Template = (props) => {
@@ -42,16 +43,13 @@ const Template = (props) => {
             <div dangerouslySetInnerHTML={{ __html: info[0].text }}></div>
           )}
         </div>
-        <Box sx={{ width: '100%' }} className='box'>
-          <Grid container rowSpacing={2} columnSpacing={0}>
-            <Grid item xs={6}></Grid>
-            <Grid item xs={6}>
-              <Item className='item'>
-                <a href={info.length && info[0].weblink} className='post-text'>
-                  Website Link
-                </a>
-              </Item>
-            </Grid>
+        <Box textAlign='end' justifyContent='end'>
+          <Grid container justifyContent='flex-end'>
+            <Item className='item'>
+              <a href={info.length && info[0].weblink} className='post-text'>
+                Website Link
+              </a>
+            </Item>
           </Grid>
         </Box>
       </div>

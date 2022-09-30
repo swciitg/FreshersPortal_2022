@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './StudentOrganisation.css';
 import axios from 'axios';
 import { styled } from '@mui/material/styles';
@@ -11,7 +11,7 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  width:'30%',
+  width: '30%',
   color: theme.palette.text.secondary,
 }));
 const StuOrgTemplate = (props) => {
@@ -48,7 +48,10 @@ const StuOrgTemplate = (props) => {
         <Box textAlign='end' justifyContent='end'>
           <Grid container justifyContent='flex-end'>
             <Item className='organisation_item'>
-              <a href={info.length && info[0].weblink} className='organisation_post-text'>
+              <a
+                href={info.length && info[0].weblink}
+                className='organisation_post-text'
+              >
                 Website Link
               </a>
             </Item>

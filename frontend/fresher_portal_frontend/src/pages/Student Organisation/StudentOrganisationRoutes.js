@@ -1,10 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ResponsiveDrawer from './SideNav';
-import CulturalBoard from './BoardTemplate2';
-import HostelAffairBoard from './HostelAffairBoard';
-import StudentGymkhanaCouncil from './StudentGymkhanaCouncil';
-import TechnicalBoard from './TechnicalBoard';
 import BoardTemplate from './BoardTemplate';
 import StuOrgTemplate from './StuOrgTemplate';
 import Template from '../ImportantInformation/Template';
@@ -40,10 +36,13 @@ const StudentOrganisationRoutes = () => {
             path='/culturalboard'
             element={<BoardTemplate2 url='cult' />}
           />
-          <Route path='/technicalboard' element={<BoardTemplate2 url='tech' />} />
+          <Route
+            path='/technicalboard'
+            element={<BoardTemplate2 url='tech' />}
+          />
           {[
             'Anchorenza & RadioG',
-            'Cadance',
+            'Cadence',
             'Finesse',
             'Deb-Soc',
             'Xpressions',
@@ -57,10 +56,7 @@ const StudentOrganisationRoutes = () => {
                 path={`/${url[index]}`}
                 element={
                   <StuOrgTemplate
-                    url={`${String(club)
-                      .split(' ')[0]
-                      .toLowerCase()
-                      .slice(0, 3)}`}
+                    url={`${String(club).split(' ')[0].toLowerCase()}`}
                   />
                 }
               />
@@ -86,7 +82,7 @@ const StudentOrganisationRoutes = () => {
             'Aeromodelling Club',
             'Astronomy Club',
             'Coding Club',
-            'Consultancy and Analytics Club',
+            'Consulting and Analytics Club',
             'Electronics Club',
             'Entreprenuership Cell',
             'Finance & Economics Club',
@@ -100,16 +96,16 @@ const StudentOrganisationRoutes = () => {
                 path={`/${String(club).split(' ')[0].toLowerCase()}`}
                 element={
                   <StuOrgTemplate
-                    url={`${String(club)
-                      .split(' ')[0]
-                      .toLowerCase()
-                      .slice(0, 3)}`}
+                    url={`${String(club).split(' ')[0].toLowerCase()}`}
                   />
                 }
               />
             );
           })}
-          <Route path='/studentswelfare' element={<Template url='swb' />} />
+          <Route
+            path='/studentswelfare'
+            element={<BoardTemplate url='swb' />}
+          />
           {[
             'Saathi - The Counselling Service',
             'Social Service Club',
@@ -122,10 +118,7 @@ const StudentOrganisationRoutes = () => {
                 path={`/${String(club).split(' ')[0].toLowerCase()}`}
                 element={
                   <StuOrgTemplate
-                    url={`${String(club)
-                      .split(' ')[0]
-                      .toLowerCase()
-                      .slice(0, 3)}`}
+                    url={`${String(club).split(' ')[0].toLowerCase()}`}
                   />
                 }
               />

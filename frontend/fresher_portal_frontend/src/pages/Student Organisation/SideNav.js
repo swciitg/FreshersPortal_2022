@@ -167,14 +167,14 @@ function ResponsiveDrawer(props) {
               'Aeromodelling Club',
               'Astronomy Club',
               'Coding Club',
-              'Consultancy and Analytics Club',
+              'Consulting and Analytics Club',
               'Electronics Club',
               'Entreprenuership Cell',
               'Finance & Economics Club',
               'Green Automobile Club',
               'Robotics Club',
               'Science and Quiz Club ( ACUMEN )',
-              'TechEvince',
+              'Techevince',
             ].map((text, index) => (
               <ListItem
                 button

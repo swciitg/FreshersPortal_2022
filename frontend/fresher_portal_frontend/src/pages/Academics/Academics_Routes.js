@@ -4,7 +4,7 @@ import ResponsiveDrawer from './SideNav';
 import AcadTemplates from './AcadTemplates';
 import BranchChange from './BranchChange';
 import Minor from './Minor';
-
+import BoardTemplate2 from '../Student Organisation/BoardTemplate2';
 
 const AcademicsRoutes = () => {
   return (
@@ -21,6 +21,7 @@ const AcademicsRoutes = () => {
         }}
       >
         <Routes>
+          <Route path='/' element={<BoardTemplate2 url='dept' />} />
           <Route
             path='/bsbe'
             element={

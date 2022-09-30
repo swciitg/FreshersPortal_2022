@@ -50,9 +50,6 @@ function ResponsiveDrawer(props) {
       <ListItemButton 
         selected = {selectedIndex <= 11}
         onClick={() => {handleListItemClick(0);handleClickOn();navigate('/academics/')}}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
         <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Departments" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
@@ -67,9 +64,6 @@ function ResponsiveDrawer(props) {
               navigate(`/academics/${urls[index]}`)
             }} >
             <ListItemButton selected={selectedIndex === index+1}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
               <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary={text} />
             </ListItemButton>
           </ListItem>
@@ -84,9 +78,6 @@ function ResponsiveDrawer(props) {
           navigate('/academics/branchchange/');
         }}
       >
-        <ListItemIcon>
-          <MailIcon />
-        </ListItemIcon>
         <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Branch Change" />
       </ListItemButton>
       <ListItemButton
@@ -97,9 +88,6 @@ function ResponsiveDrawer(props) {
           navigate('/academics/minor/');
         }}
       >
-        <ListItemIcon>
-          <MailIcon />
-        </ListItemIcon>
         <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Minor Discipline" />
       </ListItemButton>
       </List>

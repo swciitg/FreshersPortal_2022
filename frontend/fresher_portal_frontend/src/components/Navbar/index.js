@@ -3,16 +3,14 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import './Navbar.css'
+import './Navbar.css';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { Stack, Button } from '@mui/material';
-import { NavLink } from "react-router-dom";
-
-
+import { NavLink } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -44,7 +42,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    paddingLeft: `calc(0.5em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
@@ -56,31 +54,89 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-
 export default function NavBar2() {
   return (
-    <Box sx={{ flexGrow: 1 , position:'fixed', top:'7%',width:'100%'}}>
-      <AppBar position='static' sx={{ bgcolor: "white", color: "black", }}>
-        <Toolbar> 
-          <Stack direction='row' spacing={11} alignItems="center"  >
-
-            <NavLink className='navbar' to="/home" activeStyle={{fontWeight: "bold",color: "red" }} isActive={(match, location) => {console.log(match);console.log(location);}}>
-              <Button color='inherit' size='large' sx={{  ':hover': {fontWeight: 'bold',} }}  >HOME</Button>
+    <Box sx={{ flexGrow: 1, position: 'fixed', top: '9%', width: '100%' }}>
+      <AppBar position='static' sx={{ bgcolor: 'white', color: 'black' }}>
+        <Toolbar>
+          <Stack direction='row' spacing={5} alignItems='center'>
+            <NavLink
+              className='navbar'
+              to='/home'
+              activeStyle={{ fontWeight: 'bold', color: 'red' }}
+              isActive={(match, location) => {
+                console.log(match);
+                console.log(location);
+              }}
+            >
+              <Button
+                color='inherit'
+                size='large'
+                sx={{ ':hover': { fontWeight: 'bold' } }}
+              >
+                HOME
+              </Button>
             </NavLink>
-            <NavLink className='navbar' to="/important" activeClassName="selected">
-              <Button color='inherit' size='large' sx={{  ':hover': {fontWeight: 'bold',} }}>IMPORTANT INFORMATION</Button>
+            <NavLink
+              className='navbar'
+              to='/important'
+              activeClassName='selected'
+            >
+              <Button
+                color='inherit'
+                size='large'
+                sx={{ ':hover': { fontWeight: 'bold' } }}
+              >
+                IMPORTANT INFORMATION
+              </Button>
             </NavLink>
-            <NavLink className='navbar' to="/academics" activeClassName="selected">
-              <Button color='inherit' size='large' sx={{  ':hover': {fontWeight: 'bold',} }}>ACADEMICS</Button>
-            </NavLink>           
-            <NavLink className='navbar' to="/hostels/facilities" activeClassName="selected">
-              <Button color='inherit' size='large' sx={{  ':hover': {fontWeight: 'bold',} }}>HOSTELS AND FACILITIES </Button>
+            <NavLink
+              className='navbar'
+              to='/academics'
+              activeClassName='selected'
+            >
+              <Button
+                color='inherit'
+                size='large'
+                sx={{ ':hover': { fontWeight: 'bold' } }}
+              >
+                ACADEMICS
+              </Button>
             </NavLink>
-            <NavLink className='navbar' to="/events" activeClassName="selected">
-              <Button color='inherit' size='large' sx={{  ':hover': {fontWeight: 'bold',} }}>EVENTS</Button>
+            <NavLink
+              className='navbar'
+              to='/hostels'
+              activeClassName='selected'
+            >
+              <Button
+                color='inherit'
+                size='large'
+                sx={{ ':hover': { fontWeight: 'bold' } }}
+              >
+                HOSTELS AND FACILITIES{' '}
+              </Button>
             </NavLink>
-            <NavLink className='navbar' to="/studentorganisation" activeClassName="selected">
-              <Button color='inherit' size='large' sx={{  ':hover': {fontWeight: 'bold',} }}>STUDENT ORGANISATION</Button>
+            <NavLink className='navbar' to='/events' activeClassName='selected'>
+              <Button
+                color='inherit'
+                size='large'
+                sx={{ ':hover': { fontWeight: 'bold' } }}
+              >
+                EVENTS
+              </Button>
+            </NavLink>
+            <NavLink
+              className='navbar'
+              to='/studentorganisation'
+              activeClassName='selected'
+            >
+              <Button
+                color='inherit'
+                size='large'
+                sx={{ ':hover': { fontWeight: 'bold' } }}
+              >
+                STUDENT ORGANISATION
+              </Button>
             </NavLink>
             <IconButton
               size='large'
@@ -102,7 +158,7 @@ export default function NavBar2() {
             >
               <MenuIcon />
             </IconButton>
-            
+
             {/* <Search>
               <SearchIconWrapper>
                 <SearchIcon />
@@ -127,11 +183,6 @@ export default function NavBar2() {
     </Box>
   );
 }
-
-
-
-
-
 
 //_________  previous NavBarCode
 

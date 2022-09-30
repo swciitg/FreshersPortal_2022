@@ -54,13 +54,15 @@ function ResponsiveDrawer(props) {
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-        {['Biosciences & Bioengineering','Chemical Engineering','Chemical Science & Technology', 'Civil Engineering','Computer Science & Engineering','Design','Electronics & Electrical Engineering','Humanities & Social Sciences','Mathematics','Mechanical Engineering','Physics'].map((text, index) => (
+        {['Biosciences & Bioengineering','Chemical Engineering','Chemistry', 'Civil Engineering','Computer Science & Engineering','Design','Electronics & Electrical Engineering','Humanities & Social Sciences','Mathematics','Mechanical Engineering','Physics'].map((text, index) => (
           <ListItem 
             button
             key={text} 
             onClick={()=> {
               handleListItemClick(index+1);
-              navigate(`/academics/${urls[index]}`)
+              navigate(
+                `/academics/${String(text).split(' ')[0].toLowerCase()}`
+              );
             }} >
             <ListItemButton selected={selectedIndex === index+1}>
               <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary={text} />

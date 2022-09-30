@@ -115,7 +115,7 @@ const ContactUs = () => {
   };
   return (
     <div className='contact_page'>
-      <div className='container'>
+      <div className='container' style={{ margin: 'auto' }}>
         <div className='heading-contact'>
           <p className='heading-text-contact'>Contact Us</p>
         </div>
@@ -170,7 +170,7 @@ const ContactUs = () => {
           </Container>
         </div>
       </div>
-      <div className='container'>
+      <div className='container' style={{ margin: 'auto' }}>
         <div className='heading-contact-2'>
           <p className='heading-text-contact'>Drop Your Message</p>
         </div>

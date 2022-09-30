@@ -46,7 +46,6 @@
 
 .organisation_description {
   background: #f7f1ff;
-  padding: 2rem;
   font-family: 'Plus Jakarta Sans';
   margin-right: 150px;
   font-style: normal;
@@ -71,7 +70,7 @@
   color: #363232;
   font-size: 18px;
   line-height: 36px;
-  margin: 0.9rem;
+  padding-bottom: 7%;
 }
 
 .organisation_image {
@@ -93,7 +92,7 @@
   font-weight: 600;
   line-height: 36px;
   color: #f7f1ff;
-  text-align: center;
+  text-align: end;
 }
 
 

@@ -20,7 +20,7 @@ const TechnicalBoard = () => {
     const navigate = useNavigate();
     return (
         <div className='page'>
-            <Box sx={{ py: 3 }} maxWidth="lg">
+            <Box sx={{ py: 3 }} maxWidth='100%'>
               <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 8, sm: 12, md: 18 }}>
               
                 {['Aeromodelling Club','Astronomy Club','Coding Club','Consultancy and Analytics Club','Electronics Club','Entreprenuership Cell','Finance & Economics Club','Green Automobile Club','Robotics Club','Science and Quiz Club ( ACUMEN )','TechEvince'].map((item)=>{

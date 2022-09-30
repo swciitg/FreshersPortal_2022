@@ -42,25 +42,23 @@ const Template = (props) => {
             <div dangerouslySetInnerHTML={{ __html: info[0].text }}></div>
           )}
         </div>
+          <Grid container spacing={2}>
+            <Grid item xs={8}>
+              <Item>
+                <p className='post-text'>
+                  Hostel Warden : {info.length && info[0].person}
+                </p>
+              </Item>
+            </Grid>
+            <Grid item xs={4}>
+              <Item>
+                <a href={info.length && info[0].weblink} className='post-text'>
+                  Website Link
+                </a>
+              </Item>
+            </Grid>
+          </Grid>
       </div>
-      <Box sx={{ width: '1400px' }} className='box'>
-        <Grid container rowSpacing={2} columnSpacing={0}>
-          <Grid item xs={6}>
-            <Item className='item'>
-              <p className='post-text'>
-                Hostel Warden : {info.length && info[0].person}
-              </p>
-            </Item>
-          </Grid>
-          <Grid item xs={6}>
-            <Item className='item'>
-              <a href={info.length && info[0].weblink} className='post-text'>
-                Website Link
-              </a>
-            </Item>
-          </Grid>
-        </Grid>
-      </Box>
     </div>
   );
 };

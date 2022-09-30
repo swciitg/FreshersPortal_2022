@@ -51,9 +51,6 @@ function ResponsiveDrawer(props) {
       <ListItemButton 
         selected = {selectedIndex <= 13}
         onClick={() => {handleListItemClick(0);handleClickOn();navigate('/hostels/')}}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
         <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Hostels" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
@@ -68,9 +65,7 @@ function ResponsiveDrawer(props) {
               navigate(`/hostels/${text.toLowerCase()}`)
             }} >
             <ListItemButton selected={selectedIndex === index+1}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+              
               <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary={text} />
             </ListItemButton>
           </ListItem>
@@ -85,9 +80,7 @@ function ResponsiveDrawer(props) {
           navigate('/hostels/facilities/');
         }}
       >
-        <ListItemIcon>
-          <MailIcon />
-        </ListItemIcon>
+
         <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Facilities" />
       </ListItemButton>
       </List>
@@ -109,30 +102,6 @@ function ResponsiveDrawer(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            sx={{
-              mr: 2,
-              display: { sm: 'none' },
-              position: 'relative',
-              top: '0',
-              left: '-100px',
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <div style={{ display: 'flex', marginRight: '10px' }}>
-            <h3 style={{ marginRight: '5px' }}>Hostels</h3>
-            <h3 style={{ marginRight: '10px' }}> & Facilities</h3>
-          </div>
-          {/* <Typography variant='h6' component='div' >
-            Admin Panel
-          </Typography> */}
-        </Toolbar>
       </AppBar>
       <Box
         component='nav'

@@ -4,7 +4,6 @@ import axios from 'axios';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1374C5' : '#313A57',
@@ -42,22 +41,22 @@ const Template = (props) => {
             <div dangerouslySetInnerHTML={{ __html: info[0].text }}></div>
           )}
         </div>
-          <Grid container spacing={2}>
-            <Grid item xs={8}>
-              <Item>
-                <p className='post-text'>
-                  Hostel Warden : {info.length && info[0].person}
-                </p>
-              </Item>
-            </Grid>
-            <Grid item xs={4}>
-              <Item>
-                <a href={info.length && info[0].weblink} className='post-text'>
-                  Website Link
-                </a>
-              </Item>
-            </Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <Item>
+              <p className='post-text'>
+                Hostel Warden : {info.length && info[0].person}
+              </p>
+            </Item>
           </Grid>
+          <Grid item xs={4}>
+            <Item>
+              <a href={info.length && info[0].weblink} className='post-text'>
+                Website Link
+              </a>
+            </Item>
+          </Grid>
+        </Grid>
       </div>
     </div>
   );

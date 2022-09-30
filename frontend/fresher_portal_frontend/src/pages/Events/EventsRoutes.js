@@ -19,28 +19,28 @@ const EventsRoutes = () => {
         }}
       >
         <Routes>
-          <Route path='/' element={<Template url='alc' />} />
-          <Route path='/alcheringa' element={<Template url='alc' />} />
-          <Route path='/advaya' element={<Template url='adv' />} />
+          <Route path='/' element={<Template url='alcheringa' />} />
+          <Route path='/alcheringa' element={<Template url='alcheringa' />} />
+          <Route path='/advaya' element={<Template url='advaya' />} />
           <Route
             path='/interhostelevents'
             element={<InterHostelEvents url='ihe' />}
           />
           <Route
             path='/interhostelevents/kriti'
-            element={<Template url='krt' />}
+            element={<Template url='kriti' />}
           />
           <Route
             path='/interhostelevents/manthan'
-            element={<Template url='mnt' />}
+            element={<Template url='manthan' />}
           />
           <Route
             path='/interhostelevents/spardha'
-            element={<Template url='spd' />}
+            element={<Template url='spardha' />}
           />
-          <Route path='/reflux' element={<Template url='ref' />} />
-          <Route path='/techniche' element={<Template url='tec' />} />
-          <Route path='/udgam' element={<Template url='udm' />} />
+          <Route path='/reflux' element={<Template url='reflux' />} />
+          <Route path='/techniche' element={<Template url='techniche' />} />
+          <Route path='/udgam' element={<Template url='udgam' />} />
         </Routes>
       </div>
     </div>

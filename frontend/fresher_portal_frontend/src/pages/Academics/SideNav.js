@@ -20,10 +20,9 @@ import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
 
 const drawerWidth = 300;
-const urls = ['bsbe','cl','cst','civil','cse','design','ece','hss','mnc','mech','phy']
+const urls = ['bsbe','cl','cst','civil','cse','design','eee','hss','mnc','mech','phy']
 function ResponsiveDrawer(props) {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
-
   const handleListItemClick = (index) => {
     setSelectedIndex(index);
     console.log(index);

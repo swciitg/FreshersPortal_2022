@@ -1,11 +1,10 @@
 .hostel_box
 {
   background: #5468FD;
-  padding-top: 40px;
-  margin-left: 100px;
-  margin-right: 150px;
-  width: 1300px;
-  height: 115px;
+  padding-top: 1rem;
+  width: 62rem;
+  margin-left: 4rem;
+  height: 5rem;
   font-family: Plus Jakarta Sans;
   font-size: 28px;
   font-weight: 600;
@@ -22,8 +21,7 @@
 
 .hostel_container{
   flex-direction: row;
-  margin-left: 100px;
-  width: 1300px;
+  width: 70rem;
 }
 .typo{
   font-family: Plus Jakarta Sans;

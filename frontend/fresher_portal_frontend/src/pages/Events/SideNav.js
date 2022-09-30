@@ -99,11 +99,7 @@ function ResponsiveDrawer(props) {
         </ListItemButton>
         <Collapse in={open} timeout='auto' unmountOnExit>
           <List component='div' disablePadding>
-            {[
-              'Kriti',
-              'Manthan',
-              'Spardha',
-            ].map((text, index) => (
+            {['Kriti', 'Manthan', 'Spardha'].map((text, index) => (
               <ListItem
                 button
                 key={text}
@@ -191,8 +187,7 @@ function ResponsiveDrawer(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
-      >
-      </AppBar>
+      ></AppBar>
       <Box
         component='nav'
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}

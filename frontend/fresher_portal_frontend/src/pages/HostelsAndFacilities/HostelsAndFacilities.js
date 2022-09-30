@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ResponsiveDrawer from './SideNav';
 import Facilities from './Facilities';
-import Hostel from './Hostel';
 import Template from './Template';
+import BoardTemplate from '../Student Organisation/BoardTemplate';
 
 const HostelsAndFacilitiesRoutes = () => {
   return (
@@ -20,20 +20,20 @@ const HostelsAndFacilitiesRoutes = () => {
         }}
       >
         <Routes>
-          <Route path='/' element={<Hostel />} />
-          <Route path='/barak' element={<Template url='bk' />} />
-          <Route path='/bramhaputra' element={<Template url='bp' />} />
-          <Route path='/dhansiri' element={<Template url='dns' />} />
-          <Route path='/dibang' element={<Template url='db' />} />
-          <Route path='/dihing' element={<Template url='dh' />} />
-          <Route path='/disang' element={<Template url='ds' />} />
-          <Route path='/kameng' element={<Template url='ka' />} />
-          <Route path='/kapili' element={<Template url='kp' />} />
-          <Route path='/manas' element={<Template url='ms' />} />
-          <Route path='/lohit' element={<Template url='lh' />} />
-          <Route path='/siang' element={<Template url='sg' />} />
-          <Route path='/subansiri' element={<Template url='sns' />} />
-          <Route path='/umiam' element={<Template url='um' />} />
+          <Route path='/' element={<BoardTemplate url='hostel' />} />
+          <Route path='/barak' element={<Template url='barak' />} />
+          <Route path='/bramhaputra' element={<Template url='brahmaputra' />} />
+          <Route path='/dhansiri' element={<Template url='dhansiri' />} />
+          <Route path='/dibang' element={<Template url='dibang' />} />
+          <Route path='/dihing' element={<Template url='dihing' />} />
+          <Route path='/disang' element={<Template url='disang' />} />
+          <Route path='/kameng' element={<Template url='kameng' />} />
+          <Route path='/kapili' element={<Template url='kapili' />} />
+          <Route path='/manas' element={<Template url='manas' />} />
+          <Route path='/lohit' element={<Template url='lohit' />} />
+          <Route path='/siang' element={<Template url='siang' />} />
+          <Route path='/subansiri' element={<Template url='subansiri' />} />
+          <Route path='/umiam' element={<Template url='umiam' />} />
           <Route path='/facilities' element={<Facilities />} />
         </Routes>
       </div>

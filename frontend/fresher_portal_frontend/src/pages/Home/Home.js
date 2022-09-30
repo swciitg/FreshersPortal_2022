@@ -18,7 +18,7 @@ export default function Home() {
           <div id='hb'>IIT GUWAHATI</div>
         </div>
 
-        <NavLink className='navbar' exact to='/home' activeClassName='highlighted'>
+        <NavLink className='navbar' exact to='/home' id='AS' activeClassName='highlighted'>
           Admitted Student
         </NavLink>
       </div>

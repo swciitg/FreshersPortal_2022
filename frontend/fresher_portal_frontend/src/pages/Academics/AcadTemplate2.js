@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
   margin: '30px',
 }));
 
-const BoardTemplate2 = (props) => {
+const AcadTemplate2 = (props) => {
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const BoardTemplate2 = (props) => {
                     sx={{ maxWidth: '150%' }}
                     onClick={() => {
                       navigate(
-                        `/studentorganisation/${String(club.title)
+                        `/academics/${String(club.title)
                           .split(' ')[0]
                           .toLowerCase()}`
                       );
@@ -75,4 +75,4 @@ const BoardTemplate2 = (props) => {
   );
 };
 
-export default BoardTemplate2;
+export default AcadTemplate2;

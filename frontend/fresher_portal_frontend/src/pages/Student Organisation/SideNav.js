@@ -108,7 +108,7 @@ function ResponsiveDrawer(props) {
                   navigate(
                     `/studentorganisation/${text
                       .split(' ')[0]
-                      .replace(/[&\/\\#,+()$~%.'":*?<>{}-]/g, '')
+                      
                       .toLowerCase()}`
                   );
                 }}

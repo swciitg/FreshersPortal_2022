@@ -10,11 +10,11 @@ const url = [
   'anchorenza',
   'cadance',
   'finesse',
-  'debsoc',
+  'deb-soc',
   'xpressions',
   'lumiere',
   'montage',
-  'litsoc',
+  'lit-soc',
   'octaves',
 ];
 const StudentOrganisationRoutes = () => {

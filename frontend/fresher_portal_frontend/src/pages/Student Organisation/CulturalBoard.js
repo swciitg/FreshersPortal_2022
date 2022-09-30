@@ -22,17 +22,18 @@ const CulturalBoard = () => {
     const navigate = useNavigate();
     return (
         <div className='page'>
-            <Box sx={{ py: 3 }} maxWidth="lg">
-              <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 8, sm: 12, md: 16 }}>
+            <Box sx={{ py: 3 }} maxWidth='100%'>
+              <Grid container spacing={{ xs: 2, md: 3 }} columns={16}>
                 {['anchorenza','cadence','finesse','debsoc','xpressions','lumiere','montage','litsoc','octaves'].map((club) => {
                   return(
                     <Item>
-                      <Card sx={{ maxWidth: 360 }} onClick={() => {navigate(`/studentorganisation/${club}`);}}>
+                      <Card sx={{ maxWidth: '150%' }} onClick={() => {navigate(`/studentorganisation/${club}`);}}>
                         <CardActionArea>
                           <CardMedia
-                            component="img"
-                            height="200"
-                            width="285"
+                            component='img'
+                            height= '125%'
+                            className='image'
+                            width= '150%'
                             image={`/assets/images/${club}_sm.jpg`}
                             alt="Anchorenza"
                           />

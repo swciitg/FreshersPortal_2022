@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
 
-.page {
+.organisation_page {
   margin-left: 7%;
 }
 
@@ -10,19 +10,19 @@
   margin-bottom: 1rem;
 }
 
-.sidebar{
+.organisation_sidebar{
   background: #313A57;
   color: #FFFFFF;
 }
 
-.p{
+.organisation_p{
   font-family: 'Plus Jakarta Sans';
 }
 
-.span{
+.organisation_span{
   font-family: 'Plus Jakarta Sans';
 }
-.sidebar-text{
+.organisation_sidebar-text{
   font-family: 'Plus Jakarta Sans';
 }
 .organisation_pre-cursor {
@@ -74,20 +74,20 @@
   margin: 0.9rem;
 }
 
-.image {
+.organisation_image {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.post-text{
+.organisation_post-text{
   font-family: Plus Jakarta Sans;
   font-size: 18px;
   font-weight: 600;
   color: #f7f1ff;
   text-align: center;
 }
-.item{
+.organisation_item{
   font-family: Plus Jakarta Sans;
   font-size: 18px;
   font-weight: 600;
@@ -97,14 +97,14 @@
 }
 
 
-.box
+.organisation_box
 {
   margin-right: 150px;
   margin-bottom: 2.2rem;
 }
 
 
-.active {
+.Mui-selected {
   background-color:#5468FD;
   color:  #f7f1ff;
   font-weight: bold;

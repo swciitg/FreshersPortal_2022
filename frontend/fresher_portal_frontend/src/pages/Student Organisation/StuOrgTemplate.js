@@ -12,7 +12,7 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
-const Templates = (props) => {
+const StuOrgTemplate = (props) => {
   return (
     <div className='page'>
       <div className='heading'>
@@ -20,11 +20,11 @@ const Templates = (props) => {
         <p className='organisation_heading-text'>{props.title}</p>
       </div>
       <div className='organisation_description'>
-      <img src={`/assets/images/${String(props.title).split(' ')[0].toLowerCase()}.jpg`} className='image'/>
+      <img src={`/assets/images/${String(props.title).split(' ')[0].toLowerCase()}.jpg`} className='organisation_image'/>
         <div className='organisation_description-text'> {props.description}</div>
       </div>
     </div>
   );
 };
 
-export default Templates;
+export default StuOrgTemplate;

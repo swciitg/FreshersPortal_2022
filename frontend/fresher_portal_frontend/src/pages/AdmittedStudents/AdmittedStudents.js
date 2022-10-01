@@ -1,81 +1,92 @@
-import * as React from "react";
-import { useState } from "react";
-import Collapse from "react-bootstrap/Collapse";
-import "./AdmittedStudents.css";
-import Navbar from "../../components/Navbar/Navbar_1";
-import NavBar2 from "../../components/Navbar/index";
-import Button from "react-bootstrap/Button";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import { NavLink } from "react-router-dom";
-import { FunctionsOutlined, ViewComfyAltOutlined } from "@mui/icons-material";
-import StickyFooter from "../../components/StickyFooter";
+import React from 'react';
+import './AdmittedStudents.css';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import InputBase from '@mui/material/InputBase';
+import { Stack, Button } from '@mui/material';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Tooltip from '@mui/material/Tooltip';
+import ImageIcon from '@mui/icons-material/Image';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneIcon from '@mui/icons-material/Phone';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import GppGoodIcon from '@mui/icons-material/GppGood';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import ArticleIcon from '@mui/icons-material/Article';
+import Navbar from '../../components/Navbar/Navbar_1';
+import NavBar2 from '../../components/Navbar/index';
+import StickyFooter from '../../components/StickyFooter';
 
 export default function AdmittedStudents() {
   var s1 = 4;
   var s2 = 4;
   const data = [
     {
-      date: "06.07.2022",
-      title: "Regarding hostel accomodation",
+      date: '06.07.2022',
+      title: 'Regarding hostel accomodation',
     },
     {
-      date: "01.07.2022",
-      title: "Regarding mess refund",
+      date: '01.07.2022',
+      title: 'Regarding mess refund',
     },
     {
-      date: "30.06.2022",
-      title: "Regarding branch change",
+      date: '30.06.2022',
+      title: 'Regarding branch change',
     },
     {
-      date: "22.06.2022",
-      title: "Regarding SC/ST scholarship",
+      date: '22.06.2022',
+      title: 'Regarding SC/ST scholarship',
     },
     {
-      date: "14.06.2022",
-      title: "Regarding fee ",
+      date: '14.06.2022',
+      title: 'Regarding fee ',
     },
     {
-      date: "03.06.2022",
-      title: "Regarding department",
+      date: '03.06.2022',
+      title: 'Regarding department',
     },
     {
-      date: "14.06.2022",
-      title: "Regarding fee ",
+      date: '14.06.2022',
+      title: 'Regarding fee ',
     },
     {
-      date: "03.06.2022",
-      title: "Regarding department",
+      date: '03.06.2022',
+      title: 'Regarding department',
     },
     {
-      date: "14.06.2022",
-      title: "Regarding fee ",
+      date: '14.06.2022',
+      title: 'Regarding fee ',
     },
     {
-      date: "03.06.2022",
-      title: "Regarding department",
+      date: '03.06.2022',
+      title: 'Regarding department',
     },
   ];
 
   const galTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      <div className="tip">Gallery</div>
+    <Tooltip id='button-tooltip' {...props}>
+      <div className='tip'>Gallery</div>
     </Tooltip>
   );
   const calTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
+    <Tooltip id='button-tooltip' {...props}>
       Calendar
     </Tooltip>
   );
   const mapTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
+    <Tooltip id='button-tooltip' {...props}>
       Maps
     </Tooltip>
   );
   const telTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
+    <Tooltip id='button-tooltip' {...props}>
       Telephone Directory
     </Tooltip>
   );
@@ -83,261 +94,505 @@ export default function AdmittedStudents() {
   const [open2, setOpen2] = useState(false);
 
   return (
-    <div className="container">
-      <Navbar/>
-      <div className="classwithz"><NavBar2/></div>
-      <StickyFooter/>
-      <div className='admittedstudents_page' id="box">
-        <div className="grid grid-cols-12" id="s1">
-          <div className="col-span-11" id="d1a">
-            <h2 id="d1h">Important Submissions</h2>
-            <p id="d1p">
-              All the freshers are requested to check out the Sagittis sapien
-              tempus arcu penatibus. Eu purus arcu ut ac non sagittis aliquet.
-              Interdum sagittis, varius sit ut parturient eu et. In justo,
-              scelerisque sagittis, lorem vitae ultrices viverra. Id enim
-              accumsan, aliquet cras neque.
-            </p>
-            <NavLink to="#" id="d1a1">
-              <div id="d1ap"> Important Links</div>
-            </NavLink>
-          </div>
-          <div className="col-span-1 mt-36 " id="d1b">
-            <OverlayTrigger
-              placement="right"
-              delay={{ show: 150, hide: 150 }}
-              overlay={galTooltip}
-            >
-              <NavLink to="#" className="rectpurple">
-                <img className="s1icons" src="/AdmittedStudents/gallery.svg" />
-              </NavLink>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="right"
-              delay={{ show: 150, hide: 150 }}
-              overlay={calTooltip}
-            >
-              <NavLink to="#" className="rectpurple">
-                <img className="s1icons" src="/AdmittedStudents/Calendar.svg" />
-              </NavLink>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="right"
-              delay={{ show: 150, hide: 150 }}
-              overlay={mapTooltip}
-            >
-              <NavLink to="#" className="rectpurple">
-                <img className="s1icons" src="/AdmittedStudents/Location.svg" />
-              </NavLink>
-            </OverlayTrigger>
-            <OverlayTrigger
-              placement="right"
-              delay={{ show: 150, hide: 150 }}
-              overlay={telTooltip}
-            >
-              <NavLink to="#" className="rectpurple">
-                <img className="s1icons" src="/AdmittedStudents/Call.svg" />
-              </NavLink>
-            </OverlayTrigger>
-          </div>
-        </div>
+    <div className='container'>
+      <Navbar />
+      <div className='classwithz'>
+        <NavBar2 />
+      </div>
+      <StickyFooter />
+      <div className='admittedstudents_page'>
+        <Typography
+          variant='h2'
+          sx={{
+            position: 'relative',
+            width: '62rem',
+            height: '3.25rem',
+            left: '8rem',
+            top: '4rem',
+            fontFamily: 'Plus Jakarta Sans',
+            fontSize: '3.5rem',
+          }}
+        >
+          Important Submissions
+        </Typography>
+        <Typography
+          variant='h6'
+          sx={{
+            position: 'relative',
+            width: '72rem',
+            left: '8rem',
+            top: '8rem',
+            fontFamily: 'Plus Jakarta Sans',
+          }}
+        >
+          All the freshers are requested to check out the Sagittis sapien tempus
+          arcu penatibus. Eu purus arcu ut ac non sagittis aliquet. Interdum
+          sagittis, varius sit ut parturient eu et. In justo, scelerisque
+          sagittis, lorem vitae ultrices viverra. Id enim accumsan, aliquet cras
+          neque.
+        </Typography>
+        <Button
+          variant='outlined'
+          size='large'
+          sx={{
+            position: 'relative',
+            left: '8rem',
+            top: '11rem',
+            fontFamily: 'Plus Jakarta Sans',
+            color: 'black',
+            fontSize: '1rem',
+          }}
+        >
+          Important Links
+        </Button>
+        <Tooltip title='Gallery'>
+          <Button
+            size='large'
+            sx={{
+              position: 'relative',
+              left: '75rem',
+              top: '1rem',
+              bgcolor: '#f7f1ff',
+            }}
+          >
+            <ImageIcon />
+          </Button>
+        </Tooltip>
+        <Tooltip title='Calender'>
+          <Button
+            size='large'
+            sx={{
+              position: 'relative',
+              left: '71rem',
+              top: '4rem',
+              bgcolor: '#f7f1ff',
+            }}
+          >
+            <CalendarMonthIcon />
+          </Button>
+        </Tooltip>
+        <Tooltip title='Maps'>
+          <Button
+            size='large'
+            sx={{
+              position: 'relative',
+              left: '67rem',
+              top: '7rem',
+              bgcolor: '#f7f1ff',
+            }}
+          >
+            <LocationOnIcon />
+          </Button>
+        </Tooltip>
+        <Tooltip title='Contact Us'>
+          <Button
+            size='large'
+            sx={{
+              position: 'relative',
+              left: '63rem',
+              top: '10rem',
+              bgcolor: '#f7f1ff',
+            }}
+          >
+            <PhoneIcon />
+          </Button>
+        </Tooltip>
 
-        <div id="s2" className="grid grid-cols-12">
-          <div className="col-span-6">
-            <h2 id="s2h">Announcements</h2>
-            <ul id="ul1">
-              {(() => {
-                if (!open) {
-                  s1 = 4;
-                } else {
-                  s1 = Object.keys(data).length;
-                }
-              })()}
-              {data.slice(0, s1).map((announc) => (
-                <li className="list1 grid grid-cols-12 ">
-                  <div className="col-span-11">
-                    <div className="s2d1a">{announc.date}</div>
-                    <div className="s2d1b">{announc.title}</div>
-                  </div>
+        {/* <Button sx={{ position:"relative",left:"75rem"}} >Hi!</Button> */}
 
-                  <NavLink to="#" className="col-span-1 " id="s2c2">
-                    <img
-                      className=" s2d1c"
-                      src="/AdmittedStudents/Arrow 2.svg"
-                    />
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+        <Box
+          sx={{
+            position: 'relative',
+            height: 'auto',
+            width: 'auto',
+            top: '15rem',
+            background: '#f7f1ff',
+          }}
+        >
+          <Typography
+            variant='h2'
+            sx={{
+              position: 'relative',
+              width: '62rem',
+              height: '3.25rem',
+              left: '8rem',
+              top: '1rem',
+              fontFamily: 'Plus Jakarta Sans',
+              fontSize: '3rem',
+            }}
+          >
+            Announcements
+          </Typography>
+          <Typography variant='ul' sx={{ top: '3rem' }}>
             {(() => {
               if (!open) {
-                return (
-                  <Button
-                    id="s2div5"
-                    onClick={() => setOpen(!open)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={open}
-                  >
-                    <Button id="viewall">View all</Button>
-                  </Button>
-                );
+                s1 = 4;
               } else {
-                return (
-                  <Button
-                    id="s2div5"
-                    onClick={() => setOpen(!open)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={open}
-                  >
-                    <Button id="viewall">View less</Button>
-                  </Button>
-                );
+                s1 = Object.keys(data).length;
               }
             })()}
-          </div>
-          <div className="col-span-6">
-            <h2 id="s22h">Upcoming Events</h2>
-            {/* <div id="sort"> */}
-            {/* <div id="sorttext">Latest</div>
-             */}
-            <div id="sort">
-              <DropdownButton id="sorttext" title="Latest">
-              </DropdownButton>
-              <img src="/AdmittedStudents/Stroke 1.svg" id="downarrow" />
-            </div>
-            <ul id="ul2">
-              {(() => {
-                if (!open2) {
-                  s2 = 4;
-                } else {
-                  s2 = Object.keys(data).length;
-                }
-              })()}
-              {data.slice(0, s2).map((announc) => (
-                <li className="list1 grid grid-cols-12 ">
-                  <div className="col-span-11">
-                    <div className="s2d1a">{announc.date}</div>
-                    <div className="s2d1b">{announc.title}</div>
-                  </div>
 
-                  <NavLink to="#" className="col-span-1 " id="s2c2">
-                    <img
-                      className=" s2d1c"
-                      src="/AdmittedStudents/Arrow 2.svg"
+            {data.slice(0, s1).map((announc) => (
+              <Typography variant='li' sx={{ position: 'relative', top: '' }}>
+                <Box
+                  sx={{
+                    position: 'relative',
+                    height: '5rem',
+                    width: '60%',
+                    left: '8rem',
+                    background: '#ffff',
+                    marginTop: '1.32rem',
+                    border: '0.06rem solid #d7dde1',
+                    boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+                    borderRadius: '0.25rem',
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      position: 'relative',
+                      height: 'auto',
+                      width: '90%',
+                      top: '1rem',
+                      left: '1rem',
+                      fontFamily: 'Plus Jakarta Sans',
+                      fontStyle: 'normal',
+                      fontWeight: '400',
+                      fontSsize: '1.3rem',
+                      lineHeight: '1.25rem',
+                      letterSpacing: '-0.02em',
+                      color: '#313a57',
+                    }}
+                  >
+                    {announc.date}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      position: 'relative',
+                      height: 'auto',
+                      width: '90%',
+                      top: '1rem',
+                      left: '1rem',
+                      fontFamily: 'Plus Jakarta Sans',
+                      fontStyle: 'normal',
+                      fontWeight: '400',
+                      fontSsize: '1.3rem',
+                      lineHeight: '1.25rem',
+                      letterSpacing: '-0.02em',
+                      color: '#313a57',
+                    }}
+                  >
+                    {announc.title}
+                  </Typography>
+
+                  <NavLink to='#'>
+                    <ArrowForwardIosIcon
+                      sx={{
+                        position: 'absolute',
+                        top: '1.5rem',
+                        left: '55rem',
+                      }}
                     />
                   </NavLink>
-                </li>
-              ))}
-            </ul>
-            {(() => {
-              if (!open2) {
-                return (
+                </Box>
+              </Typography>
+            ))}
+          </Typography>
+          {(() => {
+            if (!open) {
+              return (
+                <Button
+                  id='s2div5'
+                  onClick={() => setOpen(!open)}
+                  aria-controls='example-collapse-text'
+                  aria-expanded={open}
+                >
                   <Button
-                    id="s22div5"
-                    onClick={() => setOpen2(!open2)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={open2}
+                    variant='outlined'
+                    size='large'
+                    sx={{
+                      position: 'relative',
+                      left: '7.5rem',
+                      fontFamily: 'Plus Jakarta Sans',
+                      color: 'black',
+                      fontSize: '1rem',
+                    }}
                   >
-                    <Button id="viewall">View all</Button>
+                    View all
                   </Button>
-                );
-              } else {
-                return (
+                </Button>
+              );
+            } else {
+              return (
+                <Button
+                  id='s2div5'
+                  onClick={() => setOpen(!open)}
+                  aria-controls='example-collapse-text'
+                  aria-expanded={open}
+                >
                   <Button
-                    id="s22div5"
-                    onClick={() => setOpen2(!open2)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={open2}
+                    variant='outlined'
+                    size='large'
+                    sx={{
+                      position: 'relative',
+                      left: '8rem',
+                      fontFamily: 'Plus Jakarta Sans',
+                      color: 'black',
+                      fontSize: '1rem',
+                    }}
                   >
-                    <Button id="viewall">View less</Button>
+                    View less
                   </Button>
-                );
-              }
-            })()}
-          </div>
-        </div>
+                </Button>
+              );
+            }
+          })()}
+        </Box>
+        {/* <Box sx={{position: "relative", height: 'auto', width: '100%', top:'15rem', background: '#f7f1ff'}}>
+      <Typography variant='h2' sx={{ position: "relative", width: '62rem', height: '3.25rem', left: '60rem',top:'1rem', fontFamily: "Plus Jakarta Sans", fontSize: '3rem'}}>
+          Upcoming Events
+        </Typography>
+      </Box> */}
 
-        <div id="s3">
-          <h2 id="s3h">Freshers' Guide Magazine</h2>
-          <div id="s3d1">
-            Morbi viverra in tincidunt rhoncus, cras nisl viverra commodo etiam.
-            Semper vulputate interdum tellus purus egestas arcu. Mi arcu etiam
-            lorem tincidunt odio facilisi. Turpis leo non curabitur enim. In
-            dui, scelerisque ullamcorper aenean justo feugiat suscipit ridiculus
-            semper. Sagittis sapien tempus arcu penatibus. Eu purus arcu ut ac
-            non sagittis aliquet. Interdum sagittis, varius sit ut parturient eu
-            et. In justo, scelerisque sagittis, lorem vitae ultrices viverra. Id
-            enim accumsan, aliquet cras neque. Nulla ut integer malesuada luctus
-            interdum amet, ut lorem sagittis. Phasellus nisi magnis elementum
-            lacus consectetur.
-          </div>
-          <div id="s3d2"></div>
-        </div>
-
-        <div id="s4">
-          <div id="s4d1">
-            <div id="saathi">SAATHI</div>
-            <div id="couns">Counselling Service by IIT Guwahati</div>
-          </div>
-          <div id="s4d2">
-            Morbi viverra in tincidunt rhoncus, cras nisl viverra commodo etiam.
-            Semper vulputate interdum tellus purus egestas arcu. Mi arcu etiam
-            lorem tincidunt odio facilisi. Turpis leo non curabitur enim. In
-            dui, scelerisque ullamcorper aenean justo feugiat suscipit ridiculus
-            semper. Sagittis sapien tempus arcu penatibus. Eu purus arcu ut ac
-            non sagittis aliquet. Interdum sagittis, varius sit ut parturient eu
-            et. In justo, scelerisque sagittis, lorem vitae ultrices viverra. Id
-            enim accumsan, aliquet cras neque. Nulla ut integer malesuada luctus
-            interdum amet, ut lorem sagittis. Phasellus nisi magnis elementum
-            lacus consectetur.
-          </div>
-          <div id="s4d3">
-            <div className="s4div">
-              <img classname="s4l1" src="/AdmittedStudents/Info Square.svg" />
-            </div>
-
-            <div className="s4l2">About Us</div>
-            <NavLink to="#">
-              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
-            </NavLink>
-          </div>
-          <div id="s4d4">
-            <div className="s4div">
-              <img classname="s4l1" src="/AdmittedStudents/Calendar2.svg" />
-            </div>
-            <div className="s4l2">Counsellor's Timings</div>
-            <NavLink to="#">
-              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
-            </NavLink>
-          </div>
-          <div id="s4d5">
-            <div className="s4div">
-              <img classname="s4l1" src="/AdmittedStudents/Add User.svg" />
-            </div>
-            <div className="s4l2">Student Mentorship</div>
-            <NavLink to="#">
-              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
-            </NavLink>
-          </div>
-          <div id="s4d6">
-            <div className="s4div">
-              <img classname="s4l1" src="/AdmittedStudents/3 User.svg" />
-            </div>
-            <div className="s4l2">Team</div>
-            <NavLink to="#">
-              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
-            </NavLink>
-          </div>
-          <div id="s4d7">
-            <div className="s4div">
-              <img classname="s4l1" src="/AdmittedStudents/Shield Done.svg" />
-            </div>
-            <div className="s4l2">Anonymous Emotional Support System</div>
-            <NavLink to="#">
-              <img className="s4l3" src="/AdmittedStudents/Arrow 2.svg" />
-            </NavLink>
-          </div>
-        </div>
+        <Typography
+          variant='h2'
+          sx={{
+            position: 'relative',
+            width: '62rem',
+            height: '3.25rem',
+            left: '8rem',
+            top: '20rem',
+            fontFamily: 'Plus Jakarta Sans',
+            fontSize: '3.5rem',
+          }}
+        >
+          SAATHI
+          <Typography sx={{ fontSize: '1.5rem' }}>
+            Counselling Service by IIT Guwahati
+          </Typography>
+        </Typography>
+        <Typography
+          variant='h6'
+          sx={{
+            position: 'relative',
+            width: '45rem',
+            left: '8rem',
+            top: '24rem',
+            fontFamily: 'Plus Jakarta Sans',
+          }}
+        >
+          Morbi viverra in tincidunt rhoncus, cras nisl viverra commodo etiam.
+          Semper vulputate interdum tellus purus egestas arcu. Mi arcu etiam
+          lorem tincidunt odio facilisi. Turpis leo non curabitur enim. In dui,
+          scelerisque ullamcorper aenean justo feugiat suscipit ridiculus
+          semper. Sagittis sapien tempus arcu penatibus. Eu purus arcu ut ac non
+          sagittis aliquet. Interdum sagittis, varius sit ut parturient eu et.
+          In justo, scelerisque sagittis, lorem vitae ultrices viverra. Id enim
+          accumsan, aliquet cras neque. Nulla ut integer malesuada luctus
+          interdum amet, ut lorem sagittis. Phasellus nisi magnis elementum
+          lacus consectetur.
+        </Typography>
+        <Typography variant='ul'>
+          <Typography variant='li' sx={{ position: 'relative', top: '' }}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: '5rem',
+                width: '40%',
+                left: '57rem',
+                background: '#ffff',
+                marginTop: '1.32rem',
+                border: '0.06rem solid #d7dde1',
+                boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+                borderRadius: '0.25rem',
+              }}
+            >
+              <Typography
+                sx={{
+                  position: 'relative',
+                  height: 'auto',
+                  width: '90%',
+                  top: '1.5rem',
+                  left: '1rem',
+                  fontFamily: 'Plus Jakarta Sans',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '1.5rem',
+                  lineHeight: '1.25rem',
+                  letterSpacing: '-0.02em',
+                  color: '#313a57',
+                }}
+              >
+                <ArticleIcon sx={{ width: '5rem' }} />
+                About Us
+                <NavLink to='#'>
+                  <ArrowForwardIosIcon
+                    sx={{ position: 'absolute', left: '35rem' }}
+                  />
+                </NavLink>
+              </Typography>
+            </Box>
+          </Typography>
+          <Typography variant='li' sx={{ position: 'relative', top: '' }}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: '5rem',
+                width: '40%',
+                left: '57rem',
+                background: '#ffff',
+                marginTop: '1.32rem',
+                border: '0.06rem solid #d7dde1',
+                boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+                borderRadius: '0.25rem',
+              }}
+            >
+              <Typography
+                sx={{
+                  position: 'relative',
+                  height: 'auto',
+                  width: '90%',
+                  top: '1.5rem',
+                  left: '1rem',
+                  fontFamily: 'Plus Jakarta Sans',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '1.5rem',
+                  lineHeight: '1.25rem',
+                  letterSpacing: '-0.02em',
+                  color: '#313a57',
+                }}
+              >
+                <CalendarTodayIcon sx={{ width: '5rem' }} />
+                Counsellor's Timing
+                <NavLink to='#'>
+                  <ArrowForwardIosIcon
+                    sx={{ position: 'absolute', left: '35rem' }}
+                  />
+                </NavLink>
+              </Typography>
+            </Box>
+          </Typography>
+          <Typography variant='li' sx={{ position: 'relative', top: '' }}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: '5rem',
+                width: '40%',
+                left: '57rem',
+                background: '#ffff',
+                marginTop: '1.32rem',
+                border: '0.06rem solid #d7dde1',
+                boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+                borderRadius: '0.25rem',
+              }}
+            >
+              <Typography
+                sx={{
+                  position: 'relative',
+                  height: 'auto',
+                  width: '90%',
+                  top: '1.5rem',
+                  left: '1rem',
+                  fontFamily: 'Plus Jakarta Sans',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '1.5rem',
+                  lineHeight: '1.25rem',
+                  letterSpacing: '-0.02em',
+                  color: '#313a57',
+                }}
+              >
+                <PersonAddAlt1Icon sx={{ width: '5rem' }} />
+                Student Mentorship
+                <NavLink to='#'>
+                  <ArrowForwardIosIcon
+                    sx={{ position: 'absolute', left: '35rem' }}
+                  />
+                </NavLink>
+              </Typography>
+            </Box>
+          </Typography>
+          <Typography variant='li' sx={{ position: 'relative', top: '' }}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: '5rem',
+                width: '40%',
+                left: '57rem',
+                background: '#ffff',
+                marginTop: '1.32rem',
+                border: '0.06rem solid #d7dde1',
+                boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+                borderRadius: '0.25rem',
+              }}
+            >
+              <Typography
+                sx={{
+                  position: 'relative',
+                  height: 'auto',
+                  width: '90%',
+                  top: '1.5rem',
+                  left: '1rem',
+                  fontFamily: 'Plus Jakarta Sans',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '1.5rem',
+                  lineHeight: '1.25rem',
+                  letterSpacing: '-0.02em',
+                  color: '#313a57',
+                }}
+              >
+                <PeopleAltIcon sx={{ width: '5rem' }} />
+                Team
+                <NavLink to='#'>
+                  <ArrowForwardIosIcon
+                    sx={{ position: 'absolute', left: '35rem' }}
+                  />
+                </NavLink>
+              </Typography>
+            </Box>
+          </Typography>
+          <Typography variant='li' sx={{ position: 'relative', top: '' }}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: '5rem',
+                width: '40%',
+                left: '57rem',
+                background: '#ffff',
+                marginTop: '1.32rem',
+                border: '0.06rem solid #d7dde1',
+                boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+                borderRadius: '0.25rem',
+              }}
+            >
+              <Typography
+                sx={{
+                  position: 'relative',
+                  height: 'auto',
+                  width: '90%',
+                  top: '1.5rem',
+                  left: '1rem',
+                  fontFamily: 'Plus Jakarta Sans',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '1.5rem',
+                  lineHeight: '1.25rem',
+                  letterSpacing: '-0.02em',
+                  color: '#313a57',
+                }}
+              >
+                <GppGoodIcon sx={{ width: '5rem' }} />
+                Anonymous Emotional Support System
+                <NavLink to='#'>
+                  <ArrowForwardIosIcon
+                    sx={{ position: 'absolute', left: '35rem' }}
+                  />
+                </NavLink>
+              </Typography>
+            </Box>
+          </Typography>
+        </Typography>
       </div>
     </div>
   );

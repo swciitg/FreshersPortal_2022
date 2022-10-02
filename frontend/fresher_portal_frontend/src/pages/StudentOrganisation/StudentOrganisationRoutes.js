@@ -18,6 +18,7 @@ const url = [
   'octaves',
 ];
 const StudentOrganisationRoutes = () => {
+  let ind = 0;
   return (
     <div style={{ display: 'flex' }}>
       <ResponsiveDrawer />
@@ -54,6 +55,7 @@ const StudentOrganisationRoutes = () => {
             return (
               <Route
                 path={`/${url[index]}`}
+                key={ind++}
                 element={
                   <StuOrgTemplate
                     url={`${String(club).split(' ')[0].toLowerCase()}`}
@@ -94,6 +96,7 @@ const StudentOrganisationRoutes = () => {
             return (
               <Route
                 path={`/${String(club).split(' ')[0].toLowerCase()}`}
+                key={ind++}
                 element={
                   <StuOrgTemplate
                     url={`${String(club).split(' ')[0].toLowerCase()}`}
@@ -116,6 +119,7 @@ const StudentOrganisationRoutes = () => {
             return (
               <Route
                 path={`/${String(club).split(' ')[0].toLowerCase()}`}
+                key={ind++}
                 element={
                   <StuOrgTemplate
                     url={`${String(club).split(' ')[0].toLowerCase()}`}

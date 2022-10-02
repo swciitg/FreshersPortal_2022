@@ -20,6 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const BoardTemplate2 = (props) => {
+  let ind = 2;
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
@@ -30,7 +31,6 @@ const BoardTemplate2 = (props) => {
     axios
       .get(`http://127.0.0.1:8000/api/open2/${props.url}`)
       .then((response) => {
-        console.log(response.data);
         setInfo(response.data);
       })
       .catch((error) => console.log('error', error));
@@ -43,7 +43,7 @@ const BoardTemplate2 = (props) => {
           {info.length &&
             info.map((club) => {
               return (
-                <Item>
+                <Item key={ind++}>
                   <Card
                     sx={{ maxWidth: '150%' }}
                     onClick={() => {

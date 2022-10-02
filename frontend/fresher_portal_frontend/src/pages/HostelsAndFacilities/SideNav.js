@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
@@ -9,11 +9,7 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -23,12 +19,24 @@ import StickyFooter from '../../components/StickyFooter';
 
 const drawerWidth = 280;
 
+const useStyles = makeStyles({
+  root: {
+    '&$selected': {
+      backgroundColor: ' #5468FD',
+      fontWeight:'800'
+    },
+  },
+  selected: {
+    color: '#FFFFFF',
+    backgroundColor:' #5468FD'
+  },
+});
+
 function ResponsiveDrawer(props) {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleListItemClick = (index) => {
     setSelectedIndex(index);
-    console.log(index);
   };
   const [open, setOpen] = React.useState(true);
   const handleClickOn = () => {
@@ -43,6 +51,7 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  const classes = useStyles();
   const drawer = (
     <div>
       <Divider />
@@ -63,9 +72,9 @@ function ResponsiveDrawer(props) {
               handleListItemClick(index+1);
               navigate(`/hostels/${text.toLowerCase()}`)
             }} >
-            <ListItemButton selected={selectedIndex === index+1}>
+            <ListItemButton selected={selectedIndex === index+1} classes={{ root: classes.root, selected: classes.selected }}>
               
-              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary={text} />
+              <ListItemText primaryTypographyProps={{ backgroundColor:'inherit',color:'inherit', fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }} primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -73,6 +82,7 @@ function ResponsiveDrawer(props) {
       </Collapse>
       <ListItemButton
         selected={selectedIndex==14}
+        classes={{ root: classes.root, selected: classes.selected }}
         onClick={() => {
           handleClickOff();
           handleListItemClick(14);
@@ -80,7 +90,7 @@ function ResponsiveDrawer(props) {
         }}
       >
 
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Facilities" />
+        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }} primary="Facilities" />
       </ListItemButton>
       </List>
       <Divider />
@@ -89,7 +99,6 @@ function ResponsiveDrawer(props) {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-
     return (
       <div style={{}}>
         <Navbar/>

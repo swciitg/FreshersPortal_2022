@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AppBar from '@mui/material/AppBar';
+import { makeStyles } from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import './StudentOrganisation.css';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -28,8 +23,22 @@ const drawerWidth = 330;
 const redir = (url) => {
   window.location.replace(url);
 };
+
+const useStyles = makeStyles({
+  root: {
+    '&$selected': {
+      backgroundColor: ' #5468FD',
+      fontWeight:'800'
+    },
+  },
+  selected: {
+    color: '#FFFFFF',
+    backgroundColor:' #5468FD'
+  },
+});
+
 function ResponsiveDrawer(props) {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleListItemClick = (index) => {
     setSelectedIndex(index);
@@ -67,7 +76,7 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  console.log('hello ', `${process.env.REACT_APP_BASE_URL}`);
+  const classes = useStyles();
   const drawer = (
     <div>
       <Divider />
@@ -81,10 +90,7 @@ function ResponsiveDrawer(props) {
           }}
         >
           <ListItemText
-            primaryTypographyProps={{
-              fontFamily: 'Plus Jakarta Sans',
-              fontWeight: 500,
-            }}
+            primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }}
             primary='Cultural Board'
           />
           {open ? <ExpandLess /> : <ExpandMore />}
@@ -115,11 +121,11 @@ function ResponsiveDrawer(props) {
                   );
                 }}
               >
-                <ListItemButton selected={selectedIndex === index + 1}>
+                <ListItemButton selected={selectedIndex === index + 1} classes={{ root: classes.root, selected: classes.selected }}>
                   <ListItemText
                     primaryTypographyProps={{
                       fontFamily: 'Plus Jakarta Sans',
-                      fontWeight: 500,
+                      fontWeight: 'inherit',
                     }}
                     primary={text}
                   />
@@ -131,6 +137,7 @@ function ResponsiveDrawer(props) {
 
         <ListItemButton
           selected={selectedIndex === 10}
+          classes={{ root: classes.root, selected: classes.selected }}
           onClick={() => {
             handleClickOff();
             handleClickOff2();
@@ -139,10 +146,7 @@ function ResponsiveDrawer(props) {
           }}
         >
           <ListItemText
-            primaryTypographyProps={{
-              fontFamily: 'Plus Jakarta Sans',
-              fontWeight: 500,
-            }}
+            primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }}
             primary='Hostel Affairs Board'
           />
         </ListItemButton>
@@ -155,10 +159,7 @@ function ResponsiveDrawer(props) {
           }}
         >
           <ListItemText
-            primaryTypographyProps={{
-              fontFamily: 'Plus Jakarta Sans',
-              fontWeight: 500,
-            }}
+            primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }}
             primary='Technical Board'
           />
           {open2 ? <ExpandLess /> : <ExpandMore />}
@@ -192,11 +193,11 @@ function ResponsiveDrawer(props) {
                   );
                 }}
               >
-                <ListItemButton selected={selectedIndex === index + 12}>
+                <ListItemButton selected={selectedIndex === index + 12} classes={{ root: classes.root, selected: classes.selected }}>
                   <ListItemText
                     primaryTypographyProps={{
                       fontFamily: 'Plus Jakarta Sans',
-                      fontWeight: 500,
+                      fontWeight: 'inherit',
                     }}
                     primary={text}
                   />
@@ -215,10 +216,7 @@ function ResponsiveDrawer(props) {
           }}
         >
           <ListItemText
-            primaryTypographyProps={{
-              fontFamily: 'Plus Jakarta Sans',
-              fontWeight: 500,
-            }}
+            primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }}
             primary='SAIL'
           />
         </ListItemButton>
@@ -232,15 +230,13 @@ function ResponsiveDrawer(props) {
           }}
         >
           <ListItemText
-            primaryTypographyProps={{
-              fontFamily: 'Plus Jakarta Sans',
-              fontWeight: 500,
-            }}
+            primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }}
             primary="Students' Academic Board"
           />
         </ListItemButton>
         <ListItemButton
           selected={selectedIndex === 25}
+          classes={{ root: classes.root, selected: classes.selected }}
           onClick={() => {
             handleClickOff();
             handleClickOff2();
@@ -249,15 +245,12 @@ function ResponsiveDrawer(props) {
           }}
         >
           <ListItemText
-            primaryTypographyProps={{
-              fontFamily: 'Plus Jakarta Sans',
-              fontWeight: 500,
-            }}
+            primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }}
             primary="Students' Gymkhana Council"
           />
         </ListItemButton>
         <ListItemButton
-          selected={selectedIndex >= 25 && selectedIndex <= 30}
+          selected={selectedIndex >= 26 && selectedIndex <= 30}
           onClick={() => {
             handleClickOn3();
             handleListItemClick(0);
@@ -265,10 +258,7 @@ function ResponsiveDrawer(props) {
           }}
         >
           <ListItemText
-            primaryTypographyProps={{
-              fontFamily: 'Plus Jakarta Sans',
-              fontWeight: 500,
-            }}
+            primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }}
             primary="Students' Welfare Board"
           />
           {open3 ? <ExpandLess /> : <ExpandMore />}
@@ -295,7 +285,7 @@ function ResponsiveDrawer(props) {
                   );
                 }}
               >
-                <ListItemButton selected={selectedIndex === index + 25}>
+                <ListItemButton selected={selectedIndex === index + 26} classes={{ root: classes.root, selected: classes.selected }}>
                   <ListItemText
                     primaryTypographyProps={{
                       fontFamily: 'Plus Jakarta Sans',

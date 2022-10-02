@@ -24,7 +24,7 @@ const TechnicalBoard = () => {
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 8, sm: 12, md: 18 }}
+          columns={16}
         >
           {[
             'Aeromodelling Club',
@@ -42,7 +42,7 @@ const TechnicalBoard = () => {
             return (
               <Item>
                 <Card
-                  sx={{ maxWidth: 340 }}
+                  sx={{ maxWidth: '150%' }}
                   onClick={() => {
                     navigate(
                       `/studentorganisation/${String(item)
@@ -54,8 +54,9 @@ const TechnicalBoard = () => {
                   <CardActionArea>
                     <CardMedia
                       component='img'
-                      height='200'
-                      width='285'
+                      height='125%'
+                      width='150%'
+                      className='image'
                       image={`/assets/images/${String(item)
                         .split(' ')[0]
                         .toLowerCase()}.jpg`}

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const BoardTemplate = (props) => {
   const [info, setInfo] = useState([]);
-
+  let ind = 0;
   useEffect(() => {
     fetchData();
   }, [props.url]);
@@ -12,7 +12,6 @@ const BoardTemplate = (props) => {
     axios
       .get(`http://127.0.0.1:8000/api/open1/${props.url}`)
       .then((response) => {
-        console.log(response.data);
         setInfo(response.data);
       })
       .catch((error) => console.log('error', error));
@@ -22,7 +21,7 @@ const BoardTemplate = (props) => {
       {info.length &&
         info.map((item) => {
           return (
-            <div className='important_page'>
+            <div className='important_page' key={ind++}>
               <div className='heading'>
                 <div className='important_pre-cursor'></div>
                 <div className='important_heading-text'>{item.title}</div>

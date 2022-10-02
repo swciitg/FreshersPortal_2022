@@ -207,69 +207,69 @@ export default function AdmittedStudents() {
           
 
 
-      <Box sx={{position: "relative", height: 'auto', width: '100%', top:'27rem', background: '#f7f1ff'}}>
-      <Grid container spacing={2} >
-        <Grid container item xs={6} direction="column" >
-        <Typography variant='h2' sx={{ position: "relative", width: '62rem', height: '3.25rem', left: '8rem',top: '2rem', fontFamily: "Plus Jakarta Sans", fontSize: '3.5rem'}}>
-          SAATHI
-          <Typography sx={{fontSize: '1.5rem'}}>Counselling Service by IIT Guwahati</Typography>
-        </Typography>
-              <Typography variant='h6' sx={{ position: "relative", width: '45rem', left: '8rem',top: '6rem', fontFamily: "Plus Jakarta Sans", }} >
-              Morbi viverra in tincidunt rhoncus, cras nisl viverra commodo etiam. Semper vulputate interdum tellus purus egestas arcu. Mi arcu etiam lorem tincidunt odio facilisi. Turpis leo non curabitur enim. 
-              In dui, scelerisque ullamcorper aenean justo feugiat suscipit ridiculus semper. Sagittis sapien tempus arcu penatibus. 
-              Eu purus arcu ut ac non sagittis aliquet. Interdum sagittis, varius sit ut parturient eu et. In justo, scelerisque sagittis, lorem vitae ultrices viverra. 
-              Id enim accumsan, aliquet cras neque. Nulla ut integer malesuada luctus interdum amet, ut lorem sagittis. Phasellus nisi magnis elementum lacus consectetur.
-              </Typography>
-        </Grid>
-        <Grid container item xs={6} direction="column" >
-                    <Box sx={{position: "relative", height: '5rem', width: '40%', left:'57rem',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
-                      <Typography sx={{position: "relative", height: 'auto', width: '90%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
-                        < ArticleIcon sx={{width: '5rem', color:'blue',}}/>
-                        About Us
-                        <NavLink to="#" >
-                        <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
-                        </NavLink>
-                      </Typography>   
-                    </Box>   
-                    <Box sx={{position: "relative", height: '5rem', width: '40%', left:'57rem',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
-                      <Typography sx={{position: "relative", height: 'auto', width: '90%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
-                        <CalendarTodayIcon sx={{width: '5rem',color:'blue',}}/>
-                        Counsellor's Timing
-                        <NavLink to="#" >
-                        <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
-                        </NavLink>
-                      </Typography>   
-                    </Box>   
-                    <Box sx={{position: "relative", height: '5rem', width: '40%', left:'57rem',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
-                      <Typography sx={{position: "relative", height: 'auto', width: '90%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
-                        <PersonAddAlt1Icon sx={{width: '5rem',color:'blue',}}/>
-                        Student Mentorship
-                        <NavLink to="#" >
-                        <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
-                        </NavLink>
-                      </Typography>   
-                    </Box>   
-                    <Box sx={{position: "relative", height: '5rem', width: '40%', left:'57rem',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
-                      <Typography sx={{position: "relative", height: 'auto', width: '90%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
-                        <PeopleAltIcon sx={{width: '5rem',color:'blue',}}/>
-                        Team
-                        <NavLink to="#" >
-                        <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
-                        </NavLink>
-                      </Typography>   
-                    </Box>   
-                    <Box sx={{position: "relative", height: '5rem', width: '40%', left:'57rem',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
-                      <Typography sx={{position: "relative", height: 'auto', width: '90%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
-                        <GppGoodIcon sx={{width: '5rem',color:'blue',}}/>
-                        Anonymous Emotional Support System
-                        <NavLink to="#" >
-                        <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
-                        </NavLink>
-                      </Typography>   
-                    </Box>   
-        </Grid>
-      </Grid>    
-        </Box>
+      <Box sx={{position: "relative", height: 'auto', width: '100%', top:'27rem', background: '#f7f1ff' , marginBottom:'5%'}}>
+        <Grid container spacing={0} >
+          <Grid item xs={6} sx={{width:'50'}}>
+          <Typography variant='h2' sx={{ position: "relative", width: '62rem', height: '3.25rem', left: '8rem',top: '2rem', fontFamily: "Plus Jakarta Sans", fontSize: '3.5rem'}}>
+            SAATHI
+            <Typography sx={{fontSize: '1.5rem'}}>Counselling Service by IIT Guwahati</Typography>
+          </Typography>
+                <Typography variant='h6' sx={{ position: "relative", width: '30rem', left: '8rem',top: '6rem', fontFamily: "Plus Jakarta Sans", }} >
+                Morbi viverra in tincidunt rhoncus, cras nisl viverra commodo etiam. Semper vulputate interdum tellus purus egestas arcu. Mi arcu etiam lorem tincidunt odio facilisi. Turpis leo non curabitur enim. 
+                In dui, scelerisque ullamcorper aenean justo feugiat suscipit ridiculus semper. Sagittis sapien tempus arcu penatibus. 
+                Eu purus arcu ut ac non sagittis aliquet. Interdum sagittis, varius sit ut parturient eu et. In justo, scelerisque sagittis, lorem vitae ultrices viverra. 
+                Id enim accumsan, aliquet cras neque. Nulla ut integer malesuada luctus interdum amet, ut lorem sagittis. Phasellus nisi magnis elementum lacus consectetur.
+                </Typography>
+          </Grid>
+          <Grid item xs={6} direction="column" sx={{width:'50%'}}>
+            <Box sx={{position: "relative", height: '5rem', width: '82%',  background: '#ffffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
+              <Typography sx={{position: "relative", height: 'auto', width: '100%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
+                <ArticleIcon sx={{width: '5rem', color:'blue',}}/>
+                About Us
+                <NavLink to="#" >
+                <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
+                </NavLink>
+              </Typography>   
+            </Box>   
+            <Box sx={{position: "relative", height: '5rem', width: '82%',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
+              <Typography sx={{position: "relative", height: 'auto', width: '100%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
+                <CalendarTodayIcon sx={{width: '5rem',color:'blue',}}/>
+                Counsellor's Timing
+                <NavLink to="#" >
+                <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
+                </NavLink>
+              </Typography>   
+            </Box>   
+            <Box sx={{position: "relative", height: '5rem', width: '82%',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
+              <Typography sx={{position: "relative", height: 'auto', width: '100%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
+                <PersonAddAlt1Icon sx={{width: '5rem',color:'blue',}}/>
+                Student Mentorship
+                <NavLink to="#" >
+                <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
+                </NavLink>
+              </Typography>   
+            </Box>   
+            <Box sx={{position: "relative", height: '5rem', width: '82%',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
+              <Typography sx={{position: "relative", height: 'auto', width: '100%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
+                <PeopleAltIcon sx={{width: '5rem',color:'blue',}}/>
+                Team
+                <NavLink to="#" >
+                <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
+                </NavLink>
+              </Typography>   
+            </Box>   
+            <Box sx={{position: "relative", height: '5rem', width: '82%',  background: '#ffff', marginTop:'1.32rem', border: '0.06rem solid #d7dde1',  boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)', borderRadius: '0.25rem',}}  >
+              <Typography sx={{position: "relative", height: 'auto', width: '100%',top:'1.5rem', left:'1rem', fontFamily: "Plus Jakarta Sans", fontStyle: 'normal',fontWeight:'400',fontSize: '1.5rem', lineHeight: '1.25rem',letterSpacing: '-0.02em',color: '#313a57',}} >
+                <GppGoodIcon sx={{width: '5rem',color:'blue',}}/>
+                Anonymous Emotional Support System
+                <NavLink to="#" >
+                <ArrowForwardIosIcon sx={{ position: 'absolute', left: '35rem'}}/>
+                </NavLink>
+              </Typography>   
+            </Box>   
+          </Grid>
+        </Grid>    
+      </Box>
       </div>
       <StickyFooter />
     </div>

@@ -5,7 +5,7 @@ import AdmittedStudents from './pages/AdmittedStudents/AdmittedStudents';
 import Home from './pages/Home/Home';
 import ContactUs from './pages/ContactUs/contactus';
 import HostelsAndFacilitiesRoutes from './pages/HostelsAndFacilities/HostelsAndFacilities';
-import StudentOrganisationRoutes from './pages/Student Organisation/StudentOrganisationRoutes';
+import StudentOrganisationRoutes from './pages/StudentOrganisation/StudentOrganisationRoutes';
 import EventsRoutes from './pages/Events/EventsRoutes';
 import AcademicsRoutes from './pages/Academics/Academics_Routes';
 

@@ -5,15 +5,9 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -44,6 +38,8 @@ const Navbar2 = () => {
           <NavLink
                  className='navbar'
                  to='/home'
+                 style={({ isActive }) => 
+                      (isActive ? {color: 'red'} : {color: 'blue'})}
                >
                  <Button
                    color='inherit'
@@ -56,6 +52,8 @@ const Navbar2 = () => {
           <NavLink
                  className='navbar'
                  to='/important'
+                 style={({ isActive }) => 
+                      (isActive ? {color: 'red'} : {color: 'blue'})}
                >
                  <Button
                    color='inherit'
@@ -68,6 +66,8 @@ const Navbar2 = () => {
                <NavLink
                  className='navbar'
                  to='/academics'
+                 style={({ isActive }) => 
+                      (isActive ? {color: 'red'} : {color: 'blue'})}
                >
                  <Button
                    color='inherit'
@@ -80,6 +80,8 @@ const Navbar2 = () => {
                <NavLink
                  className='navbar'
                  to='/hostels'
+                 style={({ isActive }) => 
+                      (isActive ? {color: 'red'} : {color: 'blue'})}
                >
                  <Button
                    color='inherit'
@@ -89,7 +91,8 @@ const Navbar2 = () => {
                    HOSTELS AND FACILITIES{' '}
                  </Button>
                </NavLink>
-               <NavLink className='navbar' to='/events'>
+               <NavLink className='navbar' to='/events' style={({ isActive }) => 
+                      (isActive ? {color: 'red'} : {color: 'blue'})}>
                  <Button
                    color='inherit'
                    size='large'
@@ -101,6 +104,8 @@ const Navbar2 = () => {
                <NavLink
                  className='navbar'
                  to='/studentorganisation'
+                 style={({ isActive }) => 
+                      (isActive ? {color: 'red'} : {color: 'blue'})}
                >
                  <Button
                    color='inherit'

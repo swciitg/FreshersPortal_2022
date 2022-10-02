@@ -13,7 +13,6 @@ const Template = (props) => {
    axios
      .get(`http://127.0.0.1:8000/api/imp/${props.url}`)
      .then((response) => {
-       console.log(response.data);
        setInfo(response.data);
      })
      .catch((error) => console.log('error', error));

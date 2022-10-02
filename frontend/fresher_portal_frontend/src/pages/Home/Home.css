@@ -85,14 +85,16 @@
 }
 #AS {
   position: absolute;
-  width: 285px;
-  height: 66px;
+  width: 20%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   left: 50%;
   top: 70%;
   transform: translate(-50%, -50%);
 
-  /* #5468FD */
-
+  align-items: center;
+  text-align: center; 
+  float: inherit;
   background: #5468fd;
   border-radius: 5px;
   font-family: "Plus Jakarta Sans";
@@ -104,7 +106,7 @@
 
   /* display: flex;
   align-items: center;
-  text-align: center; */
+  text-align: center; 
   letter-spacing: 0.05em;
 
   /* #FFFFFF */

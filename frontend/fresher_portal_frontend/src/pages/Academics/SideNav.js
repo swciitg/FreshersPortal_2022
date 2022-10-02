@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import { makeStyles } from '@material-ui/core/styles';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
 import Navbar from '../../components/Navbar/Navbar1';
@@ -23,9 +17,22 @@ import Navbar2 from '../../components/Navbar/Navbar2';
 import StickyFooter from '../../components/StickyFooter';
 
 const drawerWidth = 300;
-const urls = ['bsbe','cl','cst','civil','cse','design','eee','hss','mnc','mech','phy']
+
+const useStyles = makeStyles({
+  root: {
+    '&$selected': {
+      backgroundColor: ' #5468FD',
+      fontWeight:'800'
+    },
+  },
+  selected: {
+    color: '#FFFFFF',
+    backgroundColor:' #5468FD'
+  },
+});
+
 function ResponsiveDrawer(props) {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
   const handleListItemClick = (index) => {
     setSelectedIndex(index);
   };
@@ -42,7 +49,8 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  console.log('hello ', `${process.env.REACT_APP_BASE_URL}`);
+  const classes = useStyles();
+
   const drawer = (
     <div>
       <Divider />
@@ -65,8 +73,8 @@ function ResponsiveDrawer(props) {
                 `/academics/${String(text).split(' ')[0].toLowerCase()}`
               );
             }} >
-            <ListItemButton selected={selectedIndex === index+1}>
-              <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary={text} />
+            <ListItemButton selected={selectedIndex === index+1} classes={{ root: classes.root, selected: classes.selected }}>
+              <ListItemText primaryTypographyProps={{ backgroundColor:'inherit',color:'inherit', fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }} primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -74,23 +82,25 @@ function ResponsiveDrawer(props) {
       </Collapse>
       <ListItemButton
         selected={selectedIndex===12}
+        classes={{ root: classes.root, selected: classes.selected }}
         onClick={() => {
           handleClickOff();
           handleListItemClick(12);
           navigate('/academics/branchchange/');
         }}
       >
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Branch Change" />
+        <ListItemText primaryTypographyProps={{ backgroundColor:'inherit',color:'inherit', fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }} primary="Branch Change" />
       </ListItemButton>
       <ListItemButton
         selected={selectedIndex===13}
+        classes={{ root: classes.root, selected: classes.selected }}
         onClick={() => {
           handleClickOff();
           handleListItemClick(13);
           navigate('/academics/minor/');
         }}
       >
-        <ListItemText primaryTypographyProps={{ fontFamily:'Plus Jakarta Sans',fontWeight:500 }} primary="Minor Discipline" />
+        <ListItemText primaryTypographyProps={{ backgroundColor:'inherit',color:'inherit', fontFamily:'Plus Jakarta Sans',fontWeight:'inherit' }} primary="Minor Discipline" />
       </ListItemButton>
       </List>
       <Divider />

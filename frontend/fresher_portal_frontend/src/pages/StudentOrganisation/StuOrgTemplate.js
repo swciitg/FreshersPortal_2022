@@ -25,7 +25,6 @@ const StuOrgTemplate = (props) => {
     axios
       .get(`http://127.0.0.1:8000/api/base/${props.url}`)
       .then((response) => {
-        console.log(response.data);
         setInfo(response.data);
       })
       .catch((error) => console.log('error', error));

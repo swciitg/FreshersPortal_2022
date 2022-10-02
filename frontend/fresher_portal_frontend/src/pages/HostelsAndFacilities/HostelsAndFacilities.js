@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ResponsiveDrawer from './SideNav';
 import Facilities from './Facilities';
 import Template from './Template';
-import BoardTemplate from '../Student Organisation/BoardTemplate';
+import BoardTemplate from '../StudentOrganisation/BoardTemplate';
 
 const HostelsAndFacilitiesRoutes = () => {
   return (

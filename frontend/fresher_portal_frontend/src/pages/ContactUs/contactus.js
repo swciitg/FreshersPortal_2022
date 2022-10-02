@@ -117,7 +117,7 @@ const ContactUs = () => {
     <div className='contact_page'>
       <div className='container' style={{ margin: 'auto' }}>
         <div className='heading-contact'>
-          <p className='heading-text-contact'>Contact Us</p>
+          <div className='heading-text-contact'>Contact Us</div>
         </div>
         <div>
           <Container sx={{ py: 3 }} maxWidth='lg'>
@@ -145,7 +145,7 @@ const ContactUs = () => {
                             font: 'Plus Jakarta Sans',
                           }}
                         >
-                          <p className='contact_regtitle'>{card.name}</p>
+                          <div className='contact_regtitle'>{card.name}</div>
                         </Typography>
                         <Typography
                           component={'span'}
@@ -154,13 +154,13 @@ const ContactUs = () => {
                             font: 'Plus Jakarta Sans',
                           }}
                         >
-                          <p className='contact_regtext'>{card.designation}</p>
-                          <p className='contact_regtext'>
+                          <div className='contact_regtext'>{card.designation}</div>
+                          <div className='contact_regtext'>
                             {'Contact: ' + card.contact}
-                          </p>
-                          <p className='contact_regtext'>
+                          </div>
+                          <div className='contact_regtext'>
                             {'Email: ' + card.email}
-                          </p>
+                          </div>
                         </Typography>
                       </CardContent>
                     </Card>
@@ -172,7 +172,7 @@ const ContactUs = () => {
       </div>
       <div className='container' style={{ margin: 'auto' }}>
         <div className='heading-contact-2'>
-          <p className='heading-text-contact'>Drop Your Message</p>
+          <div className='heading-text-contact'>Drop Your Message</div>
         </div>
         <form onSubmit={handleSubmit}>
           <div className='contact_dropmessage'>
@@ -248,7 +248,7 @@ const ContactUs = () => {
       </div>
       <div className='contact_faq-section'>
         <div className='heading-contact'>
-          <p className='heading-text-contact'>FAQs</p>
+          <div className='heading-text-contact'>FAQs</div>
         </div>
         <div className='contact_faq'>
           {info2 &&

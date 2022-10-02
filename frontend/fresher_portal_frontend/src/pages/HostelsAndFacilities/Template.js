@@ -32,7 +32,7 @@ const Template = (props) => {
     <div className='page'>
       <div className='hostel_heading'>
         <div className='hostel_pre-cursor'></div>
-        {info.length && <p className='hostel_heading-text'>{info[0].title}</p>}
+        {info.length && <div className='hostel_heading-text'>{info[0].title}</div>}
       </div>
       <div className='hostel_description'>
         <img src={info.length && info[0].img} className='image' />
@@ -42,14 +42,14 @@ const Template = (props) => {
           )}
         </div>
         <Grid container spacing={2}>
-          <Grid item xs={8}>
+          <Grid item xs={6}>
             <Item>
-              <p className='post-text'>
-                Hostel Warden : {info.length && info[0].person}
-              </p>
+              <div className='post-text'>
+                {info.length && info[0].person}
+              </div>
             </Item>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={6}>
             <Item>
               <a href={info.length && info[0].weblink} className='post-text'>
                 Website Link

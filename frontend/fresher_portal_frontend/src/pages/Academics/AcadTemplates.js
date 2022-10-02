@@ -34,7 +34,7 @@ const AcadTemplates = (props) => {
       <div className='heading'>
         <div className='academics_pre-cursor'></div>
         {info.length && (
-          <p className='academics_heading-text'>{info[0].title}</p>
+          <div className='academics_heading-text'>{info[0].title}</div>
         )}
       </div>
       <div className='academics_description'>
@@ -45,12 +45,12 @@ const AcadTemplates = (props) => {
           )}
         </div>
         <Grid container spacing={2}>
-          <Grid item xs={8}>
+          <Grid item xs={6}>
             <Item>
-              <p className='post-text'>HOD: {info.length && info[0].person}</p>
+              <div className='post-text'>{info.length && info[0].person}</div>
             </Item>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={6}>
             <Item>
               <a href={info.length && info[0].weblink} className='post-text'>
                 Website Link

@@ -35,7 +35,7 @@ const StuOrgTemplate = (props) => {
       <div className='heading'>
         <div className='organisation_pre-cursor'></div>
         {info.length && (
-          <p className='organisation_heading-text'>{info[0].title}</p>
+          <div className='organisation_heading-text'>{info[0].title}</div>
         )}
       </div>
       <div className='organisation_description'>

@@ -33,7 +33,7 @@ const InterHostelEvents = (props) => {
     <div className='page'>
       <div className='heading'>
         <div className='events_pre-cursor'></div>
-        {info.length && <p className='events_heading-text'>{info[0].title}</p>}
+        {info.length && <div className='events_heading-text'>{info[0].title}</div>}
       </div>
       <div className='events_description'>
         <div className='events_description-text'>

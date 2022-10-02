@@ -125,10 +125,12 @@ function ResponsiveDrawer(props) {
               display: { xs: 'none', sm: 'block' },
               '& .MuiDrawer-paper': {
                 top:'16%',
+                bottom:'10%',
                 boxSizing: 'border-box',
                 width: drawerWidth,
                 background: '#313A57',
                 color: '#FFFFFF',
+                height: '81%'
               },
             }}
             open

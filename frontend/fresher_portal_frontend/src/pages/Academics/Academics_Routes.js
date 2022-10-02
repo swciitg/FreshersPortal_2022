@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ResponsiveDrawer from './SideNav';
 import AcadTemplates from './AcadTemplates';
-import BoardTemplate from '../Student Organisation/BoardTemplate';
+import BoardTemplate from '../StudentOrganisation/BoardTemplate';
 import AcadTemplate2 from './AcadTemplate2';
 
 const AcademicsRoutes = () => {

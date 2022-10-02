@@ -318,11 +318,16 @@ function ResponsiveDrawer(props) {
 
   return (
     <div style={{}}>
-      <Navbar/>
-      <Navbar2/>
+      <Navbar />
+      <Navbar2 />
       <Box
         component='nav'
-        sx={{ height: '90%',width: { sm: drawerWidth }, flexShrink: { sm: 0 } ,paddingBottom:'3%'}}
+        sx={{
+          height: '90%',
+          width: { sm: drawerWidth },
+          flexShrink: { sm: 0 },
+          paddingBottom: '3%',
+        }}
       >
         <Drawer
           container={container}
@@ -335,9 +340,9 @@ function ResponsiveDrawer(props) {
           sx={{
             display: 'flex',
             '& .MuiDrawer-paper': {
-              position:'relative',
-              overflow: 'scroll' ,
-              paddingBottom:'3%',
+              position: 'relative',
+              overflow: 'scroll',
+              paddingBottom: '3%',
               boxSizing: 'border-box',
               width: drawerWidth,
               background: '#313A57',
@@ -351,12 +356,13 @@ function ResponsiveDrawer(props) {
           sx={{
             display: 'absolute',
             '& .MuiDrawer-paper': {
-              top:'16%',
-              bottom:'10%',
+              top: '16%',
+              bottom: '10%',
               boxSizing: 'border-box',
               width: drawerWidth,
               background: '#313A57',
               color: '#FFFFFF',
+              height: '81%',
             },
           }}
           open
@@ -364,7 +370,7 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-      <StickyFooter/>
+      <StickyFooter />
     </div>
   );
 }

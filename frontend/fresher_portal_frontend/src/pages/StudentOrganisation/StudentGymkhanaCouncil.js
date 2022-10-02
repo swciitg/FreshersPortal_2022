@@ -22,7 +22,7 @@ const StudentGymkhanaCouncil = (props) => {
       <div className='heading'>
         <div className='important_pre-cursor'></div>
         {info.length && (
-          <p className='important_heading-text'>{info[0].title}</p>
+          <div className='important_heading-text'>{info[0].title}</div>
         )}
       </div>
       <div className='desc'>

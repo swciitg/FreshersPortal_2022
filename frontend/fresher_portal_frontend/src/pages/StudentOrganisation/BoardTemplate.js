@@ -25,7 +25,7 @@ const BoardTemplate = (props) => {
             <div className='important_page'>
               <div className='heading'>
                 <div className='important_pre-cursor'></div>
-                <p className='important_heading-text'>{item.title}</p>
+                <div className='important_heading-text'>{item.title}</div>
               </div>
               <div className='desc'>
                 <div dangerouslySetInnerHTML={{ __html: item.text }}></div>

@@ -38,9 +38,9 @@ const Navbar2 = () => {
   };
 
   return (
-    <AppBar position="fixed" sx={{top:'9%',backgroundColor:'#FFFFFF',color:'#000000'}}>
+    <AppBar position="fixed" sx={{top:'9.5%',backgroundColor:'#FFFFFF',color:'#000000'}}>
       <Container maxWidth="xl" >
-      <Box sx={{ flexGrow: 1, display: 'flex',paddingLeft:'15%',paddingRight:'15%' }}>
+      <Box sx={{ flexGrow: 1, display: 'flex',marginLeft:'5%', paddingLeft:'8%',paddingRight:'8%' }}>
           <NavLink
                  className='navbar'
                  to='/home'
@@ -110,7 +110,7 @@ const Navbar2 = () => {
                    STUDENT ORGANISATION
                  </Button>
                </NavLink>
-               <IconButton
+               {/* <IconButton
                  size='large'
                  edge='start'
                  color='inherit'
@@ -129,7 +129,7 @@ const Navbar2 = () => {
                  sx={{ mr: 2 }}
                >
                  <MenuIcon />
-               </IconButton>
+               </IconButton> */}
            </Box>
         </Container>
     </AppBar>

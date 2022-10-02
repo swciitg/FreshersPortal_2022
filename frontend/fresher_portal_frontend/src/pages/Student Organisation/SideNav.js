@@ -19,6 +19,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Collapse from '@mui/material/Collapse';
 import ListItemButton from '@mui/material/ListItemButton';
 import { color } from '@mui/system';
+import Navbar from '../../components/Navbar/Navbar1';
+import Navbar2 from '../../components/Navbar/Navbar2';
+import StickyFooter from '../../components/StickyFooter';
 
 const drawerWidth = 330;
 
@@ -67,7 +70,6 @@ function ResponsiveDrawer(props) {
   console.log('hello ', `${process.env.REACT_APP_BASE_URL}`);
   const drawer = (
     <div>
-      <Toolbar />
       <Divider />
       <List>
         <ListItemButton
@@ -316,17 +318,11 @@ function ResponsiveDrawer(props) {
 
   return (
     <div style={{}}>
-      <AppBar
-        position='fixed'
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-        }}
-      ></AppBar>
+      <Navbar/>
+      <Navbar2/>
       <Box
         component='nav'
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label='mailbox folders'
+        sx={{ height: '90%',width: { sm: drawerWidth }, flexShrink: { sm: 0 } ,paddingBottom:'3%'}}
       >
         <Drawer
           container={container}
@@ -337,8 +333,11 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: 'flex',
             '& .MuiDrawer-paper': {
+              position:'relative',
+              overflow: 'scroll' ,
+              paddingBottom:'3%',
               boxSizing: 'border-box',
               width: drawerWidth,
               background: '#313A57',
@@ -350,8 +349,10 @@ function ResponsiveDrawer(props) {
         <Drawer
           variant='permanent'
           sx={{
-            display: { xs: 'none', sm: 'block' },
+            display: 'absolute',
             '& .MuiDrawer-paper': {
+              top:'16%',
+              bottom:'10%',
               boxSizing: 'border-box',
               width: drawerWidth,
               background: '#313A57',
@@ -363,6 +364,7 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
+      <StickyFooter/>
     </div>
   );
 }

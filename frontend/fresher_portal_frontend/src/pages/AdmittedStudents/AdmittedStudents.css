@@ -1,11 +1,11 @@
-.classwithz{
-  z-index: 1;
+.as_container{
+  width:100%;
 }
+
 .admittedstudents_page {
   position: absolute;
   top: 10%;
   bottom:10%;
-  z-index: -1;
 }
 
 #d1 {

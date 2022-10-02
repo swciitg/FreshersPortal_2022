@@ -1,8 +1,7 @@
 import React from 'react';
 import './Home.css';
-import  NavBar  from '../../components/Navbar/Navbar_1';
-import NavBar2 from '../../components/Navbar/index';
-import {NavLink} from '../../components/Navbar/NavbarElements';
+import  NavBar  from '../../components/Navbar/Navbar1';
+import { NavLink } from 'react-router-dom';
 import StickyFooter from '../../components/StickyFooter';
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
           <div id='hb'>IIT GUWAHATI</div>
         </div>
 
-        <NavLink className='navbar' exact to='/home' id='AS' activeClassName='highlighted'>
+        <NavLink className='navbar' exact to='/home' id='AS'>
           Admitted Student
         </NavLink>
       </div>
